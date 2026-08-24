@@ -1,0 +1,7 @@
+project:
+  name: "Audion Docs AI"
+  version: "3.1-gui"
+
+safety:
+  cleanup_managed_workspace_only: true
+  never_delete_original_inputs: true

@@ -1,0 +1,3103 @@
+tool:
+  id: audion_docs_ai
+  name: "Audion Docs AI v3"
+  category: "Document audit"
+  version: "3.1-gui"
+
+paths:
+  input: "input"
+  output: "output"
+  logs: "logs"
+  report: "report"
+  workspace: "workspace"
+  work: "work"
+  config: "config"
+  release: "release"
+
+ui:
+  title: "Audion Docs AI v3"
+  host: "127.0.0.1"
+  port: 8080
+  native: false
+  reload: false
+  open_browser: false
+
+operations:
+  - id: validate_input
+    title: "Check input"
+    title_ru: "Проверить input"
+    description: "List staged DOCX/PPTX/XLSX/PDF files without calling any LLM provider."
+    description_ru: "Показать DOCX/PPTX/XLSX/PDF в input без обращения к LLM-провайдерам."
+    service: "system_core.services.audion_docs_service:validate_input"
+    kind: "safe"
+
+operation_groups:
+  - id: prepare
+    title: "Prepare"
+    title_ru: "Подготовка"
+    description: "Scan input and build Office COM render maps."
+    description_ru: "Проверка input и построение карты рендера через Office COM."
+    children:
+      - id: validate_input
+        title: "Check input"
+        title_ru: "Проверить input"
+        description: "List staged DOCX/PPTX/XLSX/PDF files without calling providers."
+        description_ru: "Показать DOCX/PPTX/XLSX/PDF в input без вызова провайдеров."
+        service: "system_core.services.audion_docs_service:validate_input"
+        kind: "safe"
+      - id: pipeline_scan
+        title: "Scan input"
+        title_ru: "Сканировать input"
+        description: "Run pipeline scan and write logs/scan.json."
+        description_ru: "Запустить сканирование и записать logs/scan.json."
+        service: "system_core.services.audion_docs_service:run_pipeline_operation"
+        kind: "safe"
+        parameters:
+          mode: "scan"
+      - id: pipeline_render
+        title: "COM render-map"
+        title_ru: "Карта рендера COM"
+        description: "Create marked OOXML, PDF exports, extracted PDF text, and render maps."
+        description_ru: "Создать marked OOXML, PDF, извлечённый текст PDF и карту рендера."
+        service: "system_core.services.audion_docs_service:run_pipeline_operation"
+        kind: "safe"
+        parameters:
+          mode: "render"
+
+  - id: task_openai
+    title: "Task OpenAI"
+    title_ru: "ЗАДАЧА ДЛЯ OPENAI"
+    description: "Run the selected document task with OpenAI and write DOCX/XLSX/MD/JSON reports."
+    description_ru: "Запустить выбранную задачу документов через OpenAI и записать DOCX/XLSX/MD/JSON отчёты."
+    service: "system_core.services.audion_docs_service:run_doc_task_operation"
+    kind: "safe"
+    parameters:
+      mode: "run_doc_task"
+      provider: "openai"
+      model_tier: "audit"
+    fields:
+      - id: doc_task_ref
+        type: "select"
+        label: "Task instruction"
+        label_ru: "Инструкция задачи"
+        default: ""
+        searchable: true
+        options_source: "system_core.services.audion_docs_service:doc_task_options"
+        cache_seconds: 30
+        hint: "Loaded from config/doc_tasks; empty value uses active_doc_task.md."
+        hint_ru: "Список из config/doc_tasks; пустое значение берёт active_doc_task.md."
+      - id: doc_task_pin
+        type: "checkbox"
+        label: "Favorite instruction"
+        label_ru: "Инструкцию в избранное"
+        default: false
+      - id: doc_task_scope
+        type: "select"
+        label: "Task scope"
+        label_ru: "Охват задачи"
+        default: "auto"
+        options:
+          - value: "auto"
+            label: "Auto"
+            label_ru: "Авто"
+          - value: "corpus"
+            label: "Whole input corpus"
+            label_ru: "Весь корпус input"
+          - value: "document"
+            label: "Each file separately"
+            label_ru: "Каждый файл отдельно"
+        hint: "Auto uses one corpus run for multiple files, but keeps exact replacements per file."
+        hint_ru: "Авто запускает один корпусный проход для нескольких файлов, но точные замены оставляет пофайловыми."
+      - id: doc_task_query
+        type: "textarea"
+        label: "Request"
+        label_ru: "Уточнение к TASK"
+        default: ""
+        placeholder: "Например: вывести все упомянутые объекты здравоохранения или заменить 'ошбка' на 'ошибка'."
+        span: "full"
+      - id: doc_task_apply_replacements
+        type: "checkbox"
+        label: "Find and replace text in DOCX documents"
+        label_ru: "Найти и заменить текст в документах DOCX"
+        default: false
+        span: "full"
+      - id: pdf_max_pages
+        type: "number"
+        label: "PDF pages"
+        label_ru: "Страниц PDF"
+        default: 5
+        min: 1
+        max: 200
+        step: 1
+        advanced: true
+        hint: "For TASK PDF inputs, read only the first N pages."
+        hint_ru: "Для PDF во входе TASK читать только первые N страниц."
+      - id: doc_task_clean_table
+        type: "checkbox"
+        label: "Clean table from template"
+        label_ru: "Чистая таблица по шаблону"
+        default: false
+        span: "full"
+        hint: "Write an additional clean XLSX, and a filled DOCX copy when the template is DOCX."
+        hint_ru: "Записать дополнительный чистый XLSX и заполненную DOCX-копию, если шаблон DOCX."
+      - id: doc_task_template_file
+        type: "select"
+        label: "Table template"
+        label_ru: "Шаблон таблицы"
+        default: ""
+        searchable: true
+        options_source: "system_core.services.audion_docs_service:template_file_options"
+        cache_seconds: 30
+        advanced: true
+        hint: "Empty value auto-detects the only DOCX/XLSX template in input."
+        hint_ru: "Пустое значение автоматически берёт единственный DOCX/XLSX-шаблон из input."
+      - id: openai_api_key_ref
+        type: "select"
+        label: "OpenAI API key"
+        label_ru: "Ключ OpenAI"
+        default: ""
+        searchable: true
+        options_source: "system_core.services.audion_docs_service:openai_api_key_options"
+        cache_seconds: 30
+      - id: openai_model
+        type: "select"
+        label: "OpenAI model"
+        label_ru: "Модель OpenAI"
+        default: ""
+        searchable: true
+        options_source: "system_core.services.audion_docs_service:openai_model_options"
+        cache_seconds: 3600
+      - id: openai_model_override
+        type: "text"
+        label: "Manual model override"
+        label_ru: "Модель вручную"
+        default: ""
+      - id: openai_chunk_tokens
+        type: "number"
+        label: "Chunk tokens"
+        label_ru: "Размер чанка"
+        default: 12000
+        min: 1000
+        max: 100000
+        step: 500
+      - id: openai_overlap_tokens
+        type: "number"
+        label: "Overlap tokens"
+        label_ru: "Перекрытие"
+        default: 0
+        min: 0
+        max: 20000
+        step: 100
+      - id: openai_min_chunks
+        type: "number"
+        label: "Min chunks"
+        label_ru: "Мин. частей"
+        default: 1
+        min: 1
+        max: 20
+        step: 1
+      - id: openai_workers
+        type: "number"
+        label: "Workers"
+        label_ru: "Многозадачность"
+        default: 4
+        min: 1
+        max: 32
+        step: 1
+        hint: "Chunks at a time"
+        hint_ru: "Частей за раз"
+      - id: openai_max_retries
+        type: "number"
+        label: "Max retries"
+        label_ru: "Повторы"
+        default: 1
+        min: 0
+        max: 20
+        step: 1
+      - id: openai_max_output_tokens
+        type: "number"
+        label: "Max output"
+        label_ru: "Макс. вывод"
+        default: 32000
+        min: 1000
+        max: 100000
+        step: 500
+      - id: openai_timeout_sec
+        type: "number"
+        label: "Timeout sec"
+        label_ru: "Таймаут, сек"
+        default: 240
+        min: 30
+        max: 3600
+        step: 30
+      - id: openai_resume
+        type: "checkbox"
+        label: "Resume cache"
+        label_ru: "Возобновлять из кэша"
+        default: true
+    children:
+      - id: pin_task_openai_key
+        title: "Favorite API key"
+        title_ru: "ДОБАВИТЬ КЛЮЧ В ИЗБРАННОЕ"
+        description: "Save the selected OpenAI API key as a favorite without running the task."
+        description_ru: "Сохранить выбранный ключ OpenAI в избранное без запуска TASK."
+        service: "system_core.services.audion_docs_service:run_pipeline_operation"
+        kind: "safe"
+        parameters:
+          mode: "pin_api_key"
+          provider: "openai"
+      - id: pin_task_openai_model
+        title: "Favorite model"
+        title_ru: "ДОБАВИТЬ МОДЕЛЬ В ИЗБРАННОЕ"
+        description: "Save the selected OpenAI model as a favorite without running the task."
+        description_ru: "Сохранить выбранную модель OpenAI в избранное без запуска TASK."
+        service: "system_core.services.audion_docs_service:run_pipeline_operation"
+        kind: "safe"
+        parameters:
+          mode: "pin_model"
+          provider: "openai"
+          model_tier: "audit"
+      - id: check_task_openai_model
+        title: "Check model"
+        title_ru: "ПРОВЕРИТЬ МОДЕЛЬ"
+        description: "Send one tiny OpenAI request and cache the selected model status."
+        description_ru: "Отправить один маленький запрос OpenAI и сохранить статус выбранной модели."
+        service: "system_core.services.audion_docs_service:run_doc_task_operation"
+        kind: "safe"
+        parameters:
+          mode: "check_model"
+          provider: "openai"
+          model_tier: "audit"
+      - id: run_task_openai
+        title: "Run"
+        title_ru: "ЗАПУСТИТЬ"
+        description: "Run the selected document task with OpenAI and write DOCX/XLSX/MD/JSON reports."
+        description_ru: "Запустить выбранную задачу документов через OpenAI и записать DOCX/XLSX/MD/JSON отчёты."
+        service: "system_core.services.audion_docs_service:run_doc_task_operation"
+        kind: "safe"
+        parameters:
+          mode: "run_doc_task"
+          provider: "openai"
+          model_tier: "audit"
+
+  - id: task_gemini
+    title: "Task Gemini"
+    title_ru: "ЗАДАЧА ДЛЯ GEMINI"
+    description: "Run the selected document task with Gemini and write DOCX/XLSX/MD/JSON reports."
+    description_ru: "Запустить выбранную задачу документов через Gemini и записать DOCX/XLSX/MD/JSON отчёты."
+    service: "system_core.services.audion_docs_service:run_doc_task_operation"
+    kind: "safe"
+    parameters:
+      mode: "run_doc_task"
+      provider: "gemini"
+      model_tier: "audit_fast"
+    fields:
+      - id: doc_task_ref
+        type: "select"
+        label: "Task instruction"
+        label_ru: "Инструкция задачи"
+        default: ""
+        searchable: true
+        options_source: "system_core.services.audion_docs_service:doc_task_options"
+        cache_seconds: 30
+        hint: "Loaded from config/doc_tasks; empty value uses active_doc_task.md."
+        hint_ru: "Список из config/doc_tasks; пустое значение берёт active_doc_task.md."
+      - id: doc_task_pin
+        type: "checkbox"
+        label: "Favorite instruction"
+        label_ru: "Инструкцию в избранное"
+        default: false
+      - id: doc_task_scope
+        type: "select"
+        label: "Task scope"
+        label_ru: "Охват задачи"
+        default: "auto"
+        options:
+          - value: "auto"
+            label: "Auto"
+            label_ru: "Авто"
+          - value: "corpus"
+            label: "Whole input corpus"
+            label_ru: "Весь корпус input"
+          - value: "document"
+            label: "Each file separately"
+            label_ru: "Каждый файл отдельно"
+        hint: "Auto uses one corpus run for multiple files, but keeps exact replacements per file."
+        hint_ru: "Авто запускает один корпусный проход для нескольких файлов, но точные замены оставляет пофайловыми."
+      - id: doc_task_query
+        type: "textarea"
+        label: "Request"
+        label_ru: "Уточнение к TASK"
+        default: ""
+        placeholder: "Например: вывести все упомянутые объекты здравоохранения или заменить 'ошбка' на 'ошибка'."
+        span: "full"
+      - id: doc_task_apply_replacements
+        type: "checkbox"
+        label: "Find and replace text in DOCX documents"
+        label_ru: "Найти и заменить текст в документах DOCX"
+        default: false
+        span: "full"
+      - id: pdf_max_pages
+        type: "number"
+        label: "PDF pages"
+        label_ru: "Страниц PDF"
+        default: 5
+        min: 1
+        max: 200
+        step: 1
+        advanced: true
+        hint: "For TASK PDF inputs, read only the first N pages."
+        hint_ru: "Для PDF во входе TASK читать только первые N страниц."
+      - id: doc_task_clean_table
+        type: "checkbox"
+        label: "Clean table from template"
+        label_ru: "Чистая таблица по шаблону"
+        default: false
+        span: "full"
+        hint: "Write an additional clean XLSX, and a filled DOCX copy when the template is DOCX."
+        hint_ru: "Записать дополнительный чистый XLSX и заполненную DOCX-копию, если шаблон DOCX."
+      - id: doc_task_template_file
+        type: "select"
+        label: "Table template"
+        label_ru: "Шаблон таблицы"
+        default: ""
+        searchable: true
+        options_source: "system_core.services.audion_docs_service:template_file_options"
+        cache_seconds: 30
+        advanced: true
+        hint: "Empty value auto-detects the only DOCX/XLSX template in input."
+        hint_ru: "Пустое значение автоматически берёт единственный DOCX/XLSX-шаблон из input."
+      - id: gemini_api_key_ref
+        type: "select"
+        label: "Gemini API key"
+        label_ru: "Ключ Gemini"
+        default: ""
+        searchable: true
+        options_source: "system_core.services.audion_docs_service:gemini_api_key_options"
+        cache_seconds: 30
+      - id: gemini_model
+        type: "select"
+        label: "Gemini model"
+        label_ru: "Модель Gemini"
+        default: ""
+        searchable: true
+        options_source: "system_core.services.audion_docs_service:gemini_model_options"
+        cache_seconds: 3600
+      - id: gemini_model_override
+        type: "text"
+        label: "Manual model override"
+        label_ru: "Модель вручную"
+        default: ""
+      - id: gemini_chunk_tokens
+        type: "number"
+        label: "Chunk tokens"
+        label_ru: "Размер чанка"
+        default: 12000
+        min: 1000
+        max: 100000
+        step: 500
+      - id: gemini_overlap_tokens
+        type: "number"
+        label: "Overlap tokens"
+        label_ru: "Перекрытие"
+        default: 0
+        min: 0
+        max: 20000
+        step: 100
+      - id: gemini_min_chunks
+        type: "number"
+        label: "Min chunks"
+        label_ru: "Мин. частей"
+        default: 1
+        min: 1
+        max: 20
+        step: 1
+      - id: gemini_workers
+        type: "number"
+        label: "Workers"
+        label_ru: "Многозадачность"
+        default: 4
+        min: 1
+        max: 32
+        step: 1
+        hint: "Chunks at a time"
+        hint_ru: "Частей за раз"
+      - id: gemini_max_retries
+        type: "number"
+        label: "Max retries"
+        label_ru: "Повторы"
+        default: 1
+        min: 0
+        max: 20
+        step: 1
+      - id: gemini_max_output_tokens
+        type: "number"
+        label: "Max output"
+        label_ru: "Макс. вывод"
+        default: 32000
+        min: 1000
+        max: 100000
+        step: 500
+      - id: gemini_timeout_sec
+        type: "number"
+        label: "Timeout sec"
+        label_ru: "Таймаут, сек"
+        default: 240
+        min: 30
+        max: 3600
+        step: 30
+      - id: gemini_resume
+        type: "checkbox"
+        label: "Resume cache"
+        label_ru: "Возобновлять из кэша"
+        default: true
+    children:
+      - id: pin_task_gemini_key
+        title: "Favorite API key"
+        title_ru: "ДОБАВИТЬ КЛЮЧ В ИЗБРАННОЕ"
+        description: "Save the selected Gemini API key as a favorite without running the task."
+        description_ru: "Сохранить выбранный ключ Gemini в избранное без запуска TASK."
+        service: "system_core.services.audion_docs_service:run_pipeline_operation"
+        kind: "safe"
+        parameters:
+          mode: "pin_api_key"
+          provider: "gemini"
+      - id: pin_task_gemini_model
+        title: "Favorite model"
+        title_ru: "ДОБАВИТЬ МОДЕЛЬ В ИЗБРАННОЕ"
+        description: "Save the selected Gemini model as a favorite without running the task."
+        description_ru: "Сохранить выбранную модель Gemini в избранное без запуска TASK."
+        service: "system_core.services.audion_docs_service:run_pipeline_operation"
+        kind: "safe"
+        parameters:
+          mode: "pin_model"
+          provider: "gemini"
+          model_tier: "audit_fast"
+      - id: check_task_gemini_model
+        title: "Check model"
+        title_ru: "ПРОВЕРИТЬ МОДЕЛЬ"
+        description: "Send one tiny Gemini request and cache the selected model status."
+        description_ru: "Отправить один маленький запрос Gemini и сохранить статус выбранной модели."
+        service: "system_core.services.audion_docs_service:run_doc_task_operation"
+        kind: "safe"
+        parameters:
+          mode: "check_model"
+          provider: "gemini"
+          model_tier: "audit_fast"
+      - id: run_task_gemini
+        title: "Run"
+        title_ru: "ЗАПУСТИТЬ"
+        description: "Run the selected document task with Gemini and write DOCX/XLSX/MD/JSON reports."
+        description_ru: "Запустить выбранную задачу документов через Gemini и записать DOCX/XLSX/MD/JSON отчёты."
+        service: "system_core.services.audion_docs_service:run_doc_task_operation"
+        kind: "safe"
+        parameters:
+          mode: "run_doc_task"
+          provider: "gemini"
+          model_tier: "audit_fast"
+
+  - id: task_xai
+    title: "Task xAI"
+    title_ru: "ЗАДАЧА ДЛЯ XAI"
+    description: "Run the selected document task with xAI Grok and write DOCX/XLSX/MD/JSON reports."
+    description_ru: "Запустить выбранную задачу документов через xAI Grok и записать DOCX/XLSX/MD/JSON отчёты."
+    service: "system_core.services.audion_docs_service:run_doc_task_operation"
+    kind: "safe"
+    parameters:
+      mode: "run_doc_task"
+      provider: "xai"
+      model_tier: "audit"
+    fields:
+      - id: doc_task_ref
+        type: "select"
+        label: "Task instruction"
+        label_ru: "Инструкция задачи"
+        default: ""
+        searchable: true
+        options_source: "system_core.services.audion_docs_service:doc_task_options"
+        cache_seconds: 30
+        hint: "Loaded from config/doc_tasks; empty value uses active_doc_task.md."
+        hint_ru: "Список из config/doc_tasks; пустое значение берёт active_doc_task.md."
+      - id: doc_task_pin
+        type: "checkbox"
+        label: "Favorite instruction"
+        label_ru: "Инструкцию в избранное"
+        default: false
+      - id: doc_task_scope
+        type: "select"
+        label: "Task scope"
+        label_ru: "Охват задачи"
+        default: "auto"
+        options:
+          - value: "auto"
+            label: "Auto"
+            label_ru: "Авто"
+          - value: "corpus"
+            label: "Whole input corpus"
+            label_ru: "Весь корпус input"
+          - value: "document"
+            label: "Each file separately"
+            label_ru: "Каждый файл отдельно"
+        hint: "Auto uses one corpus run for multiple files, but keeps exact replacements per file."
+        hint_ru: "Авто запускает один корпусный проход для нескольких файлов, но точные замены оставляет пофайловыми."
+      - id: doc_task_query
+        type: "textarea"
+        label: "Request"
+        label_ru: "Уточнение к TASK"
+        default: ""
+        placeholder: "Например: вывести все упомянутые объекты здравоохранения или заменить 'ошбка' на 'ошибка'."
+        span: "full"
+      - id: doc_task_apply_replacements
+        type: "checkbox"
+        label: "Find and replace text in DOCX documents"
+        label_ru: "Найти и заменить текст в документах DOCX"
+        default: false
+        span: "full"
+      - id: pdf_max_pages
+        type: "number"
+        label: "PDF pages"
+        label_ru: "Страниц PDF"
+        default: 5
+        min: 1
+        max: 200
+        step: 1
+        advanced: true
+        hint: "For TASK PDF inputs, read only the first N pages."
+        hint_ru: "Для PDF во входе TASK читать только первые N страниц."
+      - id: doc_task_clean_table
+        type: "checkbox"
+        label: "Clean table from template"
+        label_ru: "Чистая таблица по шаблону"
+        default: false
+        span: "full"
+        hint: "Write an additional clean XLSX, and a filled DOCX copy when the template is DOCX."
+        hint_ru: "Записать дополнительный чистый XLSX и заполненную DOCX-копию, если шаблон DOCX."
+      - id: doc_task_template_file
+        type: "select"
+        label: "Table template"
+        label_ru: "Шаблон таблицы"
+        default: ""
+        searchable: true
+        options_source: "system_core.services.audion_docs_service:template_file_options"
+        cache_seconds: 30
+        advanced: true
+        hint: "Empty value auto-detects the only DOCX/XLSX template in input."
+        hint_ru: "Пустое значение автоматически берёт единственный DOCX/XLSX-шаблон из input."
+      - id: xai_api_key_ref
+        type: "select"
+        label: "xAI API key"
+        label_ru: "Ключ xAI"
+        default: ""
+        searchable: true
+        options_source: "system_core.services.audion_docs_service:xai_api_key_options"
+        cache_seconds: 30
+      - id: xai_model
+        type: "select"
+        label: "xAI model"
+        label_ru: "Модель xAI"
+        default: ""
+        searchable: true
+        options_source: "system_core.services.audion_docs_service:xai_model_options"
+        cache_seconds: 3600
+      - id: xai_model_override
+        type: "text"
+        label: "Manual model override"
+        label_ru: "Модель вручную"
+        default: ""
+        placeholder: "grok-4.3"
+      - id: xai_chunk_tokens
+        type: "number"
+        label: "Chunk tokens"
+        label_ru: "Размер чанка"
+        default: 12000
+        min: 1000
+        max: 100000
+        step: 500
+      - id: xai_overlap_tokens
+        type: "number"
+        label: "Overlap tokens"
+        label_ru: "Перекрытие"
+        default: 0
+        min: 0
+        max: 20000
+        step: 100
+      - id: xai_min_chunks
+        type: "number"
+        label: "Min chunks"
+        label_ru: "Мин. частей"
+        default: 1
+        min: 1
+        max: 20
+        step: 1
+      - id: xai_workers
+        type: "number"
+        label: "Workers"
+        label_ru: "Многозадачность"
+        default: 4
+        min: 1
+        max: 32
+        step: 1
+        hint: "Chunks at a time"
+        hint_ru: "Частей за раз"
+      - id: xai_max_retries
+        type: "number"
+        label: "Max retries"
+        label_ru: "Повторы"
+        default: 3
+        min: 0
+        max: 20
+        step: 1
+      - id: xai_max_output_tokens
+        type: "number"
+        label: "Max output"
+        label_ru: "Макс. вывод"
+        default: 32000
+        min: 1000
+        max: 100000
+        step: 500
+      - id: xai_timeout_sec
+        type: "number"
+        label: "Timeout sec"
+        label_ru: "Таймаут, сек"
+        default: 600
+        min: 30
+        max: 3600
+        step: 30
+      - id: xai_resume
+        type: "checkbox"
+        label: "Resume cache"
+        label_ru: "Возобновлять из кэша"
+        default: true
+    children:
+      - id: pin_task_xai_key
+        title: "Favorite API key"
+        title_ru: "ДОБАВИТЬ КЛЮЧ В ИЗБРАННОЕ"
+        description: "Save the selected xAI API key as a favorite without running the task."
+        description_ru: "Сохранить выбранный ключ xAI в избранное без запуска TASK."
+        service: "system_core.services.audion_docs_service:run_pipeline_operation"
+        kind: "safe"
+        parameters:
+          mode: "pin_api_key"
+          provider: "xai"
+      - id: pin_task_xai_model
+        title: "Favorite model"
+        title_ru: "ДОБАВИТЬ МОДЕЛЬ В ИЗБРАННОЕ"
+        description: "Save the selected xAI model as a favorite without running the task."
+        description_ru: "Сохранить выбранную модель xAI в избранное без запуска TASK."
+        service: "system_core.services.audion_docs_service:run_pipeline_operation"
+        kind: "safe"
+        parameters:
+          mode: "pin_model"
+          provider: "xai"
+          model_tier: "audit"
+      - id: check_task_xai_model
+        title: "Check model"
+        title_ru: "ПРОВЕРИТЬ МОДЕЛЬ"
+        description: "Send one tiny xAI request and cache the selected model status."
+        description_ru: "Отправить один маленький запрос xAI и сохранить статус выбранной модели."
+        service: "system_core.services.audion_docs_service:run_doc_task_operation"
+        kind: "safe"
+        parameters:
+          mode: "check_model"
+          provider: "xai"
+          model_tier: "audit"
+      - id: run_task_xai
+        title: "Run"
+        title_ru: "ЗАПУСТИТЬ"
+        description: "Run the selected document task with xAI Grok and write DOCX/XLSX/MD/JSON reports."
+        description_ru: "Запустить выбранную задачу документов через xAI Grok и записать DOCX/XLSX/MD/JSON отчёты."
+        service: "system_core.services.audion_docs_service:run_doc_task_operation"
+        kind: "safe"
+        parameters:
+          mode: "run_doc_task"
+          provider: "xai"
+          model_tier: "audit"
+
+  - id: task_anthropic
+    title: "Task Claude"
+    title_ru: "ЗАДАЧА ДЛЯ CLAUDE"
+    description: "Run the selected document task with Anthropic Claude and write DOCX/XLSX/MD/JSON reports."
+    description_ru: "Запустить выбранную задачу документов через Anthropic Claude и записать DOCX/XLSX/MD/JSON отчёты."
+    service: "system_core.services.audion_docs_service:run_doc_task_operation"
+    kind: "safe"
+    parameters:
+      mode: "run_doc_task"
+      provider: "anthropic"
+      model_tier: "audit"
+    fields:
+      - id: doc_task_ref
+        type: "select"
+        label: "Task instruction"
+        label_ru: "Инструкция задачи"
+        default: ""
+        searchable: true
+        options_source: "system_core.services.audion_docs_service:doc_task_options"
+        cache_seconds: 30
+        hint: "Loaded from config/doc_tasks; empty value uses active_doc_task.md."
+        hint_ru: "Список из config/doc_tasks; пустое значение берёт active_doc_task.md."
+      - id: doc_task_pin
+        type: "checkbox"
+        label: "Favorite instruction"
+        label_ru: "Инструкцию в избранное"
+        default: false
+      - id: doc_task_scope
+        type: "select"
+        label: "Task scope"
+        label_ru: "Охват задачи"
+        default: "auto"
+        options:
+          - value: "auto"
+            label: "Auto"
+            label_ru: "Авто"
+          - value: "corpus"
+            label: "Whole input corpus"
+            label_ru: "Весь корпус input"
+          - value: "document"
+            label: "Each file separately"
+            label_ru: "Каждый файл отдельно"
+        hint: "Auto uses one corpus run for multiple files, but keeps exact replacements per file."
+        hint_ru: "Авто запускает один корпусный проход для нескольких файлов, но точные замены оставляет пофайловыми."
+      - id: doc_task_query
+        type: "textarea"
+        label: "Request"
+        label_ru: "Уточнение к TASK"
+        default: ""
+        placeholder: "Например: вывести все упомянутые объекты здравоохранения или заменить 'ошбка' на 'ошибка'."
+        span: "full"
+      - id: doc_task_apply_replacements
+        type: "checkbox"
+        label: "Find and replace text in DOCX documents"
+        label_ru: "Найти и заменить текст в документах DOCX"
+        default: false
+        span: "full"
+      - id: pdf_max_pages
+        type: "number"
+        label: "PDF pages"
+        label_ru: "Страниц PDF"
+        default: 5
+        min: 1
+        max: 200
+        step: 1
+        advanced: true
+        hint: "For TASK PDF inputs, read only the first N pages."
+        hint_ru: "Для PDF во входе TASK читать только первые N страниц."
+      - id: doc_task_clean_table
+        type: "checkbox"
+        label: "Clean table from template"
+        label_ru: "Чистая таблица по шаблону"
+        default: false
+        span: "full"
+        hint: "Write an additional clean XLSX, and a filled DOCX copy when the template is DOCX."
+        hint_ru: "Записать дополнительный чистый XLSX и заполненную DOCX-копию, если шаблон DOCX."
+      - id: doc_task_template_file
+        type: "select"
+        label: "Table template"
+        label_ru: "Шаблон таблицы"
+        default: ""
+        searchable: true
+        options_source: "system_core.services.audion_docs_service:template_file_options"
+        cache_seconds: 30
+        advanced: true
+        hint: "Empty value auto-detects the only DOCX/XLSX template in input."
+        hint_ru: "Пустое значение автоматически берёт единственный DOCX/XLSX-шаблон из input."
+      - id: anthropic_api_key_ref
+        type: "select"
+        label: "Anthropic API key"
+        label_ru: "Ключ Anthropic"
+        default: ""
+        searchable: true
+        options_source: "system_core.services.audion_docs_service:anthropic_api_key_options"
+        cache_seconds: 30
+      - id: anthropic_model
+        type: "select"
+        label: "Claude model"
+        label_ru: "Модель Claude"
+        default: ""
+        searchable: true
+        options_source: "system_core.services.audion_docs_service:anthropic_model_options"
+        cache_seconds: 3600
+      - id: anthropic_model_override
+        type: "text"
+        label: "Manual model override"
+        label_ru: "Модель вручную"
+        default: ""
+        placeholder: "claude-sonnet-5"
+      - id: anthropic_chunk_tokens
+        type: "number"
+        label: "Chunk tokens"
+        label_ru: "Размер чанка"
+        default: 12000
+        min: 1000
+        max: 100000
+        step: 500
+      - id: anthropic_overlap_tokens
+        type: "number"
+        label: "Overlap tokens"
+        label_ru: "Перекрытие"
+        default: 0
+        min: 0
+        max: 20000
+        step: 100
+      - id: anthropic_min_chunks
+        type: "number"
+        label: "Min chunks"
+        label_ru: "Мин. частей"
+        default: 1
+        min: 1
+        max: 20
+        step: 1
+      - id: anthropic_workers
+        type: "number"
+        label: "Workers"
+        label_ru: "Многозадачность"
+        default: 4
+        min: 1
+        max: 32
+        step: 1
+        hint: "Chunks at a time"
+        hint_ru: "Частей за раз"
+      - id: anthropic_max_retries
+        type: "number"
+        label: "Max retries"
+        label_ru: "Повторы"
+        default: 3
+        min: 0
+        max: 20
+        step: 1
+      - id: anthropic_max_output_tokens
+        type: "number"
+        label: "Max output"
+        label_ru: "Макс. вывод"
+        default: 32000
+        min: 1000
+        max: 128000
+        step: 500
+      - id: anthropic_timeout_sec
+        type: "number"
+        label: "Timeout sec"
+        label_ru: "Таймаут, сек"
+        default: 900
+        min: 30
+        max: 3600
+        step: 30
+      - id: anthropic_resume
+        type: "checkbox"
+        label: "Resume cache"
+        label_ru: "Возобновлять из кэша"
+        default: true
+    children:
+      - id: pin_task_anthropic_key
+        title: "Favorite API key"
+        title_ru: "ДОБАВИТЬ КЛЮЧ В ИЗБРАННОЕ"
+        description: "Save the selected Anthropic API key as a favorite without running the task."
+        description_ru: "Сохранить выбранный ключ Anthropic в избранное без запуска TASK."
+        service: "system_core.services.audion_docs_service:run_pipeline_operation"
+        kind: "safe"
+        parameters:
+          mode: "pin_api_key"
+          provider: "anthropic"
+      - id: pin_task_anthropic_model
+        title: "Favorite model"
+        title_ru: "ДОБАВИТЬ МОДЕЛЬ В ИЗБРАННОЕ"
+        description: "Save the selected Claude model as a favorite without running the task."
+        description_ru: "Сохранить выбранную модель Claude в избранное без запуска TASK."
+        service: "system_core.services.audion_docs_service:run_pipeline_operation"
+        kind: "safe"
+        parameters:
+          mode: "pin_model"
+          provider: "anthropic"
+          model_tier: "audit"
+      - id: check_task_anthropic_model
+        title: "Check model"
+        title_ru: "ПРОВЕРИТЬ МОДЕЛЬ"
+        description: "Send one tiny Claude request and cache the selected model status."
+        description_ru: "Отправить один маленький запрос Claude и сохранить статус выбранной модели."
+        service: "system_core.services.audion_docs_service:run_doc_task_operation"
+        kind: "safe"
+        parameters:
+          mode: "check_model"
+          provider: "anthropic"
+          model_tier: "audit"
+      - id: run_task_anthropic
+        title: "Run"
+        title_ru: "ЗАПУСТИТЬ"
+        description: "Run the selected document task with Anthropic Claude and write DOCX/XLSX/MD/JSON reports."
+        description_ru: "Запустить выбранную задачу документов через Anthropic Claude и записать DOCX/XLSX/MD/JSON отчёты."
+        service: "system_core.services.audion_docs_service:run_doc_task_operation"
+        kind: "safe"
+        parameters:
+          mode: "run_doc_task"
+          provider: "anthropic"
+          model_tier: "audit"
+
+  - id: normalize_openai
+    title: "Fix OpenAI"
+    title_ru: "ИСПРАВЛЕНИЕ OPENAI"
+    description: "Fix errors found during previous audit/search steps using existing OpenAI audit logs, without calling the LLM again."
+    description_ru: "Исправить ошибки, найденные на предыдущих шагах поиска и аудита, по готовым журналам OpenAI без повторного вызова LLM."
+    service: "system_core.services.audion_docs_service:normalize_documents_from_audit"
+    kind: "safe"
+    parameters:
+      provider: "openai"
+    fields:
+      - id: normalize_openai_contents
+        type: "info"
+        label: "What will be fixed"
+        label_ru: "Что исправляем"
+        text: "Reads existing OpenAI audit JSON logs, takes only safe DOCX text fixes for errors found on previous steps, writes corrected copies to the output folder, and stores JSON/XLSX/DOCX/MD reports plus a patch plan."
+        text_ru: "Берёт готовые JSON-журналы аудита OpenAI, применяет только безопасные DOCX-исправления ошибок, найденных на предыдущих шагах, складывает исправленные копии в папку результата и записывает JSON/XLSX/DOCX/MD отчёты плюс patch-plan."
+        section: "content"
+        parameter: false
+      - id: logs_dir
+        type: "text"
+        label: "Audit logs"
+        label_ru: "Журналы аудита"
+        default: "logs"
+        span: "full"
+      - id: output_dir
+        type: "text"
+        label: "Output folder"
+        label_ru: "Папка результата"
+        default: "output"
+        span: "full"
+      - id: report_dir
+        type: "text"
+        label: "Report folder"
+        label_ru: "Папка отчёта"
+        default: "output/_normalization"
+        span: "full"
+        advanced: true
+      - id: patch_dir
+        type: "text"
+        label: "Patch plan folder"
+        label_ru: "Папка patch-plan"
+        default: "report/document_normalization"
+        span: "full"
+        advanced: true
+      - id: dry_run
+        type: "checkbox"
+        label: "Dry-run"
+        label_ru: "Пробный запуск без записи DOCX"
+        default: false
+
+  - id: normalize_gemini
+    title: "Fix Gemini"
+    title_ru: "ИСПРАВЛЕНИЕ GEMINI"
+    description: "Fix errors found during previous audit/search steps using existing Gemini audit logs, without calling the LLM again."
+    description_ru: "Исправить ошибки, найденные на предыдущих шагах поиска и аудита, по готовым журналам Gemini без повторного вызова LLM."
+    service: "system_core.services.audion_docs_service:normalize_documents_from_audit"
+    kind: "safe"
+    parameters:
+      provider: "gemini"
+    fields:
+      - id: normalize_gemini_contents
+        type: "info"
+        label: "What will be fixed"
+        label_ru: "Что исправляем"
+        text: "Reads existing Gemini audit JSON logs, takes only safe DOCX text fixes for errors found on previous steps, writes corrected copies to the output folder, and stores JSON/XLSX/DOCX/MD reports plus a patch plan."
+        text_ru: "Берёт готовые JSON-журналы аудита Gemini, применяет только безопасные DOCX-исправления ошибок, найденных на предыдущих шагах, складывает исправленные копии в папку результата и записывает JSON/XLSX/DOCX/MD отчёты плюс patch-plan."
+        section: "content"
+        parameter: false
+      - id: logs_dir
+        type: "text"
+        label: "Audit logs"
+        label_ru: "Журналы аудита"
+        default: "logs"
+        span: "full"
+      - id: output_dir
+        type: "text"
+        label: "Output folder"
+        label_ru: "Папка результата"
+        default: "output"
+        span: "full"
+      - id: report_dir
+        type: "text"
+        label: "Report folder"
+        label_ru: "Папка отчёта"
+        default: "output/_normalization"
+        span: "full"
+        advanced: true
+      - id: patch_dir
+        type: "text"
+        label: "Patch plan folder"
+        label_ru: "Папка patch-plan"
+        default: "report/document_normalization"
+        span: "full"
+        advanced: true
+      - id: dry_run
+        type: "checkbox"
+        label: "Dry-run"
+        label_ru: "Пробный запуск без записи DOCX"
+        default: false
+
+  - id: normalize_xai
+    title: "Fix xAI"
+    title_ru: "ИСПРАВЛЕНИЕ XAI"
+    description: "Fix errors found during previous audit/search steps using existing xAI audit logs, without calling the LLM again."
+    description_ru: "Исправить ошибки, найденные на предыдущих шагах поиска и аудита, по готовым журналам xAI без повторного вызова LLM."
+    service: "system_core.services.audion_docs_service:normalize_documents_from_audit"
+    kind: "safe"
+    parameters:
+      provider: "xai"
+    fields:
+      - id: normalize_xai_contents
+        type: "info"
+        label: "What will be fixed"
+        label_ru: "Что исправляем"
+        text: "Reads existing xAI audit JSON logs, takes only safe DOCX text fixes for errors found on previous steps, writes corrected copies to the output folder, and stores JSON/XLSX/DOCX/MD reports plus a patch plan."
+        text_ru: "Берёт готовые JSON-журналы аудита xAI, применяет только безопасные DOCX-исправления ошибок, найденных на предыдущих шагах, складывает исправленные копии в папку результата и записывает JSON/XLSX/DOCX/MD отчёты плюс patch-plan."
+        section: "content"
+        parameter: false
+      - id: logs_dir
+        type: "text"
+        label: "Audit logs"
+        label_ru: "Журналы аудита"
+        default: "logs"
+        span: "full"
+      - id: output_dir
+        type: "text"
+        label: "Output folder"
+        label_ru: "Папка результата"
+        default: "output"
+        span: "full"
+      - id: report_dir
+        type: "text"
+        label: "Report folder"
+        label_ru: "Папка отчёта"
+        default: "output/_normalization"
+        span: "full"
+        advanced: true
+      - id: patch_dir
+        type: "text"
+        label: "Patch plan folder"
+        label_ru: "Папка patch-plan"
+        default: "report/document_normalization"
+        span: "full"
+        advanced: true
+      - id: dry_run
+        type: "checkbox"
+        label: "Dry-run"
+        label_ru: "Пробный запуск без записи DOCX"
+        default: false
+
+  - id: normalize_anthropic
+    title: "Fix Claude"
+    title_ru: "ИСПРАВЛЕНИЕ CLAUDE"
+    description: "Fix errors found during previous audit/search steps using existing Claude audit logs, without calling the LLM again."
+    description_ru: "Исправить ошибки, найденные на предыдущих шагах поиска и аудита, по готовым журналам Claude без повторного вызова LLM."
+    service: "system_core.services.audion_docs_service:normalize_documents_from_audit"
+    kind: "safe"
+    parameters:
+      provider: "anthropic"
+    fields:
+      - id: normalize_anthropic_contents
+        type: "info"
+        label: "What will be fixed"
+        label_ru: "Что исправляем"
+        text: "Reads existing Claude audit JSON logs, takes only safe DOCX text fixes for errors found on previous steps, writes corrected copies to the output folder, and stores JSON/XLSX/DOCX/MD reports plus a patch plan."
+        text_ru: "Берёт готовые JSON-журналы аудита Claude, применяет только безопасные DOCX-исправления ошибок, найденных на предыдущих шагах, складывает исправленные копии в папку результата и записывает JSON/XLSX/DOCX/MD отчёты плюс patch-plan."
+        section: "content"
+        parameter: false
+      - id: logs_dir
+        type: "text"
+        label: "Audit logs"
+        label_ru: "Журналы аудита"
+        default: "logs"
+        span: "full"
+      - id: output_dir
+        type: "text"
+        label: "Output folder"
+        label_ru: "Папка результата"
+        default: "output"
+        span: "full"
+      - id: report_dir
+        type: "text"
+        label: "Report folder"
+        label_ru: "Папка отчёта"
+        default: "output/_normalization"
+        span: "full"
+        advanced: true
+      - id: patch_dir
+        type: "text"
+        label: "Patch plan folder"
+        label_ru: "Папка patch-plan"
+        default: "report/document_normalization"
+        span: "full"
+        advanced: true
+      - id: dry_run
+        type: "checkbox"
+        label: "Dry-run"
+        label_ru: "Пробный запуск без записи DOCX"
+        default: false
+
+  - id: rules
+    title: "Audit rules"
+    title_ru: "Правила аудита"
+    description: "Select, favorite, and import single-file audit instruction sets."
+    description_ru: "Выбор, добавление в избранное и импорт единых файлов инструкций аудита."
+    fields:
+      - id: audit_rule_ref
+        type: "select"
+        label: "Audit rules"
+        label_ru: "Правила аудита"
+        default: ""
+        searchable: true
+        options_source: "system_core.services.audion_docs_service:audit_rule_options"
+        cache_seconds: 30
+        hint: "Loaded from config/audit_rules; empty value uses active_audit_rules.md."
+        hint_ru: "Список из config/audit_rules; пустое значение берёт active_audit_rules.md."
+      - id: audit_rule_pin
+        type: "checkbox"
+        label: "Favorite"
+        label_ru: "В избранное"
+        default: false
+      - id: audit_rule_file
+        type: "file"
+        label: "Rules file to import"
+        label_ru: "Файл правил для импорта"
+        default: ""
+        file_filter: "Markdown files|*.md|Text files|*.txt|All files|*.*"
+        hint: "First pick a file; Import selected file copies it into config/audit_rules with a unique name and makes it active."
+        hint_ru: "Сначала выберите файл; кнопка «Импортировать выбранный файл» копирует его в config/audit_rules с уникальным именем и делает активным."
+      - id: audit_rule_label
+        type: "text"
+        label: "Imported label"
+        label_ru: "Метка импорта"
+        default: ""
+        placeholder: "Строгий юридический аудит"
+      - id: audit_rule_note
+        type: "text"
+        label: "Imported note"
+        label_ru: "Пояснение импорта"
+        default: ""
+        placeholder: "Короткая заметка для списка"
+    children:
+      - id: set_active_audit_rule
+        title: "Set active"
+        title_ru: "СДЕЛАТЬ АКТИВНЫМИ"
+        description: "Copy the selected rules into config/audit_rules/active_audit_rules.md."
+        description_ru: "Скопировать выбранные правила в config/audit_rules/active_audit_rules.md."
+        service: "system_core.services.audion_docs_service:run_pipeline_operation"
+        kind: "safe"
+        parameters:
+          mode: "set_active_audit_rule"
+      - id: pin_audit_rule
+        title: "Favorite rules"
+        title_ru: "ПРАВИЛА В ИЗБРАННОЕ"
+        description: "Save the selected audit rules as a favorite without running audit."
+        description_ru: "Сохранить выбранные правила в избранное без запуска аудита."
+        service: "system_core.services.audion_docs_service:run_pipeline_operation"
+        kind: "safe"
+        parameters:
+          mode: "pin_audit_rule"
+      - id: import_audit_rule
+        title: "Import selected file"
+        title_ru: "ИМПОРТИРОВАТЬ ВЫБРАННЫЙ ФАЙЛ"
+        description: "Copy a selected Markdown/TXT file into config/audit_rules and make it active."
+        description_ru: "Скопировать выбранный Markdown/TXT в config/audit_rules и сделать активным."
+        service: "system_core.services.audion_docs_service:run_pipeline_operation"
+        kind: "safe"
+        parameters:
+          mode: "import_audit_rule"
+
+  - id: doc_tasks
+    title: "Document tasks"
+    title_ru: "Инструкция задачи"
+    description: "Run arbitrary LLM instructions over DOCX/PPTX/XLSX/PDF and produce DOCX/XLSX-first results."
+    description_ru: "Выбор и импорт Markdown/TXT инструкций TASK для DOCX/PPTX/XLSX/PDF."
+    fields:
+      - id: doc_task_ref
+        type: "select"
+        label: "Task instruction"
+        label_ru: "Инструкция задачи"
+        default: ""
+        searchable: true
+        options_source: "system_core.services.audion_docs_service:doc_task_options"
+        cache_seconds: 30
+        hint: "Loaded from config/doc_tasks; empty value uses active_doc_task.md."
+        hint_ru: "Список из config/doc_tasks; пустое значение берёт active_doc_task.md."
+      - id: doc_task_pin
+        type: "checkbox"
+        label: "Favorite instruction"
+        label_ru: "Инструкцию в избранное"
+        default: false
+      - id: doc_task_scope
+        type: "select"
+        label: "Task scope"
+        label_ru: "Охват задачи"
+        default: "auto"
+        options:
+          - value: "auto"
+            label: "Auto"
+            label_ru: "Авто"
+          - value: "corpus"
+            label: "Whole input corpus"
+            label_ru: "Весь корпус input"
+          - value: "document"
+            label: "Each file separately"
+            label_ru: "Каждый файл отдельно"
+        hint: "Auto uses one corpus run for multiple files, but keeps exact replacements per file."
+        hint_ru: "Авто запускает один корпусный проход для нескольких файлов, но точные замены оставляет пофайловыми."
+      - id: doc_task_query
+        type: "textarea"
+        label: "Request"
+        label_ru: "Уточнение к TASK"
+        default: ""
+        placeholder: "Например: вывести все упомянутые объекты здравоохранения или заменить 'ошбка' на 'ошибка'."
+        span: "full"
+      - id: doc_task_apply_replacements
+        type: "checkbox"
+        label: "Find and replace text in DOCX documents"
+        label_ru: "Найти и заменить текст в документах DOCX"
+        default: false
+        span: "full"
+      - id: pdf_max_pages
+        type: "number"
+        label: "PDF pages"
+        label_ru: "Страниц PDF"
+        default: 5
+        min: 1
+        max: 200
+        step: 1
+        advanced: true
+        hint: "For TASK PDF inputs, read only the first N pages."
+        hint_ru: "Для PDF во входе TASK читать только первые N страниц."
+      - id: doc_task_clean_table
+        type: "checkbox"
+        label: "Clean table from template"
+        label_ru: "Чистая таблица по шаблону"
+        default: false
+        span: "full"
+        hint: "Write an additional clean XLSX, and a filled DOCX copy when the template is DOCX."
+        hint_ru: "Записать дополнительный чистый XLSX и заполненную DOCX-копию, если шаблон DOCX."
+      - id: doc_task_template_file
+        type: "select"
+        label: "Table template"
+        label_ru: "Шаблон таблицы"
+        default: ""
+        searchable: true
+        options_source: "system_core.services.audion_docs_service:template_file_options"
+        cache_seconds: 30
+        advanced: true
+        hint: "Empty value auto-detects the only DOCX/XLSX template in input."
+        hint_ru: "Пустое значение автоматически берёт единственный DOCX/XLSX-шаблон из input."
+      - id: doc_task_file
+        type: "file"
+        label: "Task file to import"
+        label_ru: "Файл инструкции для импорта"
+        default: ""
+        file_filter: "Markdown files|*.md|Text files|*.txt|All files|*.*"
+        hint: "First pick a file; Import selected file copies it into config/doc_tasks with a unique name and makes it active."
+        hint_ru: "Сначала выберите файл; кнопка «Импортировать выбранный файл» копирует его в config/doc_tasks с уникальным именем и делает активным."
+      - id: doc_task_label
+        type: "text"
+        label: "Imported label"
+        label_ru: "Метка импорта"
+        default: ""
+        placeholder: "Объекты здравоохранения"
+      - id: doc_task_note
+        type: "text"
+        label: "Imported note"
+        label_ru: "Пояснение импорта"
+        default: ""
+        placeholder: "Короткая заметка для списка"
+    children:
+      - id: set_active_doc_task
+        title: "Set active"
+        title_ru: "СДЕЛАТЬ АКТИВНОЙ"
+        description: "Copy the selected instruction into config/doc_tasks/active_doc_task.md."
+        description_ru: "Скопировать выбранную инструкцию в config/doc_tasks/active_doc_task.md."
+        service: "system_core.services.audion_docs_service:run_doc_task_operation"
+        kind: "safe"
+        parameters:
+          mode: "set_active_doc_task"
+      - id: pin_doc_task
+        title: "Favorite task"
+        title_ru: "ЗАДАЧУ В ИЗБРАННОЕ"
+        description: "Save the selected document task instruction as a favorite."
+        description_ru: "Сохранить выбранную инструкцию задачи в избранное."
+        service: "system_core.services.audion_docs_service:run_doc_task_operation"
+        kind: "safe"
+        parameters:
+          mode: "pin_doc_task"
+      - id: import_doc_task
+        title: "Import selected file"
+        title_ru: "ИМПОРТИРОВАТЬ ВЫБРАННЫЙ ФАЙЛ"
+        description: "Copy a selected Markdown/TXT instruction into config/doc_tasks and make it active."
+        description_ru: "Скопировать Markdown/TXT инструкцию в config/doc_tasks и сделать активной."
+        service: "system_core.services.audion_docs_service:run_doc_task_operation"
+        kind: "safe"
+        parameters:
+          mode: "import_doc_task"
+      - id: run_doc_task_openai
+        title: "Run with OpenAI"
+        title_ru: "ЗАПУСТИТЬ ЧЕРЕЗ OPENAI"
+        description: "Run the selected document task and write DOCX/XLSX/MD/JSON reports."
+        description_ru: "Запустить задачу и записать DOCX/XLSX/MD/JSON отчёты."
+        service: "system_core.services.audion_docs_service:run_doc_task_operation"
+        kind: "safe"
+        parameters:
+          mode: "run_doc_task"
+          provider: "openai"
+          model_tier: "audit"
+        fields:
+          - id: openai_api_key_ref
+            type: "select"
+            label: "OpenAI API key"
+            label_ru: "Ключ OpenAI"
+            default: ""
+            searchable: true
+            options_source: "system_core.services.audion_docs_service:openai_api_key_options"
+            cache_seconds: 30
+          - id: openai_model
+            type: "select"
+            label: "OpenAI model"
+            label_ru: "Модель OpenAI"
+            default: ""
+            searchable: true
+            options_source: "system_core.services.audion_docs_service:openai_model_options"
+            cache_seconds: 3600
+          - id: openai_model_override
+            type: "text"
+            label: "Manual model override"
+            label_ru: "Модель вручную"
+            default: ""
+          - id: openai_chunk_tokens
+            type: "number"
+            label: "Chunk tokens"
+            label_ru: "Размер чанка"
+            default: 12000
+            min: 1000
+            max: 100000
+            step: 500
+          - id: openai_overlap_tokens
+            type: "number"
+            label: "Overlap tokens"
+            label_ru: "Перекрытие"
+            default: 0
+            min: 0
+            max: 20000
+            step: 100
+          - id: openai_min_chunks
+            type: "number"
+            label: "Min chunks"
+            label_ru: "Мин. частей"
+            default: 1
+            min: 1
+            max: 20
+            step: 1
+          - id: openai_workers
+            type: "number"
+            label: "Workers"
+            label_ru: "Многозадачность"
+            default: 4
+            min: 1
+            max: 32
+            step: 1
+            hint: "Chunks at a time"
+            hint_ru: "Частей за раз"
+          - id: openai_max_retries
+            type: "number"
+            label: "Max retries"
+            label_ru: "Повторы"
+            default: 1
+            min: 0
+            max: 20
+            step: 1
+          - id: openai_max_output_tokens
+            type: "number"
+            label: "Max output"
+            label_ru: "Макс. вывод"
+            default: 32000
+            min: 1000
+            max: 100000
+            step: 500
+          - id: openai_timeout_sec
+            type: "number"
+            label: "Timeout sec"
+            label_ru: "Таймаут, сек"
+            default: 240
+            min: 30
+            max: 3600
+            step: 30
+          - id: openai_resume
+            type: "checkbox"
+            label: "Resume cache"
+            label_ru: "Возобновлять из кэша"
+            default: true
+      - id: run_doc_task_gemini
+        title: "Run with Gemini"
+        title_ru: "ЗАПУСТИТЬ ЧЕРЕЗ GEMINI"
+        description: "Run the selected document task and write DOCX/XLSX/MD/JSON reports."
+        description_ru: "Запустить задачу и записать DOCX/XLSX/MD/JSON отчёты."
+        service: "system_core.services.audion_docs_service:run_doc_task_operation"
+        kind: "safe"
+        parameters:
+          mode: "run_doc_task"
+          provider: "gemini"
+          model_tier: "audit_fast"
+        fields:
+          - id: gemini_api_key_ref
+            type: "select"
+            label: "Gemini API key"
+            label_ru: "Ключ Gemini"
+            default: ""
+            searchable: true
+            options_source: "system_core.services.audion_docs_service:gemini_api_key_options"
+            cache_seconds: 30
+          - id: gemini_model
+            type: "select"
+            label: "Gemini model"
+            label_ru: "Модель Gemini"
+            default: ""
+            searchable: true
+            options_source: "system_core.services.audion_docs_service:gemini_model_options"
+            cache_seconds: 3600
+          - id: gemini_model_override
+            type: "text"
+            label: "Manual model override"
+            label_ru: "Модель вручную"
+            default: ""
+          - id: gemini_chunk_tokens
+            type: "number"
+            label: "Chunk tokens"
+            label_ru: "Размер чанка"
+            default: 12000
+            min: 1000
+            max: 100000
+            step: 500
+          - id: gemini_overlap_tokens
+            type: "number"
+            label: "Overlap tokens"
+            label_ru: "Перекрытие"
+            default: 0
+            min: 0
+            max: 20000
+            step: 100
+          - id: gemini_min_chunks
+            type: "number"
+            label: "Min chunks"
+            label_ru: "Мин. частей"
+            default: 1
+            min: 1
+            max: 20
+            step: 1
+          - id: gemini_workers
+            type: "number"
+            label: "Workers"
+            label_ru: "Многозадачность"
+            default: 4
+            min: 1
+            max: 32
+            step: 1
+            hint: "Chunks at a time"
+            hint_ru: "Частей за раз"
+          - id: gemini_max_retries
+            type: "number"
+            label: "Max retries"
+            label_ru: "Повторы"
+            default: 1
+            min: 0
+            max: 20
+            step: 1
+          - id: gemini_max_output_tokens
+            type: "number"
+            label: "Max output"
+            label_ru: "Макс. вывод"
+            default: 32000
+            min: 1000
+            max: 100000
+            step: 500
+          - id: gemini_timeout_sec
+            type: "number"
+            label: "Timeout sec"
+            label_ru: "Таймаут, сек"
+            default: 240
+            min: 30
+            max: 3600
+            step: 30
+          - id: gemini_resume
+            type: "checkbox"
+            label: "Resume cache"
+            label_ru: "Возобновлять из кэша"
+            default: true
+      - id: run_doc_task_xai
+        title: "Run with xAI"
+        title_ru: "ЗАПУСТИТЬ ЧЕРЕЗ XAI"
+        description: "Run the selected document task and write DOCX/XLSX/MD/JSON reports."
+        description_ru: "Запустить задачу и записать DOCX/XLSX/MD/JSON отчёты."
+        service: "system_core.services.audion_docs_service:run_doc_task_operation"
+        kind: "safe"
+        parameters:
+          mode: "run_doc_task"
+          provider: "xai"
+          model_tier: "audit"
+        fields:
+          - id: xai_api_key_ref
+            type: "select"
+            label: "xAI API key"
+            label_ru: "Ключ xAI"
+            default: ""
+            searchable: true
+            options_source: "system_core.services.audion_docs_service:xai_api_key_options"
+            cache_seconds: 30
+          - id: xai_model
+            type: "select"
+            label: "xAI model"
+            label_ru: "Модель xAI"
+            default: ""
+            searchable: true
+            options_source: "system_core.services.audion_docs_service:xai_model_options"
+            cache_seconds: 3600
+          - id: xai_model_override
+            type: "text"
+            label: "Manual model override"
+            label_ru: "Модель вручную"
+            default: "grok-4.3"
+          - id: xai_chunk_tokens
+            type: "number"
+            label: "Chunk tokens"
+            label_ru: "Размер чанка"
+            default: 12000
+            min: 1000
+            max: 100000
+            step: 500
+          - id: xai_overlap_tokens
+            type: "number"
+            label: "Overlap tokens"
+            label_ru: "Перекрытие"
+            default: 0
+            min: 0
+            max: 20000
+            step: 100
+          - id: xai_min_chunks
+            type: "number"
+            label: "Min chunks"
+            label_ru: "Мин. частей"
+            default: 1
+            min: 1
+            max: 20
+            step: 1
+          - id: xai_workers
+            type: "number"
+            label: "Workers"
+            label_ru: "Многозадачность"
+            default: 4
+            min: 1
+            max: 32
+            step: 1
+            hint: "Chunks at a time"
+            hint_ru: "Частей за раз"
+          - id: xai_max_retries
+            type: "number"
+            label: "Max retries"
+            label_ru: "Повторы"
+            default: 3
+            min: 0
+            max: 20
+            step: 1
+          - id: xai_max_output_tokens
+            type: "number"
+            label: "Max output"
+            label_ru: "Макс. вывод"
+            default: 32000
+            min: 1000
+            max: 100000
+            step: 500
+          - id: xai_timeout_sec
+            type: "number"
+            label: "Timeout sec"
+            label_ru: "Таймаут, сек"
+            default: 600
+            min: 30
+            max: 3600
+            step: 30
+          - id: xai_resume
+            type: "checkbox"
+            label: "Resume cache"
+            label_ru: "Возобновлять из кэша"
+            default: true
+
+  - id: specialized_commands
+    title: "Specialized commands"
+    title_ru: "Специализированные команды"
+    description: "Document recovery tools and specialized local operations."
+    description_ru: "Восстановление регистра после запятых и другие локальные спецоперации."
+    children:
+      - id: quick_doc_tasks
+        title: "Quick document task"
+        title_ru: "Быстрая задача"
+        description: "Type an inline LLM instruction, optionally reuse cached/favorite quick instructions, and run it over input."
+        description_ru: "Окно TASK с историей, пинами, загрузкой MD/TXT-инструкций и запуском по input."
+        fields:
+          - id: quick_doc_task_ref
+            type: "select"
+            label: "Saved quick instruction"
+            label_ru: "История TASK / пины"
+            default: ""
+            searchable: true
+            options_source: "system_core.services.audion_docs_service:quick_doc_task_options"
+            cache_seconds: 15
+            hide_refresh: true
+            span: "third"
+            section: "task_sources"
+            load_text_to: "quick_doc_task_instruction"
+            load_label_to: "quick_doc_task_label"
+            load_note_to: "quick_doc_task_note"
+          - id: quick_doc_task_actions
+            type: "action_buttons"
+            label: "Quick history actions"
+            label_ru: "Действия истории"
+            parameter: false
+            hide_label: true
+            span: "third"
+            section: "task_sources"
+            include_fields:
+              - quick_doc_task_ref
+              - quick_doc_task_instruction
+              - quick_doc_task_label
+              - quick_doc_task_note
+            actions:
+              - id: pin_quick_doc_task
+                icon: "push_pin"
+                label: "Pin"
+                label_ru: "Закрепить"
+                tooltip: "Pin the selected quick instruction, or save and pin the typed TASK text."
+                tooltip_ru: "Закрепить выбранную запись; если запись не выбрана, сохранить и закрепить текст TASK."
+                service: "system_core.services.audion_docs_service:run_doc_task_operation"
+                kind: "safe"
+                parameters:
+                  mode: "pin_quick_doc_task"
+                  quick_doc_task: true
+              - id: unpin_quick_doc_task
+                icon: "block"
+                label: "Unpin"
+                label_ru: "Открепить"
+                tooltip: "Unpin the selected quick instruction without deleting it."
+                tooltip_ru: "Открепить выбранную запись, не удаляя её из истории."
+                service: "system_core.services.audion_docs_service:run_doc_task_operation"
+                kind: "safe"
+                parameters:
+                  mode: "unpin_quick_doc_task"
+                  quick_doc_task: true
+              - id: delete_quick_doc_task
+                icon: "delete"
+                label: "Del"
+                label_ru: "Удалить"
+                tooltip: "Delete only the selected quick instruction from history."
+                tooltip_ru: "Удалить из истории только выбранную запись."
+                service: "system_core.services.audion_docs_service:run_doc_task_operation"
+                kind: "dangerous"
+                parameters:
+                  mode: "delete_quick_doc_task"
+                  quick_doc_task: true
+          - id: doc_task_ref
+            type: "select"
+            label: "Managed MD instruction"
+            label_ru: "MD-инструкция из библиотеки"
+            default: ""
+            searchable: true
+            options_source: "system_core.services.audion_docs_service:doc_task_options"
+            cache_seconds: 30
+            hide_refresh: true
+            span: "third"
+            section: "task_sources"
+            load_text_to: "quick_doc_task_instruction"
+            load_label_to: "quick_doc_task_label"
+            load_note_to: "quick_doc_task_note"
+          - id: doc_task_file
+            type: "file"
+            label: "External MD/TXT instruction"
+            label_ru: "MD/TXT-инструкция извне"
+            default: ""
+            file_filter: "Markdown files|*.md|Text files|*.txt|All files|*.*"
+            section: "task_sources"
+            load_text_to: "quick_doc_task_instruction"
+            load_label_to: "quick_doc_task_label"
+          - id: quick_doc_task_instruction
+            type: "markdown_editor"
+            label: "TASK"
+            label_ru: "TASK"
+            default: ""
+            placeholder: "Например: сопоставь объекты из DOCX с таблицами XLSX, выведи object_name, docx_source, xlsx_source, match_status, confidence."
+            span: "full"
+            rows: 16
+            autogrow: false
+            language: "Markdown"
+            theme_dark: "vscodeDark"
+            theme_light: "vscodeLight"
+            line_wrapping: true
+            section: "task_editor"
+            classes: "audion-task-codemirror audion-task-editor"
+          - id: quick_doc_task_label
+            type: "text"
+            label: "Label"
+            label_ru: "Метка истории"
+            default: ""
+            placeholder: "Быстрое сопоставление"
+            span: "half"
+            section: "task_editor"
+          - id: quick_doc_task_note
+            type: "text"
+            label: "Note"
+            label_ru: "Пояснение истории"
+            default: ""
+            placeholder: "Короткая заметка для списка"
+            span: "half"
+            section: "task_editor"
+          - id: doc_task_scope
+            type: "select"
+            label: "Task scope"
+            label_ru: "Охват задачи"
+            default: "auto"
+            section: "task_options"
+            options:
+              - value: "auto"
+                label: "Auto"
+                label_ru: "Авто"
+              - value: "corpus"
+                label: "Whole input corpus"
+                label_ru: "Весь корпус input"
+              - value: "document"
+                label: "Each file separately"
+                label_ru: "Каждый файл отдельно"
+          - id: doc_task_query
+            type: "textarea"
+            label: "Request"
+            label_ru: "Уточнение к TASK"
+            default: ""
+            placeholder: "Дополнение к инструкции: какие колонки вывести, что считать совпадением, что отметить как расхождение."
+            span: "full"
+            rows: 3
+            section: "task_options"
+          - id: doc_task_apply_replacements
+            type: "checkbox"
+            label: "Find and replace text in DOCX documents"
+            label_ru: "Найти и заменить текст в документах DOCX"
+            default: false
+            span: "full"
+            section: "task_options"
+          - id: pdf_max_pages
+            type: "number"
+            label: "PDF pages"
+            label_ru: "Страниц PDF"
+            default: 5
+            min: 1
+            max: 200
+            step: 1
+            advanced: true
+            section: "task_options"
+            hint: "For TASK PDF inputs, read only the first N pages."
+            hint_ru: "Для PDF во входе TASK читать только первые N страниц."
+          - id: doc_task_clean_table
+            type: "checkbox"
+            label: "Clean table from template"
+            label_ru: "Чистая таблица по шаблону"
+            default: false
+            span: "full"
+            section: "task_options"
+            hint: "Write an additional clean XLSX, and a filled DOCX copy when the template is DOCX."
+            hint_ru: "Записать дополнительный чистый XLSX и заполненную DOCX-копию, если шаблон DOCX."
+          - id: doc_task_template_file
+            type: "select"
+            label: "Table template"
+            label_ru: "Шаблон таблицы"
+            default: ""
+            searchable: true
+            options_source: "system_core.services.audion_docs_service:template_file_options"
+            cache_seconds: 30
+            advanced: true
+            section: "task_options"
+            hint: "Empty value auto-detects the only DOCX/XLSX template in input."
+            hint_ru: "Пустое значение автоматически берёт единственный DOCX/XLSX-шаблон из input."
+        children:
+          - id: save_quick_doc_task
+            title: "Save quick instruction"
+            title_ru: "СОХРАНИТЬ В ИСТОРИЮ"
+            description: "Save the typed quick instruction into config/gui_doc_task_quick_cache.json."
+            description_ru: "Сохранить текст из окна TASK в историю быстрых инструкций."
+            service: "system_core.services.audion_docs_service:run_doc_task_operation"
+            kind: "safe"
+            parameters:
+              mode: "save_quick_doc_task"
+              quick_doc_task: true
+          - id: run_quick_doc_task_openai
+            title: "Run quick with OpenAI"
+            title_ru: "ЗАПУСТИТЬ TASK OPENAI"
+            description: "Run the quick instruction and write styled DOCX/XLSX/MD/JSON reports."
+            description_ru: "Запустить быструю инструкцию и записать оформленные DOCX/XLSX/MD/JSON отчёты."
+            service: "system_core.services.audion_docs_service:run_doc_task_operation"
+            kind: "safe"
+            parameters:
+              mode: "run_quick_doc_task"
+              quick_doc_task: true
+              provider: "openai"
+              model_tier: "audit"
+            fields:
+              - id: openai_api_key_ref
+                type: "select"
+                label: "OpenAI API key"
+                label_ru: "Ключ OpenAI"
+                default: ""
+                searchable: true
+                options_source: "system_core.services.audion_docs_service:openai_api_key_options"
+                cache_seconds: 30
+              - id: openai_model
+                type: "select"
+                label: "OpenAI model"
+                label_ru: "Модель OpenAI"
+                default: ""
+                searchable: true
+                options_source: "system_core.services.audion_docs_service:openai_model_options"
+                cache_seconds: 3600
+              - id: openai_model_override
+                type: "text"
+                label: "Manual model override"
+                label_ru: "Модель вручную"
+                default: ""
+              - id: openai_chunk_tokens
+                type: "number"
+                label: "Chunk tokens"
+                label_ru: "Размер чанка"
+                default: 12000
+                min: 1000
+                max: 100000
+                step: 500
+              - id: openai_overlap_tokens
+                type: "number"
+                label: "Overlap tokens"
+                label_ru: "Перекрытие"
+                default: 0
+                min: 0
+                max: 20000
+                step: 100
+              - id: openai_min_chunks
+                type: "number"
+                label: "Min chunks"
+                label_ru: "Мин. частей"
+                default: 1
+                min: 1
+                max: 20
+                step: 1
+              - id: openai_workers
+                type: "number"
+                label: "Workers"
+                label_ru: "Многозадачность"
+                default: 4
+                min: 1
+                max: 32
+                step: 1
+                hint: "Chunks at a time"
+                hint_ru: "Частей за раз"
+              - id: openai_max_retries
+                type: "number"
+                label: "Max retries"
+                label_ru: "Повторы"
+                default: 1
+                min: 0
+                max: 20
+                step: 1
+              - id: openai_max_output_tokens
+                type: "number"
+                label: "Max output"
+                label_ru: "Макс. вывод"
+                default: 32000
+                min: 1000
+                max: 100000
+                step: 500
+              - id: openai_timeout_sec
+                type: "number"
+                label: "Timeout sec"
+                label_ru: "Таймаут, сек"
+                default: 240
+                min: 30
+                max: 3600
+                step: 30
+              - id: openai_resume
+                type: "checkbox"
+                label: "Resume cache"
+                label_ru: "Возобновлять из кэша"
+                default: true
+          - id: run_quick_doc_task_gemini
+            title: "Run quick with Gemini"
+            title_ru: "ЗАПУСТИТЬ TASK GEMINI"
+            description: "Run the quick instruction and write styled DOCX/XLSX/MD/JSON reports."
+            description_ru: "Запустить быструю инструкцию и записать оформленные DOCX/XLSX/MD/JSON отчёты."
+            service: "system_core.services.audion_docs_service:run_doc_task_operation"
+            kind: "safe"
+            parameters:
+              mode: "run_quick_doc_task"
+              quick_doc_task: true
+              provider: "gemini"
+              model_tier: "audit_fast"
+            fields:
+              - id: gemini_api_key_ref
+                type: "select"
+                label: "Gemini API key"
+                label_ru: "Ключ Gemini"
+                default: ""
+                searchable: true
+                options_source: "system_core.services.audion_docs_service:gemini_api_key_options"
+                cache_seconds: 30
+              - id: gemini_model
+                type: "select"
+                label: "Gemini model"
+                label_ru: "Модель Gemini"
+                default: ""
+                searchable: true
+                options_source: "system_core.services.audion_docs_service:gemini_model_options"
+                cache_seconds: 3600
+              - id: gemini_model_override
+                type: "text"
+                label: "Manual model override"
+                label_ru: "Модель вручную"
+                default: ""
+              - id: gemini_chunk_tokens
+                type: "number"
+                label: "Chunk tokens"
+                label_ru: "Размер чанка"
+                default: 12000
+                min: 1000
+                max: 100000
+                step: 500
+              - id: gemini_overlap_tokens
+                type: "number"
+                label: "Overlap tokens"
+                label_ru: "Перекрытие"
+                default: 0
+                min: 0
+                max: 20000
+                step: 100
+              - id: gemini_min_chunks
+                type: "number"
+                label: "Min chunks"
+                label_ru: "Мин. частей"
+                default: 1
+                min: 1
+                max: 20
+                step: 1
+              - id: gemini_workers
+                type: "number"
+                label: "Workers"
+                label_ru: "Многозадачность"
+                default: 4
+                min: 1
+                max: 32
+                step: 1
+                hint: "Chunks at a time"
+                hint_ru: "Частей за раз"
+              - id: gemini_max_retries
+                type: "number"
+                label: "Max retries"
+                label_ru: "Повторы"
+                default: 1
+                min: 0
+                max: 20
+                step: 1
+              - id: gemini_max_output_tokens
+                type: "number"
+                label: "Max output"
+                label_ru: "Макс. вывод"
+                default: 32000
+                min: 1000
+                max: 100000
+                step: 500
+              - id: gemini_timeout_sec
+                type: "number"
+                label: "Timeout sec"
+                label_ru: "Таймаут, сек"
+                default: 240
+                min: 30
+                max: 3600
+                step: 30
+              - id: gemini_resume
+                type: "checkbox"
+                label: "Resume cache"
+                label_ru: "Возобновлять из кэша"
+                default: true
+          - id: run_quick_doc_task_xai
+            title: "Run quick with xAI"
+            title_ru: "ЗАПУСТИТЬ TASK XAI"
+            description: "Run the quick instruction and write styled DOCX/XLSX/MD/JSON reports."
+            description_ru: "Запустить быструю инструкцию и записать оформленные DOCX/XLSX/MD/JSON отчёты."
+            service: "system_core.services.audion_docs_service:run_doc_task_operation"
+            kind: "safe"
+            parameters:
+              mode: "run_quick_doc_task"
+              quick_doc_task: true
+              provider: "xai"
+              model_tier: "audit"
+            fields:
+              - id: xai_api_key_ref
+                type: "select"
+                label: "xAI API key"
+                label_ru: "Ключ xAI"
+                default: ""
+                searchable: true
+                options_source: "system_core.services.audion_docs_service:xai_api_key_options"
+                cache_seconds: 30
+              - id: xai_model
+                type: "select"
+                label: "xAI model"
+                label_ru: "Модель xAI"
+                default: ""
+                searchable: true
+                options_source: "system_core.services.audion_docs_service:xai_model_options"
+                cache_seconds: 3600
+              - id: xai_model_override
+                type: "text"
+                label: "Manual model override"
+                label_ru: "Модель вручную"
+                default: "grok-4.3"
+              - id: xai_chunk_tokens
+                type: "number"
+                label: "Chunk tokens"
+                label_ru: "Размер чанка"
+                default: 12000
+                min: 1000
+                max: 100000
+                step: 500
+              - id: xai_overlap_tokens
+                type: "number"
+                label: "Overlap tokens"
+                label_ru: "Перекрытие"
+                default: 0
+                min: 0
+                max: 20000
+                step: 100
+              - id: xai_min_chunks
+                type: "number"
+                label: "Min chunks"
+                label_ru: "Мин. частей"
+                default: 1
+                min: 1
+                max: 20
+                step: 1
+              - id: xai_workers
+                type: "number"
+                label: "Workers"
+                label_ru: "Многозадачность"
+                default: 4
+                min: 1
+                max: 32
+                step: 1
+                hint: "Chunks at a time"
+                hint_ru: "Частей за раз"
+              - id: xai_max_retries
+                type: "number"
+                label: "Max retries"
+                label_ru: "Повторы"
+                default: 3
+                min: 0
+                max: 20
+                step: 1
+              - id: xai_max_output_tokens
+                type: "number"
+                label: "Max output"
+                label_ru: "Макс. вывод"
+                default: 32000
+                min: 1000
+                max: 100000
+                step: 500
+              - id: xai_timeout_sec
+                type: "number"
+                label: "Timeout sec"
+                label_ru: "Таймаут, сек"
+                default: 600
+                min: 30
+                max: 3600
+                step: 30
+              - id: xai_resume
+                type: "checkbox"
+                label: "Resume cache"
+                label_ru: "Возобновлять из кэша"
+                default: true
+    
+      - id: comma_restore
+        title: "Restore comma edits"
+        title_ru: "Восстановить регистр после запятых"
+        description: "Apply LLM decisions or a manual restore map to false comma-lowercase DOCX edits from an existing DocFlow JSON report."
+        description_ru: "Восстановить ложные правки регистра по готовому JSON-отчёту DocFlow, исходному DOCX и исправленному DOCX. Решение берётся из JSON решений LLM или ручной карты."
+        service: "system_core.services.audion_docs_service:restore_comma_lowercase"
+        kind: "safe"
+        fields:
+          - id: comma_report
+            type: "text"
+            label: "DocFlow JSON report"
+            label_ru: "JSON-отчёт DocFlow"
+            default: "report/comma_lowercase.json"
+            span: "full"
+          - id: source_docx
+            type: "text"
+            label: "Original DOCX file/folder"
+            label_ru: "Исходный DOCX / папка"
+            default: "input"
+            span: "full"
+          - id: fixed_docx
+            type: "text"
+            label: "Fixed DOCX file/folder"
+            label_ru: "Исправленный DOCX / папка"
+            default: "output/comma_lowercase"
+            span: "full"
+          - id: output_dir
+            type: "text"
+            label: "Output folder"
+            label_ru: "Папка результата"
+            default: "output/comma_lowercase_restored"
+            span: "full"
+          - id: decisions_json
+            type: "text"
+            label: "LLM decisions JSON"
+            label_ru: "JSON решений LLM"
+            default: ""
+            hint_ru: "Необязательно. Если задан, решения restore/keep имеют приоритет над ручной картой."
+            span: "full"
+          - id: llm_provider
+            type: "select"
+            label: "Decision source"
+            label_ru: "Источник решений"
+            default: "none"
+            options:
+              - value: "none"
+                label: "Ready JSON / map"
+                label_ru: "Готовый JSON / карта"
+              - value: "openai"
+                label: "OpenAI"
+                label_ru: "OpenAI"
+              - value: "gemini"
+                label: "Gemini"
+                label_ru: "Gemini"
+              - value: "xai"
+                label: "xAI"
+                label_ru: "xAI"
+          - id: openai_api_key_ref
+            type: "select"
+            label: "OpenAI API key"
+            label_ru: "Ключ OpenAI"
+            default: ""
+            searchable: true
+            options_source: "system_core.services.audion_docs_service:openai_api_key_options"
+            cache_seconds: 30
+          - id: openai_model
+            type: "select"
+            label: "OpenAI model"
+            label_ru: "Модель OpenAI"
+            default: ""
+            searchable: true
+            options_source: "system_core.services.audion_docs_service:openai_model_options"
+            cache_seconds: 3600
+          - id: openai_model_override
+            type: "text"
+            label: "OpenAI model override"
+            label_ru: "Модель OpenAI вручную"
+            default: ""
+            hint_ru: "Если заполнено, это значение важнее dropdown."
+          - id: openai_reasoning
+            type: "radio"
+            label: "OpenAI reasoning"
+            label_ru: "Глубина OpenAI"
+            default: "high"
+            span: "full"
+            options:
+              - value: "low"
+                label: "Fast"
+                label_ru: "Быстро"
+              - value: "medium"
+                label: "Balanced"
+                label_ru: "Баланс"
+              - value: "high"
+                label: "Deep"
+                label_ru: "Глубже"
+          - id: gemini_api_key_ref
+            type: "select"
+            label: "Gemini API key"
+            label_ru: "Ключ Gemini"
+            default: ""
+            searchable: true
+            options_source: "system_core.services.audion_docs_service:gemini_api_key_options"
+            cache_seconds: 30
+          - id: gemini_model
+            type: "select"
+            label: "Gemini model"
+            label_ru: "Модель Gemini"
+            default: ""
+            searchable: true
+            options_source: "system_core.services.audion_docs_service:gemini_model_options"
+            cache_seconds: 3600
+          - id: gemini_model_override
+            type: "text"
+            label: "Gemini model override"
+            label_ru: "Модель Gemini вручную"
+            default: ""
+            hint_ru: "Если заполнено, это значение важнее dropdown."
+          - id: xai_api_key_ref
+            type: "select"
+            label: "xAI API key"
+            label_ru: "Ключ xAI"
+            default: ""
+            searchable: true
+            options_source: "system_core.services.audion_docs_service:xai_api_key_options"
+            cache_seconds: 30
+          - id: xai_model
+            type: "select"
+            label: "xAI model"
+            label_ru: "Модель xAI"
+            default: ""
+            searchable: true
+            options_source: "system_core.services.audion_docs_service:xai_model_options"
+            cache_seconds: 3600
+          - id: xai_model_override
+            type: "text"
+            label: "xAI model override"
+            label_ru: "Модель xAI вручную"
+            default: ""
+            placeholder: "grok-4.3"
+            hint_ru: "Если заполнено, это значение важнее dropdown."
+          - id: restore_map
+            type: "text"
+            label: "Restore map"
+            label_ru: "Карта восстановления"
+            default: "config/comma_restore_map.yaml"
+            span: "full"
+          - id: llm_batch_size
+            type: "number"
+            label: "LLM batch"
+            label_ru: "Пакет LLM"
+            default: 80
+            min: 10
+            max: 300
+            step: 10
+          - id: llm_max_output_tokens
+            type: "number"
+            label: "LLM max output"
+            label_ru: "Макс. вывод LLM"
+            default: 32000
+            min: 1000
+            max: 30000
+            step: 1000
+          - id: llm_max_retries
+            type: "number"
+            label: "LLM retries"
+            label_ru: "Повторы LLM"
+            default: 2
+            min: 0
+            max: 10
+            step: 1
+          - id: scope
+            type: "select"
+            label: "Scope"
+            label_ru: "Область"
+            default: "table-cells"
+            options:
+              - value: "table-cells"
+                label: "Table cells"
+                label_ru: "Только ячейки таблиц"
+              - value: "all"
+                label: "All report hits"
+                label_ru: "Все срабатывания отчёта"
+          - id: dry_run
+            type: "checkbox"
+            label: "Dry-run"
+            label_ru: "Пробный запуск без записи DOCX"
+            default: false
+          - id: restore_all
+            type: "checkbox"
+            label: "Restore all report hits"
+            label_ru: "Восстановить все hits"
+            default: false
+            hint_ru: "Диагностический режим. Обычно нужен JSON решений LLM или карта."
+          - id: overwrite
+            type: "checkbox"
+            label: "Overwrite"
+            label_ru: "Разрешить перезапись"
+            default: false
+
+  - id: openai
+    title: "Audit OpenAI"
+    title_ru: "АУДИТ OPENAI"
+    description: "Audit DOCX/PPTX with OpenAI models."
+    description_ru: "Аудит DOCX/PPTX через модели OpenAI."
+    fields:
+      - id: audit_rule_ref
+        type: "select"
+        label: "Audit rules"
+        label_ru: "Правила аудита"
+        default: ""
+        searchable: true
+        options_source: "system_core.services.audion_docs_service:audit_rule_options"
+        cache_seconds: 30
+        hint: "Empty value uses active_audit_rules.md."
+        hint_ru: "Пустое значение берёт active_audit_rules.md."
+      - id: openai_api_key_ref
+        type: "select"
+        label: "OpenAI API key"
+        label_ru: "Ключ OpenAI"
+        default: ""
+        searchable: true
+        options_source: "system_core.services.audion_docs_service:openai_api_key_options"
+        cache_seconds: 30
+        hint: "Loaded from config/api_key_openai.txt; empty value uses env/config default."
+        hint_ru: "Список из config/api_key_openai.txt; пустое значение берёт env/config default."
+      - id: openai_model
+        type: "select"
+        label: "OpenAI model"
+        label_ru: "Модель OpenAI"
+        default: ""
+        searchable: true
+        options_source: "system_core.services.audion_docs_service:openai_model_options"
+        cache_seconds: 3600
+        hint: "Loaded from OpenAI Models API/cache; empty value uses latest OK checked or favorite model."
+        hint_ru: "Загружается через OpenAI Models API/cache; пустое значение берёт последнюю OK-проверенную или избранную модель."
+      - id: openai_model_override
+        type: "text"
+        label: "Manual model override"
+        label_ru: "Модель вручную"
+        default: ""
+        placeholder: "gpt-5.6-luna"
+        hint: "If filled, this value wins over the dropdown."
+        hint_ru: "Если заполнено, это значение важнее dropdown."
+      - id: openai_reasoning
+        type: "radio"
+        label: "OpenAI reasoning"
+        label_ru: "Глубина OpenAI"
+        default: "high"
+        span: "full"
+        options:
+          - value: "low"
+            label: "Fast"
+            label_ru: "Быстро"
+          - value: "medium"
+            label: "Balanced"
+            label_ru: "Баланс"
+          - value: "high"
+            label: "Deep"
+            label_ru: "Глубже"
+      - id: openai_chunk_tokens
+        type: "number"
+        label: "Chunk tokens"
+        label_ru: "Размер чанка"
+        default: 12000
+        min: 1000
+        max: 100000
+        step: 500
+      - id: openai_overlap_tokens
+        type: "number"
+        label: "Overlap tokens"
+        label_ru: "Перекрытие"
+        default: 1200
+        min: 0
+        max: 20000
+        step: 100
+      - id: openai_min_chunks
+        type: "number"
+        label: "Min chunks"
+        label_ru: "Мин. частей"
+        default: 4
+        min: 1
+        max: 20
+        step: 1
+      - id: openai_workers
+        type: "number"
+        label: "Workers"
+        label_ru: "Многозадачность"
+        default: 4
+        min: 1
+        max: 32
+        step: 1
+        hint: "Chunks at a time"
+        hint_ru: "Частей за раз"
+      - id: openai_max_retries
+        type: "number"
+        label: "Max retries"
+        label_ru: "Повторы"
+        default: 3
+        min: 0
+        max: 20
+        step: 1
+      - id: openai_max_output_tokens
+        type: "number"
+        label: "Max output"
+        label_ru: "Макс. вывод"
+        default: 32000
+        min: 1000
+        max: 100000
+        step: 500
+      - id: openai_timeout_sec
+        type: "number"
+        label: "Timeout sec"
+        label_ru: "Таймаут, сек"
+        default: 600
+        min: 30
+        max: 3600
+        step: 30
+      - id: openai_resume
+        type: "checkbox"
+        label: "Resume cache"
+        label_ru: "Возобновлять из кэша"
+        default: true
+      - id: require_render_map
+        type: "checkbox"
+        label: "Require render-map"
+        label_ru: "Требовать карту рендера"
+        default: false
+    children:
+      - id: pin_openai_key
+        title: "Favorite API key"
+        title_ru: "ДОБАВИТЬ КЛЮЧ В ИЗБРАННОЕ"
+        description: "Save the selected OpenAI API key as a favorite without running audit."
+        description_ru: "Сохранить выбранный ключ OpenAI в избранное без запуска аудита."
+        service: "system_core.services.audion_docs_service:run_pipeline_operation"
+        kind: "safe"
+        parameters:
+          mode: "pin_api_key"
+          provider: "openai"
+      - id: pin_openai_model
+        title: "Favorite model"
+        title_ru: "ДОБАВИТЬ МОДЕЛЬ В ИЗБРАННОЕ"
+        description: "Save the selected OpenAI model as a favorite without running audit."
+        description_ru: "Сохранить выбранную модель OpenAI в избранное без запуска аудита."
+        service: "system_core.services.audion_docs_service:run_pipeline_operation"
+        kind: "safe"
+        parameters:
+          mode: "pin_model"
+          provider: "openai"
+          model_tier: "audit"
+      - id: check_openai_model
+        title: "Check model"
+        title_ru: "ПРОВЕРИТЬ МОДЕЛЬ"
+        description: "Send one tiny OpenAI request and cache the selected model status."
+        description_ru: "Отправить один маленький запрос OpenAI и сохранить статус выбранной модели."
+        service: "system_core.services.audion_docs_service:run_pipeline_operation"
+        kind: "safe"
+        parameters:
+          mode: "check_model"
+          provider: "openai"
+          model_tier: "audit"
+      - id: run_openai_audit
+        title: "Run"
+        title_ru: "ЗАПУСТИТЬ"
+        description: "Run OpenAI audit with the selected model and parameters, then write XLSX/DOCX reports and annotated copies."
+        description_ru: "Запустить OpenAI-аудит с выбранной моделью и сразу записать XLSX/DOCX-отчёты и аннотированные копии."
+        service: "system_core.services.audion_docs_service:run_pipeline_operation"
+        kind: "safe"
+        parameters:
+          mode: "audit"
+          provider: "openai"
+          model_tier: "audit"
+          report_lang: "ru"
+
+  - id: gemini
+    title: "Audit Gemini"
+    title_ru: "АУДИТ GEMINI"
+    description: "Audit DOCX/PPTX with Gemini models."
+    description_ru: "Аудит DOCX/PPTX через модели Gemini."
+    fields:
+      - id: audit_rule_ref
+        type: "select"
+        label: "Audit rules"
+        label_ru: "Правила аудита"
+        default: ""
+        searchable: true
+        options_source: "system_core.services.audion_docs_service:audit_rule_options"
+        cache_seconds: 30
+        hint: "Empty value uses active_audit_rules.md."
+        hint_ru: "Пустое значение берёт active_audit_rules.md."
+      - id: gemini_api_key_ref
+        type: "select"
+        label: "Gemini API key"
+        label_ru: "Ключ Gemini"
+        default: ""
+        searchable: true
+        options_source: "system_core.services.audion_docs_service:gemini_api_key_options"
+        cache_seconds: 30
+        hint: "Loaded from config/api_key_gemini.txt; empty value uses env/config default."
+        hint_ru: "Список из config/api_key_gemini.txt; пустое значение берёт env/config default."
+      - id: gemini_model
+        type: "select"
+        label: "Gemini model"
+        label_ru: "Модель Gemini"
+        default: ""
+        searchable: true
+        options_source: "system_core.services.audion_docs_service:gemini_model_options"
+        cache_seconds: 3600
+        hint: "Loaded from Gemini Models API/cache; empty value uses latest OK checked or favorite model."
+        hint_ru: "Загружается через Gemini Models API/cache; пустое значение берёт последнюю OK-проверенную или избранную модель."
+      - id: gemini_model_override
+        type: "text"
+        label: "Manual model override"
+        label_ru: "Модель вручную"
+        default: ""
+        placeholder: "gemini-3.6-flash"
+        hint: "If filled, this value wins over the dropdown."
+        hint_ru: "Если заполнено, это значение важнее dropdown."
+      - id: gemini_reasoning
+        type: "radio"
+        label: "Gemini thinking"
+        label_ru: "Глубина Gemini"
+        default: "medium"
+        span: "full"
+        hint: "Controls thinking_level for Gemini 3 models; ignored for older models."
+        hint_ru: "Управляет реальным thinking_level для моделей Gemini 3; для старых моделей параметр не отправляется."
+        options:
+          - value: "minimal"
+            label: "Minimal"
+            label_ru: "Минимальный"
+          - value: "low"
+            label: "Low"
+            label_ru: "Низкий"
+          - value: "medium"
+            label: "Medium"
+            label_ru: "Средний"
+          - value: "high"
+            label: "High"
+            label_ru: "Высокий"
+      - id: gemini_chunk_tokens
+        type: "number"
+        label: "Chunk tokens"
+        label_ru: "Размер чанка"
+        default: 12000
+        min: 1000
+        max: 100000
+        step: 500
+      - id: gemini_overlap_tokens
+        type: "number"
+        label: "Overlap tokens"
+        label_ru: "Перекрытие"
+        default: 1200
+        min: 0
+        max: 20000
+        step: 100
+      - id: gemini_min_chunks
+        type: "number"
+        label: "Min chunks"
+        label_ru: "Мин. частей"
+        default: 4
+        min: 1
+        max: 20
+        step: 1
+      - id: gemini_workers
+        type: "number"
+        label: "Workers"
+        label_ru: "Многозадачность"
+        default: 4
+        min: 1
+        max: 32
+        step: 1
+        hint: "Chunks at a time"
+        hint_ru: "Частей за раз"
+      - id: gemini_max_retries
+        type: "number"
+        label: "Max retries"
+        label_ru: "Повторы"
+        default: 4
+        min: 0
+        max: 20
+        step: 1
+      - id: gemini_max_output_tokens
+        type: "number"
+        label: "Max output"
+        label_ru: "Макс. вывод"
+        default: 32000
+        min: 1000
+        max: 100000
+        step: 500
+      - id: gemini_timeout_sec
+        type: "number"
+        label: "Timeout sec"
+        label_ru: "Таймаут, сек"
+        default: 600
+        min: 30
+        max: 3600
+        step: 30
+      - id: gemini_resume
+        type: "checkbox"
+        label: "Resume cache"
+        label_ru: "Возобновлять из кэша"
+        default: true
+      - id: require_render_map
+        type: "checkbox"
+        label: "Require render-map"
+        label_ru: "Требовать карту рендера"
+        default: false
+    children:
+      - id: pin_gemini_key
+        title: "Favorite API key"
+        title_ru: "ДОБАВИТЬ КЛЮЧ В ИЗБРАННОЕ"
+        description: "Save the selected Gemini API key as a favorite without running audit."
+        description_ru: "Сохранить выбранный ключ Gemini в избранное без запуска аудита."
+        service: "system_core.services.audion_docs_service:run_pipeline_operation"
+        kind: "safe"
+        parameters:
+          mode: "pin_api_key"
+          provider: "gemini"
+      - id: pin_gemini_model
+        title: "Favorite model"
+        title_ru: "ДОБАВИТЬ МОДЕЛЬ В ИЗБРАННОЕ"
+        description: "Save the selected Gemini model as a favorite without running audit."
+        description_ru: "Сохранить выбранную модель Gemini в избранное без запуска аудита."
+        service: "system_core.services.audion_docs_service:run_pipeline_operation"
+        kind: "safe"
+        parameters:
+          mode: "pin_model"
+          provider: "gemini"
+          model_tier: "audit_fast"
+      - id: check_gemini_model
+        title: "Check model"
+        title_ru: "ПРОВЕРИТЬ МОДЕЛЬ"
+        description: "Send one tiny Gemini request and cache the selected model status."
+        description_ru: "Отправить один маленький запрос Gemini и сохранить статус выбранной модели."
+        service: "system_core.services.audion_docs_service:run_pipeline_operation"
+        kind: "safe"
+        parameters:
+          mode: "check_model"
+          provider: "gemini"
+          model_tier: "audit_fast"
+      - id: run_gemini_audit
+        title: "Run"
+        title_ru: "ЗАПУСТИТЬ"
+        description: "Run Gemini audit with the selected model and parameters, then write XLSX/DOCX reports and annotated copies."
+        description_ru: "Запустить Gemini-аудит с выбранной моделью и сразу записать XLSX/DOCX-отчёты и аннотированные копии."
+        service: "system_core.services.audion_docs_service:run_pipeline_operation"
+        kind: "safe"
+        parameters:
+          mode: "audit"
+          provider: "gemini"
+          model_tier: "audit_fast"
+          report_lang: "ru"
+
+  - id: xai
+    title: "Audit xAI"
+    title_ru: "АУДИТ XAI"
+    description: "Audit DOCX/PPTX with xAI models."
+    description_ru: "Аудит DOCX/PPTX через модели xAI."
+    fields:
+      - id: audit_rule_ref
+        type: "select"
+        label: "Audit rules"
+        label_ru: "Правила аудита"
+        default: ""
+        searchable: true
+        options_source: "system_core.services.audion_docs_service:audit_rule_options"
+        cache_seconds: 30
+        hint: "Empty value uses active_audit_rules.md."
+        hint_ru: "Пустое значение берёт active_audit_rules.md."
+      - id: xai_api_key_ref
+        type: "select"
+        label: "xAI API key"
+        label_ru: "Ключ xAI"
+        default: ""
+        searchable: true
+        options_source: "system_core.services.audion_docs_service:xai_api_key_options"
+        cache_seconds: 30
+        hint: "Loaded from config/api_key_xai.txt; empty value uses env/config default."
+        hint_ru: "Список из config/api_key_xai.txt; пустое значение берёт env/config default."
+      - id: xai_model
+        type: "select"
+        label: "xAI model"
+        label_ru: "Модель xAI"
+        default: ""
+        searchable: true
+        options_source: "system_core.services.audion_docs_service:xai_model_options"
+        cache_seconds: 3600
+        hint: "Loaded from xAI Models API/cache; empty value uses latest OK checked or favorite model."
+        hint_ru: "Загружается через xAI Models API/cache; пустое значение берёт последнюю OK-проверенную или избранную модель."
+      - id: xai_model_override
+        type: "text"
+        label: "Manual model override"
+        label_ru: "Модель вручную"
+        default: ""
+        placeholder: "grok-4.3"
+        hint: "If filled, this value wins over the dropdown."
+        hint_ru: "Если заполнено, это значение важнее dropdown."
+      - id: xai_reasoning
+        type: "radio"
+        label: "xAI reasoning"
+        label_ru: "Глубина xAI"
+        default: "high"
+        span: "full"
+        hint: "Controls the actual reasoning_effort sent to xAI; High is recommended for audit."
+        hint_ru: "Управляет реальным reasoning_effort в запросе xAI; для аудита рекомендуется Высокий."
+        options:
+          - value: "none"
+            label: "None"
+            label_ru: "Нет"
+          - value: "low"
+            label: "Low"
+            label_ru: "Низкий"
+          - value: "medium"
+            label: "Medium"
+            label_ru: "Средний"
+          - value: "high"
+            label: "High"
+            label_ru: "Высокий"
+      - id: xai_chunk_tokens
+        type: "number"
+        label: "Chunk tokens"
+        label_ru: "Размер чанка"
+        default: 12000
+        min: 1000
+        max: 100000
+        step: 500
+      - id: xai_overlap_tokens
+        type: "number"
+        label: "Overlap tokens"
+        label_ru: "Перекрытие"
+        default: 1200
+        min: 0
+        max: 20000
+        step: 100
+      - id: xai_min_chunks
+        type: "number"
+        label: "Min chunks"
+        label_ru: "Мин. частей"
+        default: 4
+        min: 1
+        max: 20
+        step: 1
+      - id: xai_workers
+        type: "number"
+        label: "Workers"
+        label_ru: "Многозадачность"
+        default: 4
+        min: 1
+        max: 32
+        step: 1
+        hint: "Chunks at a time"
+        hint_ru: "Частей за раз"
+      - id: xai_max_retries
+        type: "number"
+        label: "Max retries"
+        label_ru: "Повторы"
+        default: 3
+        min: 0
+        max: 20
+        step: 1
+      - id: xai_max_output_tokens
+        type: "number"
+        label: "Max output"
+        label_ru: "Макс. вывод"
+        default: 32000
+        min: 1000
+        max: 100000
+        step: 500
+      - id: xai_timeout_sec
+        type: "number"
+        label: "Timeout sec"
+        label_ru: "Таймаут, сек"
+        default: 600
+        min: 30
+        max: 3600
+        step: 30
+      - id: xai_resume
+        type: "checkbox"
+        label: "Resume cache"
+        label_ru: "Возобновлять из кэша"
+        default: true
+      - id: require_render_map
+        type: "checkbox"
+        label: "Require render-map"
+        label_ru: "Требовать карту рендера"
+        default: false
+    children:
+      - id: pin_xai_key
+        title: "Favorite API key"
+        title_ru: "ДОБАВИТЬ КЛЮЧ В ИЗБРАННОЕ"
+        description: "Save the selected xAI API key as a favorite without running audit."
+        description_ru: "Сохранить выбранный ключ xAI в избранное без запуска аудита."
+        service: "system_core.services.audion_docs_service:run_pipeline_operation"
+        kind: "safe"
+        parameters:
+          mode: "pin_api_key"
+          provider: "xai"
+      - id: pin_xai_model
+        title: "Favorite model"
+        title_ru: "ДОБАВИТЬ МОДЕЛЬ В ИЗБРАННОЕ"
+        description: "Save the selected xAI model as a favorite without running audit."
+        description_ru: "Сохранить выбранную модель xAI в избранное без запуска аудита."
+        service: "system_core.services.audion_docs_service:run_pipeline_operation"
+        kind: "safe"
+        parameters:
+          mode: "pin_model"
+          provider: "xai"
+          model_tier: "audit"
+      - id: check_xai_model
+        title: "Check model"
+        title_ru: "ПРОВЕРИТЬ МОДЕЛЬ"
+        description: "Send one tiny xAI request and cache the selected model status."
+        description_ru: "Отправить один маленький запрос xAI и сохранить статус выбранной модели."
+        service: "system_core.services.audion_docs_service:run_pipeline_operation"
+        kind: "safe"
+        parameters:
+          mode: "check_model"
+          provider: "xai"
+          model_tier: "audit"
+      - id: run_xai_audit
+        title: "Run"
+        title_ru: "ЗАПУСТИТЬ"
+        description: "Run xAI audit with the selected model and parameters, then write XLSX/DOCX reports and annotated copies."
+        description_ru: "Запустить xAI-аудит с выбранной моделью и сразу записать XLSX/DOCX-отчёты и аннотированные копии."
+        service: "system_core.services.audion_docs_service:run_pipeline_operation"
+        kind: "safe"
+        parameters:
+          mode: "audit"
+          provider: "xai"
+          model_tier: "audit"
+          report_lang: "ru"
+
+  - id: anthropic
+    title: "Audit Claude"
+    title_ru: "АУДИТ CLAUDE"
+    description: "Audit DOCX/PPTX with Anthropic Claude models."
+    description_ru: "Аудит DOCX/PPTX через модели Anthropic Claude."
+    fields:
+      - id: audit_rule_ref
+        type: "select"
+        label: "Audit rules"
+        label_ru: "Правила аудита"
+        default: ""
+        searchable: true
+        options_source: "system_core.services.audion_docs_service:audit_rule_options"
+        cache_seconds: 30
+        hint: "Empty value uses active_audit_rules.md."
+        hint_ru: "Пустое значение берёт active_audit_rules.md."
+      - id: anthropic_api_key_ref
+        type: "select"
+        label: "Anthropic API key"
+        label_ru: "Ключ Anthropic"
+        default: ""
+        searchable: true
+        options_source: "system_core.services.audion_docs_service:anthropic_api_key_options"
+        cache_seconds: 30
+        hint: "Loaded from config/api_key_anthropic.txt; empty value uses env/config default."
+        hint_ru: "Список из config/api_key_anthropic.txt; пустое значение берёт env/config default."
+      - id: anthropic_model
+        type: "select"
+        label: "Claude model"
+        label_ru: "Модель Claude"
+        default: ""
+        searchable: true
+        options_source: "system_core.services.audion_docs_service:anthropic_model_options"
+        cache_seconds: 3600
+        hint: "Loaded from the Anthropic Models API/cache; empty value uses latest OK checked or favorite model."
+        hint_ru: "Загружается через Anthropic Models API/cache; пустое значение берёт последнюю OK-проверенную или избранную модель."
+      - id: anthropic_model_override
+        type: "text"
+        label: "Manual model override"
+        label_ru: "Модель вручную"
+        default: ""
+        placeholder: "claude-sonnet-5"
+        hint: "If filled, this value wins over the dropdown."
+        hint_ru: "Если заполнено, это значение важнее dropdown."
+      - id: anthropic_reasoning
+        type: "radio"
+        label: "Claude effort"
+        label_ru: "Глубина Claude"
+        default: "medium"
+        span: "full"
+        hint: "Controls the effort level sent to Claude; thinking stays adaptive. Medium is the default for audit."
+        hint_ru: "Управляет уровнем effort в запросе Claude; thinking всегда adaptive. Для аудита по умолчанию Средний."
+        options:
+          - value: "low"
+            label: "Low"
+            label_ru: "Низкий"
+          - value: "medium"
+            label: "Medium"
+            label_ru: "Средний"
+          - value: "high"
+            label: "High"
+            label_ru: "Высокий"
+          - value: "xhigh"
+            label: "X-High"
+            label_ru: "Повышенный"
+          - value: "max"
+            label: "Max"
+            label_ru: "Максимальный"
+      - id: anthropic_chunk_tokens
+        type: "number"
+        label: "Chunk tokens"
+        label_ru: "Размер чанка"
+        default: 12000
+        min: 1000
+        max: 100000
+        step: 500
+      - id: anthropic_overlap_tokens
+        type: "number"
+        label: "Overlap tokens"
+        label_ru: "Перекрытие"
+        default: 1200
+        min: 0
+        max: 20000
+        step: 100
+      - id: anthropic_min_chunks
+        type: "number"
+        label: "Min chunks"
+        label_ru: "Мин. частей"
+        default: 4
+        min: 1
+        max: 20
+        step: 1
+      - id: anthropic_workers
+        type: "number"
+        label: "Workers"
+        label_ru: "Многозадачность"
+        default: 4
+        min: 1
+        max: 32
+        step: 1
+        hint: "Chunks at a time"
+        hint_ru: "Частей за раз"
+      - id: anthropic_max_retries
+        type: "number"
+        label: "Max retries"
+        label_ru: "Повторы"
+        default: 3
+        min: 0
+        max: 20
+        step: 1
+      - id: anthropic_max_output_tokens
+        type: "number"
+        label: "Max output"
+        label_ru: "Макс. вывод"
+        default: 32000
+        min: 1000
+        max: 128000
+        step: 500
+      - id: anthropic_timeout_sec
+        type: "number"
+        label: "Timeout sec"
+        label_ru: "Таймаут, сек"
+        default: 900
+        min: 30
+        max: 3600
+        step: 30
+      - id: anthropic_resume
+        type: "checkbox"
+        label: "Resume cache"
+        label_ru: "Возобновлять из кэша"
+        default: true
+      - id: require_render_map
+        type: "checkbox"
+        label: "Require render-map"
+        label_ru: "Требовать карту рендера"
+        default: false
+    children:
+      - id: pin_anthropic_key
+        title: "Favorite API key"
+        title_ru: "ДОБАВИТЬ КЛЮЧ В ИЗБРАННОЕ"
+        description: "Save the selected Anthropic API key as a favorite without running audit."
+        description_ru: "Сохранить выбранный ключ Anthropic в избранное без запуска аудита."
+        service: "system_core.services.audion_docs_service:run_pipeline_operation"
+        kind: "safe"
+        parameters:
+          mode: "pin_api_key"
+          provider: "anthropic"
+      - id: pin_anthropic_model
+        title: "Favorite model"
+        title_ru: "ДОБАВИТЬ МОДЕЛЬ В ИЗБРАННОЕ"
+        description: "Save the selected Claude model as a favorite without running audit."
+        description_ru: "Сохранить выбранную модель Claude в избранное без запуска аудита."
+        service: "system_core.services.audion_docs_service:run_pipeline_operation"
+        kind: "safe"
+        parameters:
+          mode: "pin_model"
+          provider: "anthropic"
+          model_tier: "audit"
+      - id: check_anthropic_model
+        title: "Check model"
+        title_ru: "ПРОВЕРИТЬ МОДЕЛЬ"
+        description: "Send one tiny Claude request and cache the selected model status."
+        description_ru: "Отправить один маленький запрос Claude и сохранить статус выбранной модели."
+        service: "system_core.services.audion_docs_service:run_pipeline_operation"
+        kind: "safe"
+        parameters:
+          mode: "check_model"
+          provider: "anthropic"
+          model_tier: "audit"
+      - id: run_anthropic_audit
+        title: "Run"
+        title_ru: "ЗАПУСТИТЬ"
+        description: "Run the Claude audit with the selected model and parameters, then write XLSX/DOCX reports and annotated copies."
+        description_ru: "Запустить Claude-аудит с выбранной моделью и сразу записать XLSX/DOCX-отчёты и аннотированные копии."
+        service: "system_core.services.audion_docs_service:run_pipeline_operation"
+        kind: "safe"
+        parameters:
+          mode: "audit"
+          provider: "anthropic"
+          model_tier: "audit"
+          report_lang: "ru"
+
+  - id: reports
+    title: "Reports"
+    title_ru: "Отчёты"
+    description: "Rebuild reports, annotated documents, and anchor copies from logs/output."
+    description_ru: "Пересборка отчётов, аннотированных документов и копий с якорями из logs/output."
+    children:
+      - id: report_from_logs
+        title: "Report"
+        title_ru: "Отчёт из журнала"
+        description: "Rebuild XLSX/DOCX reports from audit logs."
+        description_ru: "Пересобрать XLSX/DOCX-отчёты из журналов аудита."
+        service: "system_core.services.audion_docs_service:run_pipeline_operation"
+        kind: "safe"
+        parameters:
+          mode: "report"
+          report_lang: "ru"
+      - id: annotate_from_logs
+        title: "Annotate"
+        title_ru: "Аннотация"
+        description: "Rebuild annotated DOCX/PPTX copies from audit logs."
+        description_ru: "Пересобрать аннотированные DOCX/PPTX из журналов аудита."
+        service: "system_core.services.audion_docs_service:run_pipeline_operation"
+        kind: "safe"
+        parameters:
+          mode: "annotate"
+          report_lang: "ru"
+      - id: report_annotate
+        title: "Report + annotate"
+        title_ru: "Отчёт + аннотация"
+        description: "Run report and annotate steps from existing logs."
+        description_ru: "Запустить отчёт и аннотацию по существующим журналам."
+        service: "system_core.services.audion_docs_service:run_pipeline_operation"
+        kind: "safe"
+        parameters:
+          mode: "report_annotate"
+          report_lang: "ru"
+      - id: rebuild_error_anchors
+        title: "Rebuild anchors"
+        title_ru: "Пересобрать якоря"
+        description: "Recreate annotated DOCX/PPTX copies from audit logs. Normal audit already creates these files."
+        description_ru: "Пересоздать аннотированные копии DOCX/PPTX из журналов аудита. Обычный аудит уже создаёт эти файлы."
+        service: "system_core.services.audion_docs_service:run_pipeline_operation"
+        kind: "safe"
+        parameters:
+          mode: "annotate"
+          report_lang: "ru"
+      - id: strip_error_anchors
+        title: "Remove anchors"
+        title_ru: "Снять якоря"
+        description: "Create __unanchored DOCX/PPTX copies from output/*__annotated files without touching originals."
+        description_ru: "Создать копии __unanchored из output/*__annotated без изменения оригиналов."
+        service: "system_core.services.audion_docs_service:run_pipeline_operation"
+        kind: "safe"
+        parameters:
+          mode: "strip_anchors"
+          report_lang: "ru"
+
+maintenance_operations:
+  - id: cleanup_input_output
+    title: "Clear I/O"
+    title_ru: "Очистить I/O"
+    description: "Delete contents of managed input and output folders, including stale placeholders."
+    description_ru: "Удалить содержимое input/output, включая старые placeholder-файлы."
+    service: "system_core.services.audion_docs_service:cleanup_input_output"
+    kind: "dangerous"
+
+  - id: cleanup_workspace
+    title: "Cleanup workspace"
+    title_ru: "Очистить workspace"
+    description: "Delete only files inside the managed workspace folder."
+    description_ru: "Удалить только файлы внутри управляемой папки workspace."
+    service: "system_core.services.audion_docs_service:cleanup_workspace"
+    kind: "dangerous"
+
+

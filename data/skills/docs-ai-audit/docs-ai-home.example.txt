@@ -1,0 +1,16 @@
+# Где лежит портативная Audion Docs AI.
+#
+# Переименуйте этот файл в docs-ai-home.txt и впишите путь одной строкой.
+# Скиллу нужен только Python из её папки runtime — там уже есть python-docx,
+# openpyxl, PyMuPDF и python-pptx. Устанавливать ничего не требуется.
+#
+# Можно указать папку программы:
+#     E:\TOOLS\Audion Docs AI
+# либо сразу интерпретатор:
+#     E:\TOOLS\Audion Docs AI\runtime\python.exe
+# либо любой другой Python, где стоят нужные библиотеки:
+#     C:\Python312\python.exe
+#
+# Строки, начинающиеся с #, игнорируются.
+
+E:\TOOLS\Audion Docs AI

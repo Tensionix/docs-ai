@@ -1,0 +1,17 @@
+{
+  "providers": {
+    "openai": {
+      "pinned": [
+        "71047f78594926e6"
+      ]
+    },
+    "gemini": {
+      "pinned": [
+        "45b9000530663376"
+      ]
+    },
+    "xai": {
+      "pinned": []
+    }
+  }
+}

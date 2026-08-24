@@ -1,0 +1,44 @@
+# Audion Docs AI v3 portable runtime
+
+# Build tooling
+pip-tools
+setuptools
+wheel
+packaging
+
+# Core runtime
+requests
+tqdm
+pydantic
+python-dotenv
+coloredlogs
+rich
+pyyaml
+
+# LLM providers
+openai
+google-genai
+anthropic
+
+# Document extraction and rendering
+markitdown[all]
+python-docx
+python-pptx
+openpyxl
+beautifulsoup4
+markdownify
+mammoth
+pdfplumber
+pymupdf
+pypdfium2
+lxml
+
+# Data helpers
+pandas
+
+# GUI shell
+nicegui
+pywebview
+
+# Test and audit layer
+pytest

@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "pinned": [
+    "c7e7b8194b3b0ade"
+  ],
+  "usage": {},
+  "entries": {
+    "c7e7b8194b3b0ade": {
+      "ref": "c7e7b8194b3b0ade",
+      "label": "Сопоставить объекты DOCX/XLSX",
+      "note": "Стартовый быстрый шаблон для корпусного сопоставления",
+      "content": "Используй все файлы input как единый корпус. Найди объекты в DOCX и строки XLSX, которые относятся к одним и тем же объектам. Верни rows с values: object_name, docx_source, xlsx_source, match_status, confidence, mismatch_or_note.",
+      "sha256": "c7e7b8194b3b0ade7e6ca93f9dc973269a0dacce37bc5051f38dd0fcb128da54",
+      "size_bytes": 323,
+      "created_at": "2026-05-07T01:30:00Z",
+      "updated_at": "2026-05-07T01:30:00Z"
+    },
+    "709afec9dfb57a69": {
+      "ref": "709afec9dfb57a69",
+      "label": "Извлечь список объектов",
+      "note": "Стартовый быстрый шаблон для извлечения в таблицу",
+      "content": "Извлеки из всех документов упомянутые организации, объекты, адреса и идентификаторы. Верни rows с values: object_name, object_type, address_or_locality, source_file, confidence.",
+      "sha256": "709afec9dfb57a69e6db746973ba1c3a9995bf595ad51154db97c4df6eca59e7",
+      "size_bytes": 255,
+      "created_at": "2026-05-07T01:30:00Z",
+      "updated_at": "2026-05-07T01:30:00Z"
+    }
+  }
+}

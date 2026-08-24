@@ -1,0 +1,7 @@
+Return strict json only.
+
+OVERLAP_CONTEXT:
+{{OVERLAP_CONTEXT}}
+
+NEW_CHUNK_TEXT:
+{{NEW_CHUNK_TEXT}}
