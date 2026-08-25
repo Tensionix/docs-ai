@@ -8,7 +8,7 @@
 - [Direct download](https://audion.dev/get/docs-ai/1.9.3/Audion_Docs_AI_v1.9.3_Full.zip) — unmetered, no rate limits
 - [Project page](https://audion.dev/downloads/docs-ai) — every version and how to install
 
-![The program window](docs/screenshot.png)
+<img src="docs/screenshot.png" alt="The program window" width="560">
 
 `SHA-256: 5432c2a1cdbfdc96592b3e2078874482786d6beccc108d6bc82d18c93bd67a22`
 
