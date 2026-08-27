@@ -1,14 +1,19 @@
 # Audion Docs AI v3
 
 <!-- audion:release -->
-[![Windows](https://img.shields.io/badge/Windows-10%20%7C%2011-0b6db8?style=flat-square&logo=windows&logoColor=white)](https://audion.dev/downloads/docs-ai) [![Release](https://img.shields.io/github/v/release/Tensionix/docs-ai?style=flat-square&label=release&color=e08a63)](https://github.com/Tensionix/docs-ai/releases/latest) [![Downloads](https://img.shields.io/github/downloads/Tensionix/docs-ai/total?style=flat-square&label=downloads&color=5fd08a)](https://github.com/Tensionix/docs-ai/releases) [![License](https://img.shields.io/github/license/Tensionix/docs-ai?style=flat-square&color=5fd08a&logo=apache&logoColor=white&cacheSeconds=3600)](https://github.com/Tensionix/docs-ai/blob/main/LICENSE)
+<p align="center">
+  <a href="https://audion.dev/downloads/docs-ai"><img alt="Windows" src="https://img.shields.io/badge/Windows-10%20%7C%2011-0b6db8?style=flat-square&logo=windows&logoColor=white"></a>
+  <a href="https://github.com/Tensionix/docs-ai/releases/latest"><img alt="Release" src="https://img.shields.io/github/v/release/Tensionix/docs-ai?style=flat-square&label=release&color=e08a63"></a>
+  <a href="https://github.com/Tensionix/docs-ai/releases"><img alt="Downloads" src="https://img.shields.io/github/downloads/Tensionix/docs-ai/total?style=flat-square&label=downloads&color=5fd08a"></a>
+  <a href="https://github.com/Tensionix/docs-ai/blob/main/LICENSE"><img alt="License" src="https://img.shields.io/github/license/Tensionix/docs-ai?style=flat-square&color=5fd08a&logo=apache&logoColor=white&cacheSeconds=3600"></a>
+</p>
 
 **Version 1.9.3** · 2026-08-25 · 505.6 MB
 
 - [Direct download](https://audion.dev/get/docs-ai/1.9.3/Audion_Docs_AI_v1.9.3_Full.zip) — unmetered, no rate limits
 - [Project page](https://audion.dev/downloads/docs-ai) — every version and how to install
 
-<img src="docs/screenshot.png" alt="The program window" width="560">
+<p align="center"><img src="docs/screenshot.png" alt="The program window" width="560"></p>
 
 `SHA-256: 5432c2a1cdbfdc96592b3e2078874482786d6beccc108d6bc82d18c93bd67a22`
 
