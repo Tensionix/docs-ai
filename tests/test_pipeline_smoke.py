@@ -71,7 +71,7 @@ def make_xlsx(path: Path) -> None:
 
 
 def make_pdf(path: Path) -> None:
-    import fitz
+    import pymupdf as fitz
 
     path.parent.mkdir(parents=True, exist_ok=True)
     doc = fitz.open()

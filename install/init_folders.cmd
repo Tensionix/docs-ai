@@ -45,8 +45,6 @@ call :MK "%ROOT%\system_core\license\fallbacks"
 call :MK "%ROOT%\install"
 call :MK "%ROOT%\install\download"
 
-call :TOUCH "config\api_key_gemini.txt"
-call :TOUCH "config\api_key_openai.txt"
 
 if "%FAILED%"=="1" (
   echo [ERROR] init_folders.cmd failed.
@@ -60,17 +58,6 @@ if exist "%~1\" goto :eof
 mkdir "%~1" >nul 2>nul
 if not exist "%~1\" (
   echo [ERROR] Cannot create directory: %~1
-  set "FAILED=1"
-)
-goto :eof
-
-:TOUCH
-set "TARGET=%ROOT%\%~1"
-for %%P in ("%TARGET%") do if not exist "%%~dpP" call :MK "%%~dpP"
-if exist "%TARGET%" goto :eof
-type nul > "%TARGET%" 2>nul
-if not exist "%TARGET%" (
-  echo [ERROR] Cannot create file: %~1
   set "FAILED=1"
 )
 goto :eof

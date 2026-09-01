@@ -6,7 +6,7 @@ from typing import Any, Dict, List
 
 
 def extract_pdf_pages(pdf_path: Path) -> Dict[str, Any]:
-    import fitz
+    import pymupdf as fitz
 
     pages: List[Dict[str, Any]] = []
     with fitz.open(str(pdf_path)) as doc:

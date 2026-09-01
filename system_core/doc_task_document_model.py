@@ -79,7 +79,7 @@ def clean_pdf_text(text: str) -> str:
 
 def build_pdf_block_map(source: Path, input_dir: Path, *, max_pages: int = 5) -> Dict[str, Any]:
     try:
-        import fitz
+        import pymupdf as fitz
     except ImportError as exc:
         raise RuntimeError("PyMuPDF is required for PDF document-task input.") from exc
 

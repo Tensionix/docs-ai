@@ -5,8 +5,8 @@
     "20b7fc1bd59f49ce"
   ],
   "usage": {
-    "22c62eaa45f6f9cc": 10,
-    "20b7fc1bd59f49ce": 1
+    "20b7fc1bd59f49ce": 1,
+    "22c62eaa45f6f9cc": 11
   },
   "entries": {
     "22c62eaa45f6f9cc": {
@@ -16,8 +16,8 @@
       "filename": "classic_master_rules.md",
       "sha256": "22c62eaa45f6f9cc2ccb444b61166e2a307118e2119d3f828c7449cccd9f9b91",
       "size_bytes": 18409,
-      "mtime": 1786415718,
-      "updated_at": "2026-08-11T02:35:20Z",
+      "mtime": 1786416917,
+      "updated_at": "2026-08-27T11:14:10Z",
       "created_at": "2026-05-07T00:37:38Z"
     },
     "20b7fc1bd59f49ce": {
@@ -27,8 +27,8 @@
       "filename": "structured_master_recommended.md",
       "sha256": "20b7fc1bd59f49cee86b0583d511832bff48622efb830cb75d65aea0721687ce",
       "size_bytes": 14585,
-      "mtime": 1786415718,
-      "updated_at": "2026-08-11T02:35:20Z",
+      "mtime": 1786416917,
+      "updated_at": "2026-08-27T11:14:10Z",
       "created_at": "2026-05-07T00:40:24Z"
     }
   }
