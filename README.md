@@ -8,14 +8,14 @@
   <a href="https://github.com/Tensionix/docs-ai/blob/main/LICENSE"><img alt="License" src="https://img.shields.io/github/license/Tensionix/docs-ai?style=flat-square&color=5fd08a&logo=apache&logoColor=white&cacheSeconds=3600"></a>
 </p>
 
-**Version 1.9.4** · 2026-09-01 · 506.8 MB
+**Version 1.9.4** · 2026-09-01 · 5.1 MB
 
-- [Direct download](https://dl.audion.dev/docs-ai/1.9.4/Audion_Docs_AI_v1.9.4_Full.zip) — unmetered, no rate limits
+- [Direct download](https://dl.audion.dev/docs-ai/1.9.4/Audion_Docs_AI_v1.9.4.zip) — unmetered, no rate limits
 - [Project page](https://audion.dev/downloads/docs-ai) — every version and how to install
 
 <p align="center"><img src="docs/screenshot.png" alt="The program window" width="560"></p>
 
-`SHA-256: fb8df6791cac143b43a49f156b3449136e64ea81d4a3015c47d99fcfd16e6619`
+`SHA-256: 38aa1883d7ceff551d2759ed6528dd5dde052d56d749161834e43a7f46d20c8e`
 
 ---
 
