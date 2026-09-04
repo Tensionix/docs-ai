@@ -23,7 +23,7 @@ An **Audion** tool, published by [Tensionix](https://github.com/Tensionix).
 <!-- /audion:release -->
 
 
-[Русский](docs/README_RU.md) · [User Guide](docs/USER_GUIDE_EN.md)
+[Русский](Docs/README_RU.md) · [User Guide](Docs/USER_GUIDE_EN.md)
 
 **Contents**
 
@@ -103,7 +103,7 @@ The source document is never modified — edits go into a copy.
 
 ## Next
 
-* [User Guide](docs/USER_GUIDE_EN.md) — step by step.
+* [User Guide](Docs/USER_GUIDE_EN.md) — step by step.
 * `tools\GUI_WORKFLOW_RU.md` — the window and the order of work.
 * `tools\DOCUMENT_NORMALIZATION_RU.md` — how correction works.
 * `tools\COMMA_LOWERCASE_RESTORE_RU.md` — restoring commas and lower case.
