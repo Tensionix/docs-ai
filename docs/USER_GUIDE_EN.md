@@ -1,5 +1,18 @@
 # Audion Docs AI - User Guide
 
+**Contents**
+
+- [Start](#start)
+- [Recursive Document Pipeline](#recursive-document-pipeline)
+- [Audit Results](#audit-results)
+- [Document TASK Workflow](#document-task-workflow)
+- [Normalization](#normalization)
+- [Providers And Keys](#providers-and-keys)
+- [Workbench And Output](#workbench-and-output)
+- [Verification](#verification)
+- [Troubleshooting](#troubleshooting)
+- [Safe Maintenance](#safe-maintenance)
+
 Audion Docs AI audits, normalizes, and transforms DOCX/PPTX document sets through reproducible local pipelines with optional AI-provider stages.
 
 ## Start

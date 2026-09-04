@@ -12,238 +12,238 @@ BUNDLED COMPONENTS
 1. aiofiles
    Version: 25.1.0
    License: Apache-2.0
-   Source type: wheelhouse
+   Source type: site-packages
    Provider: not recorded
-   Legal documents: L-104c58d1d450, L-a8ad31b1c3f4
+   Legal documents: L-a8ad31b1c3f4, L-104c58d1d450
 
 2. aiohappyeyeballs
    Version: 2.7.1
    License: PSF-2.0
-   Source type: wheelhouse
+   Source type: site-packages
    Provider: not recorded
    Legal documents: L-3b2f81fe21d1
 
 3. aiohttp
    Version: 3.14.3
    License: Apache-2.0 AND MIT
-   Source type: wheelhouse
+   Source type: site-packages
    Provider: not recorded
-   Legal documents: L-628168d68bb5, L-2e4be5fc6c4c
+   Legal documents: L-2e4be5fc6c4c, L-628168d68bb5
 
 4. aiosignal
    Version: 1.4.0
    License: Apache 2.0
-   Source type: wheelhouse
+   Source type: site-packages
    Provider: not recorded
    Legal documents: L-6fd5243e92dd
 
 5. annotated-doc
    Version: 0.0.5
    License: MIT
-   Source type: wheelhouse
+   Source type: site-packages
    Provider: not recorded
    Legal documents: L-fff170779a6a
 
 6. annotated-types
    Version: 0.8.0
    License: MIT
-   Source type: wheelhouse
+   Source type: site-packages
    Provider: not recorded
    Legal documents: L-fe1049884b1a
 
 7. anthropic
-   Version: 1.2.0
+   Version: 1.3.0
    License: MIT
-   Source type: wheelhouse
+   Source type: site-packages
    Provider: not recorded
-   Legal documents: L-90f45e20cf0b, L-f8508be03f7b, L-154759c1e9eb
+   Legal documents: L-154759c1e9eb, L-f8508be03f7b, L-90f45e20cf0b
 
 8. anyio
-   Version: 4.14.2
+   Version: 4.15.0
    License: MIT
-   Source type: wheelhouse
+   Source type: site-packages
    Provider: not recorded
    Legal documents: L-5361ac9dc58f
 
 9. attrs
    Version: 26.1.0
    License: MIT
-   Source type: wheelhouse
+   Source type: site-packages
    Provider: not recorded
    Legal documents: L-882115c95dfc
 
 10. azure-ai-contentunderstanding
    Version: 1.2.0b3
    License: MIT
-   Source type: wheelhouse
+   Source type: site-packages
    Provider: not recorded
    Legal documents: L-7c77a44a8acd
 
 11. azure-ai-documentintelligence
    Version: 1.0.2
    License: MIT License
-   Source type: wheelhouse
+   Source type: site-packages
    Provider: not recorded
    Legal documents: L-7c77a44a8acd
 
 12. azure-core
    Version: 1.41.0
    License: MIT
-   Source type: wheelhouse
+   Source type: site-packages
    Provider: not recorded
    Legal documents: L-7c77a44a8acd
 
 13. azure-identity
    Version: 1.25.3
    License: MIT
-   Source type: wheelhouse
+   Source type: site-packages
    Provider: not recorded
    Legal documents: L-7c77a44a8acd
 
 14. beautifulsoup4
    Version: 4.15.0
    License: MIT License
-   Source type: wheelhouse
+   Source type: site-packages
    Provider: not recorded
    Legal documents: L-55b4d8d4b1e5, L-b989238918e1
 
 15. bidict
    Version: 0.24.1
    License: MPL-2.0
-   Source type: wheelhouse
+   Source type: site-packages
    Provider: not recorded
-   Legal documents: L-01ba4719c80b, L-099b9dcb0448
+   Legal documents: L-099b9dcb0448
 
 16. bottle
    Version: 0.13.4
    License: MIT
-   Source type: wheelhouse
+   Source type: site-packages
    Provider: not recorded
    Legal documents: L-af150257b1f7
 
 17. build
    Version: 1.6.0
    License: MIT
-   Source type: wheelhouse
+   Source type: site-packages
    Provider: not recorded
    Legal documents: L-aaf9a29ca590
 
 18. certifi
    Version: 2026.7.22
    License: MPL-2.0
-   Source type: wheelhouse
+   Source type: site-packages
    Provider: not recorded
    Legal documents: L-e93716da6b9c
 
 19. cffi
    Version: 2.1.1
    License: MIT-0
-   Source type: wheelhouse
+   Source type: site-packages
    Provider: not recorded
    Legal documents: L-1d2438cadca3
 
 20. charset-normalizer
    Version: 3.5.1
    License: MIT
-   Source type: wheelhouse
+   Source type: site-packages
    Provider: not recorded
    Legal documents: L-6d0d41bfe170
 
 21. click
    Version: 8.5.0
    License: BSD-3-Clause
-   Source type: wheelhouse
+   Source type: site-packages
    Provider: not recorded
    Legal documents: L-9a8ad106a394
 
 22. clr_loader
    Version: 0.3.1
    License: MIT
-   Source type: wheelhouse
+   Source type: site-packages
    Provider: not recorded
    Legal documents: L-dd6bdca10cdc
 
 23. cobble
    Version: 0.1.4
    License: BSD-2-Clause
-   Source type: wheelhouse
+   Source type: site-packages
    Provider: not recorded
    Legal documents: L-4b7fed0ea8ba
 
 24. colorama
    Version: 0.4.6
    License: License :: OSI Approved :: BSD License
-   Source type: wheelhouse
+   Source type: site-packages
    Provider: not recorded
    Legal documents: L-cac35c02686e
 
 25. coloredlogs
    Version: 15.0.1
    License: MIT
-   Source type: wheelhouse
+   Source type: site-packages
    Provider: not recorded
    Legal documents: L-0bef4ffb1855
 
 26. cryptography
    Version: 50.0.1
    License: Apache-2.0 OR BSD-3-Clause
-   Source type: wheelhouse
+   Source type: site-packages
    Provider: not recorded
-   Legal documents: L-602c4c7482de, L-34cb75d73943, L-3e0c7c091a94
+   Legal documents: L-3e0c7c091a94, L-602c4c7482de, L-34cb75d73943
 
 27. defusedxml
    Version: 0.7.1
    License: PSFL
-   Source type: wheelhouse
+   Source type: site-packages
    Provider: not recorded
    Legal documents: L-bc35cb420ea1
 
 28. distro
    Version: 1.9.0
    License: Apache License, Version 2.0
-   Source type: wheelhouse
+   Source type: site-packages
    Provider: not recorded
    Legal documents: L-a8ad31b1c3f4
 
 29. docstring_parser
    Version: 0.18.0
    License: MIT
-   Source type: wheelhouse
+   Source type: site-packages
    Provider: not recorded
    Legal documents: L-dfe514a337ae
 
 30. docutils
    Version: 0.23
    License: License :: Public Domain; License :: OSI Approved :: BSD License; License :: OSI Approved :: GNU General Public License (GPL)
-   Source type: wheelhouse
+   Source type: site-packages
    Provider: not recorded
-   Legal documents: L-c0e192fdb667, L-b8f3b31a2f43, L-6ab4f27c76c7, L-42ac50251ab8
+   Legal documents: L-6ab4f27c76c7, L-c0e192fdb667, L-42ac50251ab8, L-b8f3b31a2f43
 
 31. et_xmlfile
    Version: 2.0.0
    License: MIT
-   Source type: wheelhouse
+   Source type: site-packages
    Provider: not recorded
-   Legal documents: L-4ccdaaebc0f4, L-7f038029ea54, L-0c84bb42f5d3
+   Legal documents: L-7f038029ea54, L-0c84bb42f5d3, L-4ccdaaebc0f4
 
 32. fastapi
    Version: 0.141.1
    License: MIT
-   Source type: wheelhouse
+   Source type: site-packages
    Provider: not recorded
    Legal documents: L-4ec89ffc8148
 
 33. flatbuffers
    Version: 25.12.19
    License: Apache-2.0
-   Source type: wheelhouse
+   Source type: site-packages
    Provider: not recorded
    Legal documents: L-50e6751797c5
 
 34. frozenlist
    Version: 1.8.0
    License: Apache-2.0
-   Source type: wheelhouse
+   Source type: site-packages
    Provider: not recorded
    Legal documents: L-6fd5243e92dd
 
@@ -255,310 +255,310 @@ BUNDLED COMPONENTS
    Legal documents: L-a296f423c0d3
 
 36. google-auth
-   Version: 2.57.0
+   Version: 2.57.1
    License: Apache 2.0
-   Source type: wheelhouse
+   Source type: site-packages
    Provider: not recorded
    Legal documents: L-50e6751797c5
 
 37. google-genai
-   Version: 2.21.0
+   Version: 2.22.0
    License: Apache-2.0
-   Source type: wheelhouse
+   Source type: site-packages
    Provider: not recorded
    Legal documents: L-50e6751797c5
 
 38. h11
    Version: 0.16.0
    License: MIT
-   Source type: wheelhouse
+   Source type: site-packages
    Provider: not recorded
    Legal documents: L-37db5bb85926
 
 39. httpcore
    Version: 1.0.9
    License: BSD-3-Clause
-   Source type: wheelhouse
+   Source type: site-packages
    Provider: not recorded
    Legal documents: L-fdcb59154c74
 
 40. httpcore2
    Version: 2.12.0
    License: BSD-3-Clause
-   Source type: wheelhouse
+   Source type: site-packages
    Provider: not recorded
    Legal documents: L-c4df125c807b
 
 41. httptools
    Version: 0.8.0
    License: MIT
-   Source type: wheelhouse
+   Source type: site-packages
    Provider: not recorded
-   Legal documents: L-628168d68bb5, L-f4573e7cb767, L-2580ca6f428e
+   Legal documents: L-f4573e7cb767, L-628168d68bb5, L-2580ca6f428e
 
 42. httpx
    Version: 0.28.1
    License: BSD-3-Clause
-   Source type: wheelhouse
+   Source type: site-packages
    Provider: not recorded
    Legal documents: L-4ec59d544f12
 
 43. httpx2
    Version: 2.12.0
    License: BSD-3-Clause
-   Source type: wheelhouse
+   Source type: site-packages
    Provider: not recorded
    Legal documents: L-7e7d6dbaf7fe
 
 44. humanfriendly
    Version: 10.0
    License: MIT
-   Source type: wheelhouse
+   Source type: site-packages
    Provider: not recorded
    Legal documents: L-4ac48f411780
 
 45. idna
    Version: 3.19
    License: BSD-3-Clause
-   Source type: wheelhouse
+   Source type: site-packages
    Provider: not recorded
    Legal documents: L-1a9a4f0e3d47
 
 46. ifaddr
    Version: 0.2.0
    License: MIT
-   Source type: wheelhouse
+   Source type: site-packages
    Provider: not recorded
    Legal documents: L-8700856576ae
 
 47. iniconfig
    Version: 2.3.0
    License: MIT
-   Source type: wheelhouse
+   Source type: site-packages
    Provider: not recorded
    Legal documents: L-3409fa91f7ac
 
 48. isodate
    Version: 0.7.2
    License: License :: OSI Approved :: BSD License
-   Source type: wheelhouse
+   Source type: site-packages
    Provider: not recorded
    Legal documents: L-ce5fe4893fb6
 
 49. itsdangerous
    Version: 2.2.0
    License: License :: OSI Approved :: BSD License
-   Source type: wheelhouse
+   Source type: site-packages
    Provider: not recorded
    Legal documents: L-63af09891b6b
 
 50. Jinja2
    Version: 3.1.6
    License: License :: OSI Approved :: BSD License
-   Source type: wheelhouse
+   Source type: site-packages
    Provider: not recorded
    Legal documents: L-3b49dcee4105
 
 51. jiter
    Version: 0.16.0
    License: MIT
-   Source type: wheelhouse
+   Source type: site-packages
    Provider: not recorded
    Legal documents: L-7c7134b9f7b9
 
 52. lxml
-   Version: 6.1.2
+   Version: 6.1.3
    License: BSD-3-Clause
-   Source type: wheelhouse
+   Source type: site-packages
    Provider: not recorded
-   Legal documents: L-388fa99f3bde, L-8fc2b5681335
+   Legal documents: L-8fc2b5681335, L-388fa99f3bde
 
 53. magika
    Version: 0.6.3
    License: Apache-2.0
-   Source type: wheelhouse
+   Source type: site-packages
    Provider: not recorded
    Legal documents: L-50e6751797c5
 
 54. mammoth
    Version: 1.11.0
    License: BSD-2-Clause
-   Source type: wheelhouse
+   Source type: site-packages
    Provider: not recorded
    Legal documents: L-59d0910e3653
 
 55. markdown-it-py
    Version: 4.2.0
    License: License :: OSI Approved :: MIT License
-   Source type: wheelhouse
+   Source type: site-packages
    Provider: not recorded
    Legal documents: L-4a2260d6e2cd, L-792c48c5a849
 
 56. markdown2
    Version: 2.5.5
    License: MIT
-   Source type: wheelhouse
+   Source type: site-packages
    Provider: not recorded
    Legal documents: L-350d81a24cca
 
 57. markdownify
    Version: 1.2.3
    License: License :: OSI Approved :: MIT License
-   Source type: wheelhouse
+   Source type: site-packages
    Provider: not recorded
    Legal documents: L-fae8b42db142
 
 58. markitdown
    Version: 0.1.7
    License: MIT
-   Source type: wheelhouse
+   Source type: site-packages
    Provider: not recorded
    Legal documents: L-7df20dcdf919
 
 59. MarkupSafe
    Version: 3.0.3
    License: BSD-3-Clause
-   Source type: wheelhouse
+   Source type: site-packages
    Provider: not recorded
    Legal documents: L-489a8e110850
 
 60. mdurl
    Version: 0.1.2
    License: License :: OSI Approved :: MIT License
-   Source type: wheelhouse
+   Source type: site-packages
    Provider: not recorded
    Legal documents: L-7c605df6e286
 
 61. mpmath
    Version: 1.3.0
    License: BSD
-   Source type: wheelhouse
+   Source type: site-packages
    Provider: not recorded
    Legal documents: L-c26cae81da45
 
 62. msal
    Version: 1.38.0
    License: MIT
-   Source type: wheelhouse
+   Source type: site-packages
    Provider: not recorded
    Legal documents: L-f24a464601e5
 
 63. msal-extensions
    Version: 1.3.1
    License: MIT License
-   Source type: wheelhouse
+   Source type: site-packages
    Provider: not recorded
    Legal documents: L-09c990d042f0
 
 64. multidict
    Version: 6.7.1
    License: Apache License 2.0
-   Source type: wheelhouse
+   Source type: site-packages
    Provider: not recorded
    Legal documents: L-926b19214015
 
 65. nicegui
    Version: 3.16.0
    License: MIT
-   Source type: wheelhouse
+   Source type: site-packages
    Provider: not recorded
    Legal documents: L-41c065c20811
 
 66. numpy
    Version: 2.5.2
    License: BSD-3-Clause AND 0BSD AND MIT AND Zlib AND CC0-1.0
-   Source type: wheelhouse
+   Source type: site-packages
    Provider: not recorded
-   Legal documents: L-9d4098846018, L-1900269b4c2f, L-01ba4719c80b, L-f7b14309e5f5, L-6f5828a57223, L-211e7d737d61, L-a85ca13fdf90, L-82606ac1b37d, L-f419e9908876, L-ef21afaad4bb, L-b8b1fae5894c, L-d7e9361b9533, L-a14cc25e10d4, L-3f2c1ffa7638, L-5f6ed77cd032, L-a7a1034ce101, L-4a765ceefcdd, L-c17011467b4f
+   Legal documents: L-4a765ceefcdd, L-1900269b4c2f, L-a7a1034ce101, L-f419e9908876, L-a85ca13fdf90, L-b8b1fae5894c, L-d7e9361b9533, L-9d4098846018, L-c17011467b4f, L-6f5828a57223, L-ef21afaad4bb, L-a14cc25e10d4, L-82606ac1b37d, L-5f6ed77cd032, L-f7b14309e5f5, L-211e7d737d61, L-3f2c1ffa7638
 
 67. olefile
    Version: 0.47
    License: BSD
-   Source type: wheelhouse
+   Source type: site-packages
    Provider: not recorded
-   Legal documents: L-e76529051aac, L-cf1498d5b834, L-1102d8ad5864, L-215f5df7c376
+   Legal documents: L-215f5df7c376, L-1102d8ad5864, L-e76529051aac, L-cf1498d5b834
 
 68. onnxruntime
    Version: 1.20.1
    License: MIT
-   Source type: wheelhouse
+   Source type: site-packages
    Provider: not recorded
-   Legal documents: L-2f07c72751ae, L-7df20dcdf919, L-cf7342f7ba48
+   Legal documents: L-7df20dcdf919, L-2f07c72751ae, L-cf7342f7ba48
 
 69. openai
-   Version: 3.6.0
+   Version: 3.8.0
    License: Apache-2.0
-   Source type: wheelhouse
+   Source type: site-packages
    Provider: not recorded
-   Legal documents: L-fb3496291624, L-154759c1e9eb
+   Legal documents: L-154759c1e9eb, L-fb3496291624
 
 70. openpyxl
    Version: 3.1.5
    License: MIT
-   Source type: wheelhouse
+   Source type: site-packages
    Provider: not recorded
    Legal documents: L-0c84bb42f5d3
 
 71. orjson
    Version: 3.12.0
    License: MPL-2.0 AND (Apache-2.0 OR MIT)
-   Source type: wheelhouse
+   Source type: site-packages
    Provider: not recorded
-   Legal documents: L-23f18e03dc49, L-3f3d9e0024b1, L-143368af9701
+   Legal documents: L-23f18e03dc49, L-143368af9701, L-3f3d9e0024b1
 
 72. packaging
    Version: 26.3
    License: Apache-2.0 OR BSD-2-Clause
-   Source type: wheelhouse
+   Source type: site-packages
    Provider: not recorded
-   Legal documents: L-bb28c48e3e07, L-cad1ef5bd340, L-b70e7e9b742f
+   Legal documents: L-cad1ef5bd340, L-b70e7e9b742f, L-bb28c48e3e07
 
 73. pandas
    Version: 3.0.5
    License: License :: OSI Approved :: BSD License
-   Source type: wheelhouse
+   Source type: site-packages
    Provider: not recorded
    Legal documents: L-9850f6b5bdef
 
 74. pdfminer.six
    Version: 20260107
    License: MIT
-   Source type: wheelhouse
+   Source type: site-packages
    Provider: not recorded
    Legal documents: L-f01e5d699a33
 
 75. pdfplumber
    Version: 0.11.10
    License: License :: OSI Approved :: MIT License
-   Source type: wheelhouse
+   Source type: site-packages
    Provider: not recorded
    Legal documents: L-0d48994da4d1
 
 76. pillow
    Version: 12.3.0
    License: MIT-CMU
-   Source type: wheelhouse
+   Source type: site-packages
    Provider: not recorded
    Legal documents: L-ab0d05ea62c2
 
 77. pip
    Version: 26.2.1
    License: MIT
-   Source type: wheelhouse
+   Source type: site-packages
    Provider: not recorded
-   Legal documents: L-f388fd38cad1, L-deed7c17a431, L-b80816b0d530, L-a8ad31b1c3f4, L-1a9a4f0e3d47, L-bb28c48e3e07, L-86eeee87be2a, L-86da0f01aeae, L-a9d66f1d526d, L-e93716da6b9c, L-81932e77fef4, L-808e10c8a6ab, L-cad1ef5bd340, L-130e3a64d5fd, L-33be7b7e8fa4, L-1b22b049b526, L-29e0fd62e929, L-b70e7e9b742f, L-9e9824923444, L-4eb1fb1705e2, L-634300a669d4
+   Legal documents: L-deed7c17a431, L-b80816b0d530, L-a8ad31b1c3f4, L-e93716da6b9c, L-1a9a4f0e3d47, L-a9d66f1d526d, L-81932e77fef4, L-cad1ef5bd340, L-f388fd38cad1, L-33be7b7e8fa4, L-808e10c8a6ab, L-130e3a64d5fd, L-29e0fd62e929, L-b70e7e9b742f, L-86da0f01aeae, L-1b22b049b526, L-86eeee87be2a, L-bb28c48e3e07, L-634300a669d4, L-9e9824923444, L-4eb1fb1705e2
 
 78. pip-tools
    Version: 7.6.1
    License: BSD
-   Source type: wheelhouse
+   Source type: site-packages
    Provider: not recorded
    Legal documents: L-075f22737ed9
 
 79. pluggy
    Version: 1.6.0
    License: MIT
-   Source type: wheelhouse
+   Source type: site-packages
    Provider: not recorded
    Legal documents: L-d6b65e6c213a
 
@@ -572,378 +572,385 @@ BUNDLED COMPONENTS
 81. propcache
    Version: 0.5.2
    License: Apache-2.0
-   Source type: wheelhouse
+   Source type: site-packages
    Provider: not recorded
-   Legal documents: L-42205088a265, L-50e6751797c5
+   Legal documents: L-50e6751797c5, L-42205088a265
 
 82. protobuf
    Version: 7.36.1
    License: 3-Clause BSD License
-   Source type: wheelhouse
+   Source type: site-packages
    Provider: not recorded
    Legal documents: L-6e5e117324af
 
-83. pyasn1
+83. proxy_tools
+   Version: 0.1.0
+   License: MIT
+   Source type: site-packages
+   Provider: not recorded
+   Legal documents: L-c26a5009d736
+
+84. pyasn1
    Version: 0.6.4
    License: BSD-2-Clause
-   Source type: wheelhouse
+   Source type: site-packages
    Provider: not recorded
    Legal documents: L-07538c4a2098
 
-84. pyasn1_modules
+85. pyasn1_modules
    Version: 0.4.2
    License: BSD
-   Source type: wheelhouse
+   Source type: site-packages
    Provider: not recorded
    Legal documents: L-07538c4a2098
 
-85. pycparser
+86. pycparser
    Version: 3.0
    License: BSD-3-Clause
-   Source type: wheelhouse
+   Source type: site-packages
    Provider: not recorded
    Legal documents: L-b345a9762fdc
 
-86. pydantic
+87. pydantic
    Version: 2.13.5
    License: MIT
-   Source type: wheelhouse
+   Source type: site-packages
    Provider: not recorded
    Legal documents: L-a9e186f3ca16
 
-87. pydantic_core
+88. pydantic_core
    Version: 2.46.5
    License: MIT
-   Source type: wheelhouse
+   Source type: site-packages
    Provider: not recorded
    Legal documents: L-2afdd30d54b4
 
-88. pydub
+89. pydub
    Version: 0.25.1
    License: MIT
-   Source type: wheelhouse
+   Source type: site-packages
    Provider: not recorded
    Legal documents: L-715684a9a2db, L-306071a5ab42
 
-89. Pygments
+90. Pygments
    Version: 2.21.0
    License: BSD-2-Clause
-   Source type: wheelhouse
+   Source type: site-packages
    Provider: not recorded
-   Legal documents: L-ea74b9158f45, L-a9d66f1d526d
+   Legal documents: L-a9d66f1d526d, L-ea74b9158f45
 
-90. PyJWT
+91. PyJWT
    Version: 2.13.0
    License: MIT
-   Source type: wheelhouse
+   Source type: site-packages
    Provider: not recorded
-   Legal documents: L-925ce4346102, L-797a7a20231d
+   Legal documents: L-797a7a20231d, L-925ce4346102
 
-91. pymupdf
+92. pymupdf
    Version: 1.28.2
    License: Dual Licensed - GNU AFFERO GPL 3.0 or Artifex Commercial License
-   Source type: wheelhouse
+   Source type: site-packages
    Provider: not recorded
    Legal documents: L-35a118c0313e
 
-92. pypdfium2
+93. pypdfium2
    Version: 5.13.0
    License: BSD-3-Clause, Apache-2.0, dependency licenses
-   Source type: wheelhouse
+   Source type: site-packages
    Provider: not recorded
-   Legal documents: L-34cb75d73943, L-33fd641c9f3b, L-75815e3bf648, L-419896aea50c, L-e562f3f974ce, L-930a704da82f, L-961eacd9633f, L-e55522d81edc, L-ebcd9bbf783a, L-fc8dbc04e03a, L-c110d3ea2ad7, L-bdb0a645ea18, L-50e6751797c5, L-c5ab0890a737, L-7312b68c5b25, L-ba26c1263131, L-96f5b328adbb, L-a6d11f0694c0, L-92b72ba97e6c
+   Legal documents: L-419896aea50c, L-50e6751797c5, L-a6d11f0694c0, L-e55522d81edc, L-7312b68c5b25, L-33fd641c9f3b, L-c110d3ea2ad7, L-34cb75d73943, L-bdb0a645ea18, L-961eacd9633f, L-92b72ba97e6c, L-fc8dbc04e03a, L-930a704da82f, L-ebcd9bbf783a, L-e562f3f974ce, L-c5ab0890a737, L-96f5b328adbb, L-75815e3bf648, L-ba26c1263131
 
-93. pyproject_hooks
+94. pyproject_hooks
    Version: 1.2.0
    License: License :: OSI Approved :: MIT License
-   Source type: wheelhouse
+   Source type: site-packages
    Provider: not recorded
    Legal documents: L-1b22b049b526
 
-94. pyreadline3
+95. pyreadline3
    Version: 3.5.6
    License: BSD
-   Source type: wheelhouse
+   Source type: site-packages
    Provider: not recorded
    Legal documents: L-b8b132a8cafd
 
-95. pytest
+96. pytest
    Version: 9.1.1
    License: MIT
-   Source type: wheelhouse
+   Source type: site-packages
    Provider: not recorded
    Legal documents: L-ca836a5f9ecc
 
-96. python-dateutil
+97. python-dateutil
    Version: 2.9.0.post0
    License: Dual License
-   Source type: wheelhouse
+   Source type: site-packages
    Provider: not recorded
    Legal documents: L-9313256b27c4
 
-97. python-docx
+98. python-docx
    Version: 1.2.0
    License: MIT
-   Source type: wheelhouse
+   Source type: site-packages
    Provider: not recorded
    Legal documents: L-7652f271e46d
 
-98. python-dotenv
+99. python-dotenv
    Version: 1.2.3
    License: BSD-3-Clause
-   Source type: wheelhouse
+   Source type: site-packages
    Provider: not recorded
    Legal documents: L-80619b7049f0
 
-99. Python Embedded
+100. Python Embedded
    Version: 3.12.x
    License: PSF License Version 2 and bundled third-party notices
    Source type: baseline-runtime
    Provider: not recorded
    Legal documents: L-f6fa51e9cc3f
 
-100. python-engineio
+101. python-engineio
    Version: 4.14.0
    License: MIT
-   Source type: wheelhouse
+   Source type: site-packages
    Provider: not recorded
    Legal documents: L-c9e97d3dbc1f
 
-101. python-multipart
+102. python-multipart
    Version: 0.0.32
    License: Apache-2.0
-   Source type: wheelhouse
+   Source type: site-packages
    Provider: not recorded
    Legal documents: L-50e6751797c5
 
-102. python-pptx
+103. python-pptx
    Version: 1.0.2
    License: MIT
-   Source type: wheelhouse
+   Source type: site-packages
    Provider: not recorded
    Legal documents: L-7652f271e46d
 
-103. python-socketio
+104. python-socketio
    Version: 5.16.4
    License: MIT
-   Source type: wheelhouse
+   Source type: site-packages
    Provider: not recorded
    Legal documents: L-c9e97d3dbc1f
 
-104. pythonnet
+105. pythonnet
    Version: 3.1.0
    License: MIT
-   Source type: wheelhouse
+   Source type: site-packages
    Provider: not recorded
-   Legal documents: L-65a13631f078, L-e1dc3a6ff017
+   Legal documents: L-e1dc3a6ff017, L-65a13631f078
 
-105. pywebview
+106. pywebview
    Version: 6.2.1
    License: License :: OSI Approved :: BSD License
-   Source type: wheelhouse
+   Source type: site-packages
    Provider: not recorded
    Legal documents: L-4a988dd35988
 
-106. PyYAML
+107. PyYAML
    Version: 6.0.3
    License: MIT
-   Source type: wheelhouse
+   Source type: site-packages
    Provider: not recorded
    Legal documents: L-8d3928f9dc44
 
-107. requests
+108. requests
    Version: 2.34.2
    License: Apache-2.0
-   Source type: wheelhouse
+   Source type: site-packages
    Provider: not recorded
    Legal documents: L-81932e77fef4, L-f5110972deda
 
-108. rich
+109. rich
    Version: 15.0.0
    License: MIT
-   Source type: wheelhouse
+   Source type: site-packages
    Provider: not recorded
    Legal documents: L-deed7c17a431
 
-109. setuptools
+110. setuptools
    Version: 84.0.0
    License: MIT
-   Source type: wheelhouse
+   Source type: site-packages
    Provider: not recorded
-   Legal documents: L-b70e7e9b742f, L-30c236186791, L-09f1c8c9e941, L-cad1ef5bd340, L-86da0f01aeae, L-5a57cb4db85e, L-2dddf0881829, L-09c9bcea95ca, L-9755a1851966, L-6557adc4bc1d, L-29e0fd62e929, L-bb28c48e3e07, L-458502e12d97, L-b80816b0d530
+   Legal documents: L-86da0f01aeae, L-6557adc4bc1d, L-b80816b0d530, L-5a57cb4db85e, L-cad1ef5bd340, L-30c236186791, L-b70e7e9b742f, L-29e0fd62e929, L-9755a1851966, L-09f1c8c9e941, L-bb28c48e3e07, L-458502e12d97, L-2dddf0881829, L-09c9bcea95ca
 
-110. simple-websocket
+111. simple-websocket
    Version: 1.1.0
    License: License :: OSI Approved :: MIT License
-   Source type: wheelhouse
+   Source type: site-packages
    Provider: not recorded
    Legal documents: L-4b8abadcc5e3
 
-111. six
+112. six
    Version: 1.17.0
    License: MIT
-   Source type: wheelhouse
+   Source type: site-packages
    Provider: not recorded
    Legal documents: L-4375ba20e2b9
 
-112. sniffio
+113. sniffio
    Version: 1.3.1
    License: MIT OR Apache-2.0
-   Source type: wheelhouse
+   Source type: site-packages
    Provider: not recorded
-   Legal documents: L-652c878488d1, L-50e6751797c5, L-3e6dae555eb9
+   Legal documents: L-652c878488d1, L-3e6dae555eb9, L-50e6751797c5
 
-113. soupsieve
+114. soupsieve
    Version: 2.9.2
    License: MIT
-   Source type: wheelhouse
+   Source type: site-packages
    Provider: not recorded
    Legal documents: L-76a0acdb98c3
 
-114. SpeechRecognition
+115. SpeechRecognition
    Version: 3.17.0
    License: BSD-3-Clause
-   Source type: wheelhouse
+   Source type: site-packages
    Provider: not recorded
-   Legal documents: L-b90ed8150a6d, L-92cb9c55adfd, L-c7dc80eb009a
+   Legal documents: L-c7dc80eb009a, L-92cb9c55adfd, L-b90ed8150a6d
 
-115. starlette
+116. starlette
    Version: 1.6.0
    License: BSD-3-Clause
-   Source type: wheelhouse
+   Source type: site-packages
    Provider: not recorded
    Legal documents: L-dcb95677a022
 
-116. sympy
+117. sympy
    Version: 1.14.0
    License: BSD
-   Source type: wheelhouse
+   Source type: site-packages
    Provider: not recorded
-   Legal documents: L-ea9b7901b93a, L-007bc30a58fa, L-82b1038521b0
+   Legal documents: L-007bc30a58fa, L-ea9b7901b93a, L-82b1038521b0
 
-117. tenacity
+118. tenacity
    Version: 9.1.4
    License: Apache 2.0
-   Source type: wheelhouse
+   Source type: site-packages
    Provider: not recorded
    Legal documents: L-50e6751797c5
 
-118. tinycss2
+119. tinycss2
    Version: 1.5.1
    License: License :: OSI Approved :: BSD License
-   Source type: wheelhouse
+   Source type: site-packages
    Provider: not recorded
    Legal documents: L-6b94acee20ec
 
-119. tqdm
+120. tqdm
    Version: 4.70.0
    License: MPL-2.0 AND MIT
-   Source type: wheelhouse
+   Source type: site-packages
    Provider: not recorded
    Legal documents: L-fcff87c3a47c
 
-120. truststore
+121. truststore
    Version: 0.10.4
    License: MIT
-   Source type: wheelhouse
+   Source type: site-packages
    Provider: not recorded
    Legal documents: L-33be7b7e8fa4
 
-121. typing_extensions
+122. typing_extensions
    Version: 4.16.0
    License: PSF-2.0
-   Source type: wheelhouse
+   Source type: site-packages
    Provider: not recorded
    Legal documents: L-3b2f81fe21d1
 
-122. typing-inspection
+123. typing-inspection
    Version: 0.4.4
    License: MIT
-   Source type: wheelhouse
+   Source type: site-packages
    Provider: not recorded
    Legal documents: L-804b59b25f2c
 
-123. tzdata
+124. tzdata
    Version: 2026.3
    License: Apache-2.0
-   Source type: wheelhouse
+   Source type: site-packages
    Provider: not recorded
-   Legal documents: L-50e6751797c5, L-df58f69ea886
+   Legal documents: L-df58f69ea886, L-50e6751797c5
 
-124. urllib3
+125. urllib3
    Version: 2.7.0
    License: MIT
-   Source type: wheelhouse
+   Source type: site-packages
    Provider: not recorded
    Legal documents: L-130e3a64d5fd
 
-125. uvicorn
+126. uvicorn
    Version: 0.52.4
    License: BSD-3-Clause
-   Source type: wheelhouse
+   Source type: site-packages
    Provider: not recorded
    Legal documents: L-efe1acf3e62f
 
-126. watchfiles
+127. watchfiles
    Version: 1.2.0
    License: MIT
-   Source type: wheelhouse
+   Source type: site-packages
    Provider: not recorded
    Legal documents: L-4fd78355b67c
 
-127. webencodings
+128. webencodings
    Version: 0.6.1
    License: BSD-3-Clause
-   Source type: wheelhouse
+   Source type: site-packages
    Provider: not recorded
-   Legal documents: L-e06ef33485e7, L-01b876deaedb
+   Legal documents: L-01b876deaedb, L-e06ef33485e7
 
-128. websockets
+129. websockets
    Version: 16.1.1
    License: BSD-3-Clause
-   Source type: wheelhouse
+   Source type: site-packages
    Provider: not recorded
    Legal documents: L-3d6a0c050d8b
 
-129. wheel
+130. wheel
    Version: 0.48.0
    License: MIT
-   Source type: wheelhouse
+   Source type: site-packages
    Provider: not recorded
    Legal documents: L-30c236186791
 
-130. wsproto
+131. wsproto
    Version: 1.3.2
    License: MIT
-   Source type: wheelhouse
+   Source type: site-packages
    Provider: not recorded
    Legal documents: L-fdbe26ef1b61
 
-131. xlrd
+132. xlrd
    Version: 2.0.2
    License: BSD
-   Source type: wheelhouse
+   Source type: site-packages
    Provider: not recorded
    Legal documents: L-b5a5dbce6026
 
-132. xlsxwriter
+133. xlsxwriter
    Version: 3.2.9
    License: BSD-2-Clause
-   Source type: wheelhouse
+   Source type: site-packages
    Provider: not recorded
    Legal documents: L-cf08b60a4ded
 
-133. yarl
+134. yarl
    Version: 1.24.5
    License: Apache-2.0
-   Source type: wheelhouse
+   Source type: site-packages
    Provider: not recorded
    Legal documents: L-50e6751797c5, L-42205088a265
 
-134. youtube-transcript-api
+135. youtube-transcript-api
    Version: 1.0.3
    License: MIT
-   Source type: wheelhouse
+   Source type: site-packages
    Provider: not recorded
    Legal documents: L-e7608cc316ea
 
@@ -953,10 +960,10 @@ None registered.
 CONSOLIDATED LEGAL DOCUMENTS
 ================================================================================
 
-[L-007bc30a58fa] LICENSE.txt
+[L-007bc30a58fa] LICENSE_1txt
 SHA256: 007bc30a58fa40a996e772047120de4eaf31f5110e4f9c3b5f93fcdfbe2eaca1
 Components: sympy
-Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260901T043316Z_audion-docs-ai_fc671953\collector_legal_files\sympy-1.14.0\LICENSE.txt
+Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260904T022702Z_audion-docs-ai_03ebd123\collector_legal_files\sympy-1.14.0\LICENSE_1txt
 --------------------------------------------------------------------------------
 The MIT License (MIT)
 
@@ -985,7 +992,7 @@ SOFTWARE.
 [L-01b876deaedb] LICENSE-webencodings-BSD-3-Clause.txt
 SHA256: 01b876deaedb2e876a451c271903f3ad91ed6f62f60c0bbcfea6d8558e275c50
 Components: webencodings
-Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260901T043316Z_audion-docs-ai_fc671953\collector_legal_files\webencodings-present-in-release\LICENSE-webencodings-BSD-3-Clause.txt
+Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260904T022702Z_audion-docs-ai_03ebd123\collector_legal_files\webencodings-present-in-release\LICENSE-webencodings-BSD-3-Clause.txt
 --------------------------------------------------------------------------------
 Copyright (c) 2012 by Simon Sapin. Some rights reserved.
 
@@ -1002,19 +1009,10 @@ IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, 
 
 ================================================================================
 
-[L-01ba4719c80b] licenses
-SHA256: 01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b
-Components: bidict, numpy
-Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260901T043316Z_audion-docs-ai_fc671953\collector_legal_files\bidict-0.24.1\licenses
---------------------------------------------------------------------------------
-
-
-================================================================================
-
-[L-07538c4a2098] LICENSE.rst
+[L-07538c4a2098] LICENSE_1rst
 SHA256: 07538c4a209865151151b3269321cb1fc327dca522d0fc848e620d876e67ecab
 Components: pyasn1, pyasn1_modules
-Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260901T043316Z_audion-docs-ai_fc671953\collector_legal_files\pyasn1-0.6.4\LICENSE.rst
+Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260904T022702Z_audion-docs-ai_03ebd123\collector_legal_files\pyasn1-0.6.4\LICENSE_1rst
 --------------------------------------------------------------------------------
 Copyright (c) 2005-2020, Ilya Etingof <etingof@gmail.com>
 All rights reserved.
@@ -1043,10 +1041,10 @@ POSSIBILITY OF SUCH DAMAGE.
 
 ================================================================================
 
-[L-075f22737ed9] LICENSE
+[L-075f22737ed9] LICENSE_1.txt
 SHA256: 075f22737ed9245d386a23968c7ec906f66dfb7af35c3ff920aabd165a8ae920
 Components: pip-tools
-Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260901T043316Z_audion-docs-ai_fc671953\collector_legal_files\pip-tools-7.6.1\LICENSE
+Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260904T022702Z_audion-docs-ai_03ebd123\collector_legal_files\pip-tools-7.6.1\LICENSE_1.txt
 --------------------------------------------------------------------------------
 BSD 3-Clause License
 
@@ -1079,10 +1077,10 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 ================================================================================
 
-[L-099b9dcb0448] LICENSE
+[L-099b9dcb0448] LICENSE_1.txt
 SHA256: 099b9dcb04485b32cf93aba82b303e099bcf98ab2476fae716d22c930fd6b915
 Components: bidict
-Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260901T043316Z_audion-docs-ai_fc671953\collector_legal_files\bidict-0.24.1\LICENSE
+Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260904T022702Z_audion-docs-ai_03ebd123\collector_legal_files\bidict-0.24.1\LICENSE_1.txt
 --------------------------------------------------------------------------------
 Mozilla Public License Version 2.0
 ==================================
@@ -1463,10 +1461,10 @@ Exhibit B - "Incompatible With Secondary Licenses" Notice
 
 ================================================================================
 
-[L-09c990d042f0] LICENSE
+[L-09c990d042f0] LICENSE_1.txt
 SHA256: 09c990d042f0b5c706bfcb87c741ddbf5121a4945fc88858825e3a80cd54b6d6
 Components: msal-extensions
-Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260901T043316Z_audion-docs-ai_fc671953\collector_legal_files\msal-extensions-1.3.1\LICENSE
+Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260904T022702Z_audion-docs-ai_03ebd123\collector_legal_files\msal-extensions-1.3.1\LICENSE_1.txt
 --------------------------------------------------------------------------------
 MIT License
 
@@ -1492,10 +1490,10 @@ MIT License
 
 ================================================================================
 
-[L-09c9bcea95ca] NOTICE_1.txt
+[L-09c9bcea95ca] NOTICE_3.txt
 SHA256: 09c9bcea95ca086f8bc5bed174e40bc835b297d40fb5f86bbbb570fe0a5581a7
 Components: setuptools
-Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260901T043316Z_audion-docs-ai_fc671953\collector_legal_files\setuptools-84.0.0\NOTICE_1.txt
+Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260904T022702Z_audion-docs-ai_03ebd123\collector_legal_files\setuptools-84.0.0\NOTICE_3.txt
 --------------------------------------------------------------------------------
 The code contained in this directory was automatically generated using the
 following command:
@@ -1938,10 +1936,10 @@ Exhibit B - "Incompatible With Secondary Licenses" Notice
 
 ================================================================================
 
-[L-09f1c8c9e941] LICENSE
+[L-09f1c8c9e941] LICENSE_16.txt
 SHA256: 09f1c8c9e941af3e584d59641ea9b87d83c0cb0fd007eb5ef391a7e2643c1a46
 Components: setuptools
-Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260901T043316Z_audion-docs-ai_fc671953\collector_legal_files\setuptools-84.0.0\LICENSE
+Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260904T022702Z_audion-docs-ai_03ebd123\collector_legal_files\setuptools-84.0.0\LICENSE_16.txt
 --------------------------------------------------------------------------------
 Copyright (c) 2012 Erik Rose
 
@@ -1965,10 +1963,10 @@ SOFTWARE.
 
 ================================================================================
 
-[L-0bef4ffb1855] LICENSE.txt
+[L-0bef4ffb1855] LICENSE_1txt
 SHA256: 0bef4ffb1855b65570304f2018c6d44e4bab97bd5df8716ecd7800014d717267
 Components: coloredlogs
-Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260901T043316Z_audion-docs-ai_fc671953\collector_legal_files\coloredlogs-15.0.1\LICENSE.txt
+Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260904T022702Z_audion-docs-ai_03ebd123\collector_legal_files\coloredlogs-15.0.1\LICENSE_1txt
 --------------------------------------------------------------------------------
 Copyright (c) 2020 Peter Odding
 
@@ -1993,10 +1991,10 @@ WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 ================================================================================
 
-[L-0c84bb42f5d3] LICENCE.rst
+[L-0c84bb42f5d3] LICENCE_1rst
 SHA256: 0c84bb42f5d367e5ebf9fc2dde35b16141df5ee0fdc189250858bc6c5560f69e
 Components: et_xmlfile, openpyxl
-Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260901T043316Z_audion-docs-ai_fc671953\collector_legal_files\et-xmlfile-2.0.0\LICENCE.rst
+Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260904T022702Z_audion-docs-ai_03ebd123\collector_legal_files\et-xmlfile-2.0.0\LICENCE_1rst
 --------------------------------------------------------------------------------
 This software is under the MIT Licence
 ======================================
@@ -2024,10 +2022,10 @@ SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 ================================================================================
 
-[L-0d48994da4d1] LICENSE.txt
+[L-0d48994da4d1] LICENSE_1txt
 SHA256: 0d48994da4d1321e395b5e64a724ed4dec63fb96b88ac5b88fc014771e690821
 Components: pdfplumber
-Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260901T043316Z_audion-docs-ai_fc671953\collector_legal_files\pdfplumber-0.11.10\LICENSE.txt
+Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260904T022702Z_audion-docs-ai_03ebd123\collector_legal_files\pdfplumber-0.11.10\LICENSE_1txt
 --------------------------------------------------------------------------------
 The MIT License (MIT)
 
@@ -2053,20 +2051,20 @@ SOFTWARE.
 
 ================================================================================
 
-[L-104c58d1d450] NOTICE
+[L-104c58d1d450] NOTICE_1.txt
 SHA256: 104c58d1d450bd6474c09d8b64bc0182733a60ac3d8c253e334cde8294520ff1
 Components: aiofiles
-Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260901T043316Z_audion-docs-ai_fc671953\collector_legal_files\aiofiles-25.1.0\NOTICE
+Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260904T022702Z_audion-docs-ai_03ebd123\collector_legal_files\aiofiles-25.1.0\NOTICE_1.txt
 --------------------------------------------------------------------------------
 Asyncio support for files
 Copyright 2016 Tin Tvrtkovic
 
 ================================================================================
 
-[L-1102d8ad5864] License.md
+[L-1102d8ad5864] License_1md
 SHA256: 1102d8ad5864d8c28b4080a191d26f1ecc00be8d27342a0084b375d28bfc57f3
 Components: olefile
-Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260901T043316Z_audion-docs-ai_fc671953\collector_legal_files\olefile-0.47\License.md
+Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260904T022702Z_audion-docs-ai_03ebd123\collector_legal_files\olefile-0.47\License_1md
 --------------------------------------------------------------------------------
 License for olefile
 ===================
@@ -2125,10 +2123,10 @@ olefile documentation
 
 ================================================================================
 
-[L-130e3a64d5fd] LICENSE_2txt
+[L-130e3a64d5fd] LICENSE_5txt
 SHA256: 130e3a64d5fdd5d096a752694634a7d9df284469de86e5732100268041e3d686
 Components: pip, urllib3
-Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260901T043316Z_audion-docs-ai_fc671953\collector_legal_files\pip-26.2.1\LICENSE_2txt
+Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260904T022702Z_audion-docs-ai_03ebd123\collector_legal_files\pip-26.2.1\LICENSE_5txt
 --------------------------------------------------------------------------------
 MIT License
 
@@ -2154,10 +2152,10 @@ SOFTWARE.
 
 ================================================================================
 
-[L-143368af9701] LICENSE-APACHE
+[L-143368af9701] LICENSE-APACHE_1.txt
 SHA256: 143368af9701a24ebaf89fe5310ad8116ca71e8e99f17415c0dd893f6a256ae4
 Components: orjson
-Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260901T043316Z_audion-docs-ai_fc671953\collector_legal_files\orjson-3.12.0\LICENSE-APACHE
+Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260904T022702Z_audion-docs-ai_03ebd123\collector_legal_files\orjson-3.12.0\LICENSE-APACHE_1.txt
 --------------------------------------------------------------------------------
 Apache License
                         Version 2.0, January 2004
@@ -2363,10 +2361,10 @@ limitations under the License.
 
 ================================================================================
 
-[L-154759c1e9eb] LICENSE_1.txt
+[L-154759c1e9eb] LICENSE_2.txt
 SHA256: 154759c1e9eb58e42643ee43ec59d556def4d1d702d911a484c469e02f85dd5d
 Components: anthropic, openai
-Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260901T043316Z_audion-docs-ai_fc671953\collector_legal_files\anthropic-1.2.0\LICENSE_1.txt
+Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260904T022702Z_audion-docs-ai_03ebd123\collector_legal_files\anthropic-1.3.0\LICENSE_2.txt
 --------------------------------------------------------------------------------
 Copyright © 2025, Karen Petrosyan.
 All rights reserved.
@@ -2398,10 +2396,10 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 ================================================================================
 
-[L-1900269b4c2f] LICENSE_1md
+[L-1900269b4c2f] LICENSE_9md
 SHA256: 1900269b4c2f0ff0c7ad01ecf13f5ded5610968a0cf1fb6bc3a83bccc2b4c38d
 Components: numpy
-Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260901T043316Z_audion-docs-ai_fc671953\collector_legal_files\numpy-2.5.2\LICENSE_1md
+Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260904T022702Z_audion-docs-ai_03ebd123\collector_legal_files\numpy-2.5.2\LICENSE_9md
 --------------------------------------------------------------------------------
 **This software is dual-licensed under the The University of Illinois/NCSA
 Open Source License (NCSA) and The 3-Clause BSD License**
@@ -2477,10 +2475,10 @@ the component code.
 
 ================================================================================
 
-[L-1a9a4f0e3d47] LICENSE.md
+[L-1a9a4f0e3d47] LICENSE_1md
 SHA256: 1a9a4f0e3d479a27240ddd59a9137a66ab4a0f9dfdc8ca6188cc0bfd85187f04
 Components: idna, pip
-Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260901T043316Z_audion-docs-ai_fc671953\collector_legal_files\idna-3.19\LICENSE.md
+Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260904T022702Z_audion-docs-ai_03ebd123\collector_legal_files\idna-3.19\LICENSE_1md
 --------------------------------------------------------------------------------
 BSD 3-Clause License
 
@@ -2516,10 +2514,10 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 ================================================================================
 
-[L-1b22b049b526] LICENSE_10.txt
+[L-1b22b049b526] LICENSE_23.txt
 SHA256: 1b22b049b5267d6dfc23a67bf4a84d8ec04b9fdfb1a51d360e42b4342c8b4154
 Components: pip, pyproject_hooks
-Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260901T043316Z_audion-docs-ai_fc671953\collector_legal_files\pip-26.2.1\LICENSE_10.txt
+Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260904T022702Z_audion-docs-ai_03ebd123\collector_legal_files\pip-26.2.1\LICENSE_23.txt
 --------------------------------------------------------------------------------
 The MIT License (MIT)
 
@@ -2545,10 +2543,10 @@ THE SOFTWARE.
 
 ================================================================================
 
-[L-1d2438cadca3] LICENSE
+[L-1d2438cadca3] LICENSE_1.txt
 SHA256: 1d2438cadca31cb11257f8440703766e42c995202aa27e7f629f9a79a8b5c07f
 Components: cffi
-Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260901T043316Z_audion-docs-ai_fc671953\collector_legal_files\cffi-2.1.1\LICENSE
+Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260904T022702Z_audion-docs-ai_03ebd123\collector_legal_files\cffi-2.1.1\LICENSE_1.txt
 --------------------------------------------------------------------------------
 Except when otherwise stated (look for LICENSE files in directories or
 information at the beginning of each file) all software and
@@ -2574,10 +2572,10 @@ documentation is licensed as follows:
 
 ================================================================================
 
-[L-211e7d737d61] LICENSE_3md
+[L-211e7d737d61] LICENSE_17md
 SHA256: 211e7d737d6179a08f791ebb0a99897ce7cd2457410c542876d125576edfe910
 Components: numpy
-Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260901T043316Z_audion-docs-ai_fc671953\collector_legal_files\numpy-2.5.2\LICENSE_3md
+Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260904T022702Z_audion-docs-ai_03ebd123\collector_legal_files\numpy-2.5.2\LICENSE_17md
 --------------------------------------------------------------------------------
 BSD 3-Clause License
 
@@ -2610,10 +2608,10 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 ================================================================================
 
-[L-215f5df7c376] LICENSE_1txt
+[L-215f5df7c376] LICENSE_2txt
 SHA256: 215f5df7c376026b0fa10f372d35050607c7a07b9a8d449eae5376990e7af260
 Components: olefile
-Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260901T043316Z_audion-docs-ai_fc671953\collector_legal_files\olefile-0.47\LICENSE_1txt
+Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260904T022702Z_audion-docs-ai_03ebd123\collector_legal_files\olefile-0.47\LICENSE_2txt
 --------------------------------------------------------------------------------
 LICENSE for the olefile package:
 
@@ -2674,10 +2672,10 @@ PERFORMANCE OF THIS SOFTWARE.
 
 ================================================================================
 
-[L-23f18e03dc49] LICENSE-MIT
+[L-23f18e03dc49] LICENSE-MIT_1.txt
 SHA256: 23f18e03dc49df91622fe2a76176497404e46ced8a715d9d2b67a7446571cca3
 Components: orjson
-Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260901T043316Z_audion-docs-ai_fc671953\collector_legal_files\orjson-3.12.0\LICENSE-MIT
+Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260904T022702Z_audion-docs-ai_03ebd123\collector_legal_files\orjson-3.12.0\LICENSE-MIT_1.txt
 --------------------------------------------------------------------------------
 Permission is hereby granted, free of charge, to any
 person obtaining a copy of this software and associated
@@ -2705,10 +2703,10 @@ DEALINGS IN THE SOFTWARE.
 
 ================================================================================
 
-[L-2580ca6f428e] LICENSE-MIT
+[L-2580ca6f428e] LICENSE-MIT_1.txt
 SHA256: 2580ca6f428e469f8f6626f621ea867d5356638d97dc748b5790df8ae52b3926
 Components: httptools
-Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260901T043316Z_audion-docs-ai_fc671953\collector_legal_files\httptools-0.8.0\LICENSE-MIT
+Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260904T022702Z_audion-docs-ai_03ebd123\collector_legal_files\httptools-0.8.0\LICENSE-MIT_1.txt
 --------------------------------------------------------------------------------
 Copyright Joyent, Inc. and other Node contributors.
 
@@ -2732,10 +2730,10 @@ IN THE SOFTWARE.
 
 ================================================================================
 
-[L-29e0fd62e929] LICENSE_11.txt
+[L-29e0fd62e929] LICENSE_21.txt
 SHA256: 29e0fd62e929850e86eb28c3fdccf0cefdf4fa94879011cffb3d0d4bed6d4db6
 Components: pip, setuptools
-Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260901T043316Z_audion-docs-ai_fc671953\collector_legal_files\pip-26.2.1\LICENSE_11.txt
+Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260904T022702Z_audion-docs-ai_03ebd123\collector_legal_files\pip-26.2.1\LICENSE_21.txt
 --------------------------------------------------------------------------------
 MIT License
 
@@ -2761,10 +2759,10 @@ SOFTWARE.
 
 ================================================================================
 
-[L-2afdd30d54b4] LICENSE
+[L-2afdd30d54b4] LICENSE_1.txt
 SHA256: 2afdd30d54b4d62b6f488a6bcc1546e84ec5061f13f4209c03d012348783795a
 Components: pydantic_core
-Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260901T043316Z_audion-docs-ai_fc671953\collector_legal_files\pydantic-core-2.46.5\LICENSE
+Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260904T022702Z_audion-docs-ai_03ebd123\collector_legal_files\pydantic-core-2.46.5\LICENSE_1.txt
 --------------------------------------------------------------------------------
 The MIT License (MIT)
 
@@ -2790,10 +2788,10 @@ SOFTWARE.
 
 ================================================================================
 
-[L-2dddf0881829] NOTICE
+[L-2dddf0881829] NOTICE_2.txt
 SHA256: 2dddf08818297a3b89d43d95ff659d8da85741108c9136dfa3a4d856c0623bd8
 Components: setuptools
-Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260901T043316Z_audion-docs-ai_fc671953\collector_legal_files\setuptools-84.0.0\NOTICE
+Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260904T022702Z_audion-docs-ai_03ebd123\collector_legal_files\setuptools-84.0.0\NOTICE_2.txt
 --------------------------------------------------------------------------------
 The following files include code from opensource projects
 (either as direct copies or modified versions):
@@ -2808,10 +2806,10 @@ The following files include code from opensource projects
 
 ================================================================================
 
-[L-2e4be5fc6c4c] LICENSE.txt
+[L-2e4be5fc6c4c] LICENSE_1txt
 SHA256: 2e4be5fc6c4c72a466fcb665d726e049a6891981fe536c4f04b6366749461d23
 Components: aiohttp
-Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260901T043316Z_audion-docs-ai_fc671953\collector_legal_files\aiohttp-3.14.3\LICENSE.txt
+Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260904T022702Z_audion-docs-ai_03ebd123\collector_legal_files\aiohttp-3.14.3\LICENSE_1txt
 --------------------------------------------------------------------------------
 Apache License
                            Version 2.0, January 2004
@@ -3017,10 +3015,10 @@ Apache License
 
 ================================================================================
 
-[L-2f07c72751ae] LICENSE
+[L-2f07c72751ae] LICENSE_1.txt
 SHA256: 2f07c72751aed99790b8a4869cf2311df85a860b22ded05fa22803587a48922c
 Components: onnxruntime
-Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260901T043316Z_audion-docs-ai_fc671953\collector_legal_files\onnxruntime-1.20.1\LICENSE
+Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260904T022702Z_audion-docs-ai_03ebd123\collector_legal_files\onnxruntime-1.20.1\LICENSE_1.txt
 --------------------------------------------------------------------------------
 MIT License
 
@@ -3046,10 +3044,10 @@ SOFTWARE.
 
 ================================================================================
 
-[L-306071a5ab42] AUTHORS
+[L-306071a5ab42] AUTHORS_1.txt
 SHA256: 306071a5ab426e9fbce081960c270bdb99c100f3556720d15ade1eedcf3a8530
 Components: pydub
-Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260901T043316Z_audion-docs-ai_fc671953\collector_legal_files\pydub-0.25.1\AUTHORS
+Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260904T022702Z_audion-docs-ai_03ebd123\collector_legal_files\pydub-0.25.1\AUTHORS_1.txt
 --------------------------------------------------------------------------------
 James Robert
     github: jiaaro
@@ -3152,10 +3150,10 @@ Grzegorz Kotfis
 
 ================================================================================
 
-[L-30c236186791] LICENSE.txt
+[L-30c236186791] LICENSE_1txt
 SHA256: 30c23618679108f3e8ea1d2a658c7ca417bdfc891c98ef1a89fa4ff0c9828654
 Components: setuptools, wheel
-Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260901T043316Z_audion-docs-ai_fc671953\collector_legal_files\setuptools-84.0.0\LICENSE.txt
+Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260904T022702Z_audion-docs-ai_03ebd123\collector_legal_files\setuptools-84.0.0\LICENSE_1txt
 --------------------------------------------------------------------------------
 MIT License
 
@@ -3181,10 +3179,10 @@ OTHER DEALINGS IN THE SOFTWARE.
 
 ================================================================================
 
-[L-33be7b7e8fa4] LICENSE_9.txt
+[L-33be7b7e8fa4] LICENSE_20.txt
 SHA256: 33be7b7e8fa4fd19b1760e1a8ed8a668bdab852c91b692dd41424bcb725a9fca
 Components: pip, truststore
-Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260901T043316Z_audion-docs-ai_fc671953\collector_legal_files\pip-26.2.1\LICENSE_9.txt
+Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260904T022702Z_audion-docs-ai_03ebd123\collector_legal_files\pip-26.2.1\LICENSE_20.txt
 --------------------------------------------------------------------------------
 The MIT License (MIT)
 
@@ -3210,10 +3208,10 @@ THE SOFTWARE.
 
 ================================================================================
 
-[L-33fd641c9f3b] zlib.txt
+[L-33fd641c9f3b] zlib_1txt
 SHA256: 33fd641c9f3b0e0be64bc78fea9e94807674cdd70c48477599226cb8956565fe
 Components: pypdfium2
-Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260901T043316Z_audion-docs-ai_fc671953\collector_legal_files\pypdfium2-5.13.0\zlib.txt
+Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260904T022702Z_audion-docs-ai_03ebd123\collector_legal_files\pypdfium2-5.13.0\zlib_1txt
 --------------------------------------------------------------------------------
 /* zlib.h -- interface of the 'zlib' general purpose compression library
   version 1.3.2.1, February xxth, 2026
@@ -3247,10 +3245,10 @@ Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260901T043316Z_au
 
 ================================================================================
 
-[L-3409fa91f7ac] LICENSE
+[L-3409fa91f7ac] LICENSE_1.txt
 SHA256: 3409fa91f7ace557894632676656e32264fe5ef7581535725dc9a23774551bd4
 Components: iniconfig
-Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260901T043316Z_audion-docs-ai_fc671953\collector_legal_files\iniconfig-2.3.0\LICENSE
+Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260904T022702Z_audion-docs-ai_03ebd123\collector_legal_files\iniconfig-2.3.0\LICENSE_1.txt
 --------------------------------------------------------------------------------
 The MIT License (MIT)
 
@@ -3276,10 +3274,10 @@ SOFTWARE.
 
 ================================================================================
 
-[L-34cb75d73943] LICENSE.APACHE
+[L-34cb75d73943] LICENSE_1APACHE
 SHA256: 34cb75d73943f10a7f9a3b0e3e7bf8ef271065eedcb0d47481e7c831b637aeae
 Components: cryptography, pypdfium2
-Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260901T043316Z_audion-docs-ai_fc671953\collector_legal_files\cryptography-50.0.1\LICENSE.APACHE
+Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260904T022702Z_audion-docs-ai_03ebd123\collector_legal_files\cryptography-50.0.1\LICENSE_1APACHE
 --------------------------------------------------------------------------------
 Apache License
                            Version 2.0, January 2004
@@ -3485,10 +3483,10 @@ Apache License
 
 ================================================================================
 
-[L-350d81a24cca] LICENSE.txt
+[L-350d81a24cca] LICENSE_1txt
 SHA256: 350d81a24cca849298e755022fad37c43a006ccdea3f6dcf044f00832deeea6f
 Components: markdown2
-Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260901T043316Z_audion-docs-ai_fc671953\collector_legal_files\markdown2-2.5.5\LICENSE.txt
+Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260904T022702Z_audion-docs-ai_03ebd123\collector_legal_files\markdown2-2.5.5\LICENSE_1txt
 --------------------------------------------------------------------------------
 This implementation of Markdown is licensed under the MIT License:
 
@@ -3551,19 +3549,19 @@ as follows:
 
 ================================================================================
 
-[L-35a118c0313e] COPYING
+[L-35a118c0313e] COPYING_1.txt
 SHA256: 35a118c0313e258dd0079a4d6dfe3cc8ee961785683a721067a164718ef38851
 Components: pymupdf
-Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260901T043316Z_audion-docs-ai_fc671953\collector_legal_files\pymupdf-1.28.2\COPYING
+Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260904T022702Z_audion-docs-ai_03ebd123\collector_legal_files\pymupdf-1.28.2\COPYING_1.txt
 --------------------------------------------------------------------------------
 Dual Licensed - GNU AFFERO GPL 3.0 or Artifex Commercial License
 
 ================================================================================
 
-[L-37db5bb85926] LICENSE.txt
+[L-37db5bb85926] LICENSE_1txt
 SHA256: 37db5bb85926db28a427a25867f10b1232003aea1be69ccb851138adb8e6f361
 Components: h11
-Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260901T043316Z_audion-docs-ai_fc671953\collector_legal_files\h11-0.16.0\LICENSE.txt
+Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260904T022702Z_audion-docs-ai_03ebd123\collector_legal_files\h11-0.16.0\LICENSE_1txt
 --------------------------------------------------------------------------------
 The MIT License (MIT)
 
@@ -3590,10 +3588,10 @@ WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 ================================================================================
 
-[L-388fa99f3bde] LICENSES.txt
+[L-388fa99f3bde] LICENSES_1txt
 SHA256: 388fa99f3bde4447cd5a4cbb114037be026854db6cfe89e112691c1d8abdcf3c
 Components: lxml
-Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260901T043316Z_audion-docs-ai_fc671953\collector_legal_files\lxml-6.1.2\LICENSES.txt
+Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260904T022702Z_audion-docs-ai_03ebd123\collector_legal_files\lxml-6.1.3\LICENSES_1txt
 --------------------------------------------------------------------------------
 lxml is copyright Infrae and distributed under the BSD license (see
 doc/licenses/BSD.txt), with the following exceptions:
@@ -3725,10 +3723,10 @@ ings in this Software without prior written authorization from him.
 
 ================================================================================
 
-[L-3b2f81fe21d1] LICENSE
+[L-3b2f81fe21d1] LICENSE_1.txt
 SHA256: 3b2f81fe21d181c499c59a256c8e1968455d6689d269aa85373bfb6af41da3bf
 Components: aiohappyeyeballs, typing_extensions
-Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260901T043316Z_audion-docs-ai_fc671953\collector_legal_files\aiohappyeyeballs-2.7.1\LICENSE
+Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260904T022702Z_audion-docs-ai_03ebd123\collector_legal_files\aiohappyeyeballs-2.7.1\LICENSE_1.txt
 --------------------------------------------------------------------------------
 A. HISTORY OF THE SOFTWARE
 ==========================
@@ -4012,10 +4010,10 @@ PERFORMANCE OF THIS SOFTWARE.
 
 ================================================================================
 
-[L-3b49dcee4105] LICENSE.txt
+[L-3b49dcee4105] LICENSE_1txt
 SHA256: 3b49dcee4105eb37bac10faf1be260408fe85d252b8e9df2e0979fc1e094437b
 Components: Jinja2
-Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260901T043316Z_audion-docs-ai_fc671953\collector_legal_files\jinja2-3.1.6\LICENSE.txt
+Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260904T022702Z_audion-docs-ai_03ebd123\collector_legal_files\jinja2-3.1.6\LICENSE_1txt
 --------------------------------------------------------------------------------
 Copyright 2007 Pallets
 
@@ -4048,10 +4046,10 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 ================================================================================
 
-[L-3d6a0c050d8b] LICENSE
+[L-3d6a0c050d8b] LICENSE_1.txt
 SHA256: 3d6a0c050d8bec52fabad502e45fb25bd02bcadbd70dea34d447b6a0ff4e6da8
 Components: websockets
-Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260901T043316Z_audion-docs-ai_fc671953\collector_legal_files\websockets-16.1.1\LICENSE
+Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260904T022702Z_audion-docs-ai_03ebd123\collector_legal_files\websockets-16.1.1\LICENSE_1.txt
 --------------------------------------------------------------------------------
 Copyright (c) Aymeric Augustin and contributors
 
@@ -4080,10 +4078,10 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 ================================================================================
 
-[L-3e0c7c091a94] LICENSE
+[L-3e0c7c091a94] LICENSE_1.txt
 SHA256: 3e0c7c091a948b82533ba98fd7cbb40432d6f1a9acbf85f5922d2f99a93ae6bb
 Components: cryptography
-Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260901T043316Z_audion-docs-ai_fc671953\collector_legal_files\cryptography-50.0.1\LICENSE
+Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260904T022702Z_audion-docs-ai_03ebd123\collector_legal_files\cryptography-50.0.1\LICENSE_1.txt
 --------------------------------------------------------------------------------
 This software is made available under the terms of *either* of the licenses
 found in LICENSE.APACHE or LICENSE.BSD. Contributions to cryptography are made
@@ -4091,10 +4089,10 @@ under the terms of *both* these licenses.
 
 ================================================================================
 
-[L-3e6dae555eb9] LICENSE.MIT
+[L-3e6dae555eb9] LICENSE_1MIT
 SHA256: 3e6dae555eb92787fc82d1d48355677f454c7f65aeb38d3f9e72bf9a3daf034b
 Components: sniffio
-Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260901T043316Z_audion-docs-ai_fc671953\collector_legal_files\sniffio-1.3.1\LICENSE.MIT
+Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260904T022702Z_audion-docs-ai_03ebd123\collector_legal_files\sniffio-1.3.1\LICENSE_1MIT
 --------------------------------------------------------------------------------
 The MIT License (MIT)
 
@@ -4119,10 +4117,10 @@ WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 ================================================================================
 
-[L-3f2c1ffa7638] COPYING
+[L-3f2c1ffa7638] COPYING_1.txt
 SHA256: 3f2c1ffa76383a55ae0aac01c9737cd70050dff63e1f026694fbe9d662573c98
 Components: numpy
-Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260901T043316Z_audion-docs-ai_fc671953\collector_legal_files\numpy-2.5.2\COPYING
+Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260904T022702Z_audion-docs-ai_03ebd123\collector_legal_files\numpy-2.5.2\COPYING_1.txt
 --------------------------------------------------------------------------------
 BSD Zero Clause License
 
@@ -4141,10 +4139,10 @@ PERFORMANCE OF THIS SOFTWARE.
 
 ================================================================================
 
-[L-3f3d9e0024b1] LICENSE-MPL-2.0
+[L-3f3d9e0024b1] LICENSE-MPL-2_10
 SHA256: 3f3d9e0024b1921b067d6f7f88deb4a60cbe7a78e76c64e3f1d7fc3b779b9d04
 Components: orjson
-Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260901T043316Z_audion-docs-ai_fc671953\collector_legal_files\orjson-3.12.0\LICENSE-MPL-2.0
+Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260904T022702Z_audion-docs-ai_03ebd123\collector_legal_files\orjson-3.12.0\LICENSE-MPL-2_10
 --------------------------------------------------------------------------------
 Mozilla Public License Version 2.0
 ==================================
@@ -4522,10 +4520,10 @@ Exhibit B - "Incompatible With Secondary Licenses" Notice
 
 ================================================================================
 
-[L-419896aea50c] CC-BY-4.0.txt
+[L-419896aea50c] CC-BY-4.0_1txt
 SHA256: 419896aea50c15d6e40c5b4baf4bd346f78223b9a354c7357ad00262afdc08ec
 Components: pypdfium2
-Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260901T043316Z_audion-docs-ai_fc671953\collector_legal_files\pypdfium2-5.13.0\CC-BY-4.0.txt
+Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260904T022702Z_audion-docs-ai_03ebd123\collector_legal_files\pypdfium2-5.13.0\CC-BY-4.0_1txt
 --------------------------------------------------------------------------------
 Creative Commons Attribution 4.0 International Public License
 
@@ -4847,10 +4845,10 @@ Section 8 -- Interpretation.
 
 ================================================================================
 
-[L-41c065c20811] LICENSE
+[L-41c065c20811] LICENSE_1.txt
 SHA256: 41c065c2081141886f7d3004e3cd4000c1507cc4bf37a063f12be1d53e9db272
 Components: nicegui
-Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260901T043316Z_audion-docs-ai_fc671953\collector_legal_files\nicegui-3.16.0\LICENSE
+Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260904T022702Z_audion-docs-ai_03ebd123\collector_legal_files\nicegui-3.16.0\LICENSE_1.txt
 --------------------------------------------------------------------------------
 MIT License
 
@@ -4876,10 +4874,10 @@ SOFTWARE.
 
 ================================================================================
 
-[L-42205088a265] NOTICE
+[L-42205088a265] NOTICE_1.txt
 SHA256: 42205088a265b992eda47039779e856e1f0d9ac819415bb6dc37bee47994ef44
 Components: propcache, yarl
-Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260901T043316Z_audion-docs-ai_fc671953\collector_legal_files\propcache-0.5.2\NOTICE
+Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260904T022702Z_audion-docs-ai_03ebd123\collector_legal_files\propcache-0.5.2\NOTICE_1.txt
 --------------------------------------------------------------------------------
 Copyright 2016-2021, Andrew Svetlov and aio-libs team
 
@@ -4897,10 +4895,10 @@ Copyright 2016-2021, Andrew Svetlov and aio-libs team
 
 ================================================================================
 
-[L-42ac50251ab8] BSD-0-Clause.rst
+[L-42ac50251ab8] BSD-0-Clause_1rst
 SHA256: 42ac50251ab8a6738f77d5707f2a788dbf3446a6ed68edecb6ac17489a78e163
 Components: docutils
-Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260901T043316Z_audion-docs-ai_fc671953\collector_legal_files\docutils-0.23\BSD-0-Clause.rst
+Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260904T022702Z_audion-docs-ai_03ebd123\collector_legal_files\docutils-0.23\BSD-0-Clause_1rst
 --------------------------------------------------------------------------------
 Zero-Clause BSD
 ===============
@@ -4918,10 +4916,10 @@ OF OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
 
 ================================================================================
 
-[L-4375ba20e2b9] LICENSE
+[L-4375ba20e2b9] LICENSE_1.txt
 SHA256: 4375ba20e2b9c6c4e7cad2940a628fd90e95cc3d50ee92aae755715d8ba1fbd0
 Components: six
-Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260901T043316Z_audion-docs-ai_fc671953\collector_legal_files\six-1.17.0\LICENSE
+Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260904T022702Z_audion-docs-ai_03ebd123\collector_legal_files\six-1.17.0\LICENSE_1.txt
 --------------------------------------------------------------------------------
 Copyright (c) 2010-2024 Benjamin Peterson
 
@@ -4944,10 +4942,10 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 ================================================================================
 
-[L-458502e12d97] LICENSE_7.txt
+[L-458502e12d97] LICENSE_17.txt
 SHA256: 458502e12d97bbf64438606a20044aa85eb05fb0a8a807bb35dbec253fd1fc04
 Components: setuptools
-Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260901T043316Z_audion-docs-ai_fc671953\collector_legal_files\setuptools-84.0.0\LICENSE_7.txt
+Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260904T022702Z_audion-docs-ai_03ebd123\collector_legal_files\setuptools-84.0.0\LICENSE_17.txt
 --------------------------------------------------------------------------------
 Apache License
 Version 2.0, January 2004
@@ -5025,10 +5023,10 @@ limitations under the License.
 
 ================================================================================
 
-[L-489a8e110850] LICENSE.txt
+[L-489a8e110850] LICENSE_1txt
 SHA256: 489a8e1108509ed98a37bb983e11e0f7e1d31f0bd8f99a79c8448e7ff37d07ea
 Components: MarkupSafe
-Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260901T043316Z_audion-docs-ai_fc671953\collector_legal_files\markupsafe-3.0.3\LICENSE.txt
+Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260904T022702Z_audion-docs-ai_03ebd123\collector_legal_files\markupsafe-3.0.3\LICENSE_1txt
 --------------------------------------------------------------------------------
 Copyright 2010 Pallets
 
@@ -5061,10 +5059,10 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 ================================================================================
 
-[L-4a2260d6e2cd] LICENSE
+[L-4a2260d6e2cd] LICENSE_1.txt
 SHA256: 4a2260d6e2cd0f5a151a1e86dbfe7d3ed552b1e2beabf9941c1ba5c49cbce484
 Components: markdown-it-py
-Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260901T043316Z_audion-docs-ai_fc671953\collector_legal_files\markdown-it-py-4.2.0\LICENSE
+Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260904T022702Z_audion-docs-ai_03ebd123\collector_legal_files\markdown-it-py-4.2.0\LICENSE_1.txt
 --------------------------------------------------------------------------------
 MIT License
 
@@ -5090,10 +5088,10 @@ SOFTWARE.
 
 ================================================================================
 
-[L-4a765ceefcdd] LICENSE_1.txt
+[L-4a765ceefcdd] LICENSE_3.txt
 SHA256: 4a765ceefcddd40d6518f2f22f0fe2c6d532890be821d8bb1f2c21ebafed8817
 Components: numpy
-Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260901T043316Z_audion-docs-ai_fc671953\collector_legal_files\numpy-2.5.2\LICENSE_1.txt
+Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260904T022702Z_audion-docs-ai_03ebd123\collector_legal_files\numpy-2.5.2\LICENSE_3.txt
 --------------------------------------------------------------------------------
 * Copyright (c) 2006, University of Georgia and Pierre G.F. Gerard-Marchant
 * All rights reserved.
@@ -5122,10 +5120,10 @@ Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260901T043316Z_au
 
 ================================================================================
 
-[L-4a988dd35988] LICENSE
+[L-4a988dd35988] LICENSE_1.txt
 SHA256: 4a988dd3598832cd3653de20dc33cb677d0fb53ab5551c879ca31280ae653675
 Components: pywebview
-Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260901T043316Z_audion-docs-ai_fc671953\collector_legal_files\pywebview-6.2.1\LICENSE
+Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260904T022702Z_audion-docs-ai_03ebd123\collector_legal_files\pywebview-6.2.1\LICENSE_1.txt
 --------------------------------------------------------------------------------
 BSD 3-Clause License
 
@@ -5159,10 +5157,10 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 ================================================================================
 
-[L-4ac48f411780] LICENSE.txt
+[L-4ac48f411780] LICENSE_1txt
 SHA256: 4ac48f4117809f2734066150450f120b3bb110ac1d3b32170795e0560dbbc1f5
 Components: humanfriendly
-Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260901T043316Z_audion-docs-ai_fc671953\collector_legal_files\humanfriendly-10.0\LICENSE.txt
+Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260904T022702Z_audion-docs-ai_03ebd123\collector_legal_files\humanfriendly-10.0\LICENSE_1txt
 --------------------------------------------------------------------------------
 Copyright (c) 2021 Peter Odding
 
@@ -5190,7 +5188,7 @@ WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 [L-4b7fed0ea8ba] LICENSE-cobble-BSD-2-Clause.txt
 SHA256: 4b7fed0ea8ba24fe6d500185769ae0c1f166ee8d4c4b77bba85ac5f6c02eb029
 Components: cobble
-Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260901T043316Z_audion-docs-ai_fc671953\collector_legal_files\cobble-present-in-release\LICENSE-cobble-BSD-2-Clause.txt
+Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260904T022702Z_audion-docs-ai_03ebd123\collector_legal_files\cobble-present-in-release\LICENSE-cobble-BSD-2-Clause.txt
 --------------------------------------------------------------------------------
 BSD 2-Clause License
 
@@ -5220,10 +5218,10 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 ================================================================================
 
-[L-4b8abadcc5e3] LICENSE
+[L-4b8abadcc5e3] LICENSE_1.txt
 SHA256: 4b8abadcc5e3dd29c71905b84952945699f0a7ba41e6af99eaba46faabe95bb7
 Components: simple-websocket
-Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260901T043316Z_audion-docs-ai_fc671953\collector_legal_files\simple-websocket-1.1.0\LICENSE
+Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260904T022702Z_audion-docs-ai_03ebd123\collector_legal_files\simple-websocket-1.1.0\LICENSE_1.txt
 --------------------------------------------------------------------------------
 MIT License
 
@@ -5249,10 +5247,10 @@ SOFTWARE.
 
 ================================================================================
 
-[L-4ccdaaebc0f4] LICENCE.python
+[L-4ccdaaebc0f4] LICENCE_1python
 SHA256: 4ccdaaebc0f44b83720ec0399bb7ab329adce067dd62f73c5535a2dc05628ab2
 Components: et_xmlfile
-Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260901T043316Z_audion-docs-ai_fc671953\collector_legal_files\et-xmlfile-2.0.0\LICENCE.python
+Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260904T022702Z_audion-docs-ai_03ebd123\collector_legal_files\et-xmlfile-2.0.0\LICENCE_1python
 --------------------------------------------------------------------------------
 et_xml is licensed under the MIT license; see the file LICENCE for details.
 
@@ -5555,10 +5553,10 @@ PERFORMANCE OF THIS SOFTWARE.
 
 ================================================================================
 
-[L-4eb1fb1705e2] AUTHORS.txt
+[L-4eb1fb1705e2] AUTHORS_1txt
 SHA256: 4eb1fb1705e2def898e81bcba19c3aac80620d27ba3569d6a6df7b4629d1b5c2
 Components: pip
-Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260901T043316Z_audion-docs-ai_fc671953\collector_legal_files\pip-26.2.1\AUTHORS.txt
+Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260904T022702Z_audion-docs-ai_03ebd123\collector_legal_files\pip-26.2.1\AUTHORS_1txt
 --------------------------------------------------------------------------------
 @Switch01
 A_Rog
@@ -6451,10 +6449,10 @@ Zvezdan Petkovic
 
 ================================================================================
 
-[L-4ec59d544f12] LICENSE.md
+[L-4ec59d544f12] LICENSE_1md
 SHA256: 4ec59d544f12b5f539a3a716fd321ac58ccd8030b465221f2c880200cdf28d8d
 Components: httpx
-Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260901T043316Z_audion-docs-ai_fc671953\collector_legal_files\httpx-0.28.1\LICENSE.md
+Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260904T022702Z_audion-docs-ai_03ebd123\collector_legal_files\httpx-0.28.1\LICENSE_1md
 --------------------------------------------------------------------------------
 Copyright © 2019, [Encode OSS Ltd](https://www.encode.io/).
 All rights reserved.
@@ -6471,10 +6469,10 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 
 ================================================================================
 
-[L-4ec89ffc8148] LICENSE
+[L-4ec89ffc8148] LICENSE_1.txt
 SHA256: 4ec89ffc81485b97fec584b2d4a961032eeffe834453894fd9c1274906cc744e
 Components: fastapi
-Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260901T043316Z_audion-docs-ai_fc671953\collector_legal_files\fastapi-0.141.1\LICENSE
+Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260904T022702Z_audion-docs-ai_03ebd123\collector_legal_files\fastapi-0.141.1\LICENSE_1.txt
 --------------------------------------------------------------------------------
 The MIT License (MIT)
 
@@ -6500,10 +6498,10 @@ THE SOFTWARE.
 
 ================================================================================
 
-[L-4fd78355b67c] LICENSE
+[L-4fd78355b67c] LICENSE_1.txt
 SHA256: 4fd78355b67ce2677ede9fb6f63a250f377bb7e22088136a5f4699adb4bc069f
 Components: watchfiles
-Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260901T043316Z_audion-docs-ai_fc671953\collector_legal_files\watchfiles-1.2.0\LICENSE
+Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260904T022702Z_audion-docs-ai_03ebd123\collector_legal_files\watchfiles-1.2.0\LICENSE_1.txt
 --------------------------------------------------------------------------------
 The MIT License (MIT)
 
@@ -6532,7 +6530,7 @@ SOFTWARE.
 [L-50e6751797c5] LICENSE-Apache-2.0.txt
 SHA256: 50e6751797c50dedd75ef1b8a0d9e42f5f8472e9fbce91f34718e9f97b0c780a
 Components: flatbuffers, google-auth, google-genai, magika, propcache, pypdfium2, python-multipart, sniffio, tenacity, tzdata, yarl
-Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260901T043316Z_audion-docs-ai_fc671953\collector_legal_files\flatbuffers-present-in-release\LICENSE-Apache-2.0.txt
+Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260904T022702Z_audion-docs-ai_03ebd123\collector_legal_files\flatbuffers-present-in-release\LICENSE-Apache-2.0.txt
 --------------------------------------------------------------------------------
 Apache License
                            Version 2.0, January 2004
@@ -6738,10 +6736,10 @@ Apache License
 
 ================================================================================
 
-[L-5361ac9dc58f] LICENSE
+[L-5361ac9dc58f] LICENSE_1.txt
 SHA256: 5361ac9dc58f2ef5fd2e9b09c68297c17f04950909bbc8023bdb82eacf22c2b0
 Components: anyio
-Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260901T043316Z_audion-docs-ai_fc671953\collector_legal_files\anyio-4.14.2\LICENSE
+Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260904T022702Z_audion-docs-ai_03ebd123\collector_legal_files\anyio-4.15.0\LICENSE_1.txt
 --------------------------------------------------------------------------------
 The MIT License (MIT)
 
@@ -6766,10 +6764,10 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 ================================================================================
 
-[L-55b4d8d4b1e5] LICENSE
+[L-55b4d8d4b1e5] LICENSE_1.txt
 SHA256: 55b4d8d4b1e5bc86d10efac91b74c87bcb77526b0f5b9edaf8b9cd2adc7397b2
 Components: beautifulsoup4
-Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260901T043316Z_audion-docs-ai_fc671953\collector_legal_files\beautifulsoup4-4.15.0\LICENSE
+Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260904T022702Z_audion-docs-ai_03ebd123\collector_legal_files\beautifulsoup4-4.15.0\LICENSE_1.txt
 --------------------------------------------------------------------------------
 Beautiful Soup is made available under the MIT license:
 
@@ -6805,10 +6803,10 @@ Isaac Muse
 
 ================================================================================
 
-[L-59d0910e3653] LICENSE
+[L-59d0910e3653] LICENSE_1.txt
 SHA256: 59d0910e3653681cc461f299ceedca65b6b9b82ff695a6cfacde55f7bef02704
 Components: mammoth
-Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260901T043316Z_audion-docs-ai_fc671953\collector_legal_files\mammoth-1.11.0\LICENSE
+Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260904T022702Z_audion-docs-ai_03ebd123\collector_legal_files\mammoth-1.11.0\LICENSE_1.txt
 --------------------------------------------------------------------------------
 Copyright (c) 2013, Michael Williamson
 All rights reserved.
@@ -6835,10 +6833,10 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 ================================================================================
 
-[L-5a57cb4db85e] LICENSE_3.txt
+[L-5a57cb4db85e] LICENSE_12.txt
 SHA256: 5a57cb4db85e2a2dd88c290628908add57e3451449e0a9a71fdfb38776fd759d
 Components: setuptools
-Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260901T043316Z_audion-docs-ai_fc671953\collector_legal_files\setuptools-84.0.0\LICENSE_3.txt
+Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260904T022702Z_audion-docs-ai_03ebd123\collector_legal_files\setuptools-84.0.0\LICENSE_12.txt
 --------------------------------------------------------------------------------
 MIT License
 
@@ -6861,10 +6859,10 @@ USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 ================================================================================
 
-[L-5f6ed77cd032] LICENSE_8md
+[L-5f6ed77cd032] LICENSE_16md
 SHA256: 5f6ed77cd0326d7a2598962550123657845db4e8095ee29904f70e2717c0816e
 Components: numpy
-Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260901T043316Z_audion-docs-ai_fc671953\collector_legal_files\numpy-2.5.2\LICENSE_8md
+Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260904T022702Z_audion-docs-ai_03ebd123\collector_legal_files\numpy-2.5.2\LICENSE_16md
 --------------------------------------------------------------------------------
 ## NumPy
 
@@ -6930,10 +6928,10 @@ WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 ================================================================================
 
-[L-602c4c7482de] LICENSE.BSD
+[L-602c4c7482de] LICENSE_1BSD
 SHA256: 602c4c7482de6479dd2e9793cda275e5e63d773dacd1eca689232ab7008fb4fb
 Components: cryptography
-Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260901T043316Z_audion-docs-ai_fc671953\collector_legal_files\cryptography-50.0.1\LICENSE.BSD
+Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260904T022702Z_audion-docs-ai_03ebd123\collector_legal_files\cryptography-50.0.1\LICENSE_1BSD
 --------------------------------------------------------------------------------
 Copyright (c) Individual contributors.
 All rights reserved.
@@ -6965,10 +6963,10 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 ================================================================================
 
-[L-628168d68bb5] LICENSE
+[L-628168d68bb5] LICENSE_1.txt
 SHA256: 628168d68bb5a8a17e0bbefb3bd74e326e1edc20583d76f52f457c82c921867d
 Components: aiohttp, httptools
-Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260901T043316Z_audion-docs-ai_fc671953\collector_legal_files\aiohttp-3.14.3\LICENSE
+Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260904T022702Z_audion-docs-ai_03ebd123\collector_legal_files\aiohttp-3.14.3\LICENSE_1.txt
 --------------------------------------------------------------------------------
 MIT License
 
@@ -6995,10 +6993,10 @@ USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 ================================================================================
 
-[L-634300a669d4] LICENSE_3txt
+[L-634300a669d4] LICENSE_7txt
 SHA256: 634300a669d49aeae65b12c6c48c924c51a4cdf3d1ff086dc3456dc8bcaa2104
 Components: pip
-Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260901T043316Z_audion-docs-ai_fc671953\collector_legal_files\pip-26.2.1\LICENSE_3txt
+Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260904T022702Z_audion-docs-ai_03ebd123\collector_legal_files\pip-26.2.1\LICENSE_7txt
 --------------------------------------------------------------------------------
 Copyright (c) 2008-present The pip developers (see AUTHORS.txt file)
 
@@ -7023,10 +7021,10 @@ WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 ================================================================================
 
-[L-63af09891b6b] LICENSE.txt
+[L-63af09891b6b] LICENSE_1txt
 SHA256: 63af09891b6be8ad1a4252ed43af0f4efba7fc948e228367bed7f3c5ae0b09d7
 Components: itsdangerous
-Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260901T043316Z_audion-docs-ai_fc671953\collector_legal_files\itsdangerous-2.2.0\LICENSE.txt
+Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260904T022702Z_audion-docs-ai_03ebd123\collector_legal_files\itsdangerous-2.2.0\LICENSE_1txt
 --------------------------------------------------------------------------------
 Copyright 2011 Pallets
 
@@ -7059,10 +7057,10 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 ================================================================================
 
-[L-652c878488d1] LICENSE
+[L-652c878488d1] LICENSE_1.txt
 SHA256: 652c878488d1456361e08c3f8607fd7ba59892a14103d15cce4ff93c85b5cc8b
 Components: sniffio
-Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260901T043316Z_audion-docs-ai_fc671953\collector_legal_files\sniffio-1.3.1\LICENSE
+Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260904T022702Z_audion-docs-ai_03ebd123\collector_legal_files\sniffio-1.3.1\LICENSE_1.txt
 --------------------------------------------------------------------------------
 This software is made available under the terms of *either* of the
 licenses found in LICENSE.APACHE2 or LICENSE.MIT. Contributions to are
@@ -7070,10 +7068,10 @@ made under the terms of *both* these licenses.
 
 ================================================================================
 
-[L-6557adc4bc1d] LICENSE_5.txt
+[L-6557adc4bc1d] LICENSE_10.txt
 SHA256: 6557adc4bc1d59232e27567a185dd70cf2ecca3154018b0be61ea29cf9e814e2
 Components: setuptools
-Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260901T043316Z_audion-docs-ai_fc671953\collector_legal_files\setuptools-84.0.0\LICENSE_5.txt
+Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260904T022702Z_audion-docs-ai_03ebd123\collector_legal_files\setuptools-84.0.0\LICENSE_10.txt
 --------------------------------------------------------------------------------
 GNU LESSER GENERAL PUBLIC LICENSE
                        Version 3, 29 June 2007
@@ -7243,10 +7241,10 @@ Library.
 
 ================================================================================
 
-[L-65a13631f078] AUTHORS.md
+[L-65a13631f078] AUTHORS_1md
 SHA256: 65a13631f078bed51e9a4033dea257e57a7f23097f3003b1ce1ba1c8a9136c93
 Components: pythonnet
-Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260901T043316Z_audion-docs-ai_fc671953\collector_legal_files\pythonnet-3.1.0\AUTHORS.md
+Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260904T022702Z_audion-docs-ai_03ebd123\collector_legal_files\pythonnet-3.1.0\AUTHORS_1md
 --------------------------------------------------------------------------------
 # Credits
 
@@ -7343,10 +7341,10 @@ Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260901T043316Z_au
 
 ================================================================================
 
-[L-6ab4f27c76c7] COPYING.rst
+[L-6ab4f27c76c7] COPYING_1rst
 SHA256: 6ab4f27c76c74f96e5e692da5944a6f82968f3bddaac5660a4aa723e70eb5d8f
 Components: docutils
-Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260901T043316Z_audion-docs-ai_fc671953\collector_legal_files\docutils-0.23\COPYING.rst
+Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260904T022702Z_audion-docs-ai_03ebd123\collector_legal_files\docutils-0.23\COPYING_1rst
 --------------------------------------------------------------------------------
 .. include:: docs/header0.rst
 
@@ -7502,10 +7500,10 @@ licenses_ directory.
 
 ================================================================================
 
-[L-6b94acee20ec] LICENSE
+[L-6b94acee20ec] LICENSE_1.txt
 SHA256: 6b94acee20ec9f2709333134f3ba70322535fb420af0ce8c1455d9cbe297f1d5
 Components: tinycss2
-Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260901T043316Z_audion-docs-ai_fc671953\collector_legal_files\tinycss2-1.5.1\LICENSE
+Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260904T022702Z_audion-docs-ai_03ebd123\collector_legal_files\tinycss2-1.5.1\LICENSE_1.txt
 --------------------------------------------------------------------------------
 BSD 3-Clause License
 
@@ -7539,10 +7537,10 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 ================================================================================
 
-[L-6d0d41bfe170] LICENSE
+[L-6d0d41bfe170] LICENSE_1.txt
 SHA256: 6d0d41bfe170ac6c7dc248c9a63e254d0fb45a60d50a8257d0af92c6e249b887
 Components: charset-normalizer
-Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260901T043316Z_audion-docs-ai_fc671953\collector_legal_files\charset-normalizer-3.5.1\LICENSE
+Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260904T022702Z_audion-docs-ai_03ebd123\collector_legal_files\charset-normalizer-3.5.1\LICENSE_1.txt
 --------------------------------------------------------------------------------
 MIT License
 
@@ -7568,10 +7566,10 @@ SOFTWARE.
 
 ================================================================================
 
-[L-6e5e117324af] LICENSE
+[L-6e5e117324af] LICENSE_1.txt
 SHA256: 6e5e117324afd944dcf67f36cf329843bc1a92229a8cd9bb573d7a83130fea7d
 Components: protobuf
-Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260901T043316Z_audion-docs-ai_fc671953\collector_legal_files\protobuf-7.36.1\LICENSE
+Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260904T022702Z_audion-docs-ai_03ebd123\collector_legal_files\protobuf-7.36.1\LICENSE_1.txt
 --------------------------------------------------------------------------------
 Copyright 2008 Google Inc.  All rights reserved.
 
@@ -7608,10 +7606,10 @@ support library is itself covered by the above license.
 
 ================================================================================
 
-[L-6f5828a57223] LICENSE_2md
+[L-6f5828a57223] LICENSE_13md
 SHA256: 6f5828a57223d4cc7f8ea505a2623e7b978b242752c1515e355f46ba2cec1800
 Components: numpy
-Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260901T043316Z_audion-docs-ai_fc671953\collector_legal_files\numpy-2.5.2\LICENSE_2md
+Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260904T022702Z_audion-docs-ai_03ebd123\collector_legal_files\numpy-2.5.2\LICENSE_13md
 --------------------------------------------------------------------------------
 # PHILOX
 
@@ -7647,10 +7645,10 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 ================================================================================
 
-[L-6fd5243e92dd] LICENSE
+[L-6fd5243e92dd] LICENSE_1.txt
 SHA256: 6fd5243e92dd7f98ec69c7ac377728e74905709ff527a5bf98d6d0263c04f5b6
 Components: aiosignal, frozenlist
-Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260901T043316Z_audion-docs-ai_fc671953\collector_legal_files\aiosignal-1.4.0\LICENSE
+Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260904T022702Z_audion-docs-ai_03ebd123\collector_legal_files\aiosignal-1.4.0\LICENSE_1.txt
 --------------------------------------------------------------------------------
 Apache License
                            Version 2.0, January 2004
@@ -7856,10 +7854,10 @@ Apache License
 
 ================================================================================
 
-[L-715684a9a2db] LICENSE
+[L-715684a9a2db] LICENSE_1.txt
 SHA256: 715684a9a2db1fe58f6fd56fe784a0667dbc23f23e1fcf904700b6697102627c
 Components: pydub
-Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260901T043316Z_audion-docs-ai_fc671953\collector_legal_files\pydub-0.25.1\LICENSE
+Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260904T022702Z_audion-docs-ai_03ebd123\collector_legal_files\pydub-0.25.1\LICENSE_1.txt
 --------------------------------------------------------------------------------
 Copyright (c) 2011 James Robert, http://jiaaro.com
 
@@ -7884,10 +7882,10 @@ WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 ================================================================================
 
-[L-7312b68c5b25] lcms.txt
+[L-7312b68c5b25] lcms_1txt
 SHA256: 7312b68c5b25e9bf2b828706fb4e29588f22705112f411fd42e1f7d84c3d139a
 Components: pypdfium2
-Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260901T043316Z_audion-docs-ai_fc671953\collector_legal_files\pypdfium2-5.13.0\lcms.txt
+Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260904T022702Z_audion-docs-ai_03ebd123\collector_legal_files\pypdfium2-5.13.0\lcms_1txt
 --------------------------------------------------------------------------------
 //---------------------------------------------------------------------------------
 //
@@ -7919,10 +7917,10 @@ Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260901T043316Z_au
 
 ================================================================================
 
-[L-75815e3bf648] libjpeg_turbo.ijg
+[L-75815e3bf648] libjpeg_turbo_1ijg
 SHA256: 75815e3bf6484201a3c3d17a1bbf10f2e8e3237f84df10a2357ea896db2a81d6
 Components: pypdfium2
-Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260901T043316Z_audion-docs-ai_fc671953\collector_legal_files\pypdfium2-5.13.0\libjpeg_turbo.ijg
+Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260904T022702Z_audion-docs-ai_03ebd123\collector_legal_files\pypdfium2-5.13.0\libjpeg_turbo_1ijg
 --------------------------------------------------------------------------------
 libjpeg-turbo note:  This file has been modified by The libjpeg-turbo Project
 to include only information relevant to libjpeg-turbo, to wordsmith certain
@@ -8187,10 +8185,10 @@ Please send bug reports, offers of help, etc. to jpeg-info@jpegclub.org.
 
 ================================================================================
 
-[L-7652f271e46d] LICENSE
+[L-7652f271e46d] LICENSE_1.txt
 SHA256: 7652f271e46d0d533e9dc463f3b5fcbdcacf4d6a9c8d6b554d15efd0f37f6132
 Components: python-docx, python-pptx
-Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260901T043316Z_audion-docs-ai_fc671953\collector_legal_files\python-docx-1.2.0\LICENSE
+Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260904T022702Z_audion-docs-ai_03ebd123\collector_legal_files\python-docx-1.2.0\LICENSE_1.txt
 --------------------------------------------------------------------------------
 The MIT License (MIT)
 Copyright (c) 2013 Steve Canny, https://github.com/scanny
@@ -8215,10 +8213,10 @@ THE SOFTWARE.
 
 ================================================================================
 
-[L-76a0acdb98c3] LICENSE.md
+[L-76a0acdb98c3] LICENSE_1md
 SHA256: 76a0acdb98c3a63681e20b6f096699ef8cad5fb35d56eef8387e0fa71d797a9a
 Components: soupsieve
-Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260901T043316Z_audion-docs-ai_fc671953\collector_legal_files\soupsieve-2.9.2\LICENSE.md
+Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260904T022702Z_audion-docs-ai_03ebd123\collector_legal_files\soupsieve-2.9.2\LICENSE_1md
 --------------------------------------------------------------------------------
 MIT License
 
@@ -8244,10 +8242,10 @@ SOFTWARE.
 
 ================================================================================
 
-[L-792c48c5a849] LICENSE.markdown-it
+[L-792c48c5a849] LICENSE_1markdown-it
 SHA256: 792c48c5a849a15fdf9e37e8bcf9e6d1dd13b32b46c642a748a0a46a9919d473
 Components: markdown-it-py
-Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260901T043316Z_audion-docs-ai_fc671953\collector_legal_files\markdown-it-py-4.2.0\LICENSE.markdown-it
+Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260904T022702Z_audion-docs-ai_03ebd123\collector_legal_files\markdown-it-py-4.2.0\LICENSE_1markdown-it
 --------------------------------------------------------------------------------
 Copyright (c) 2014 Vitaly Puzrin, Alex Kocharin.
 
@@ -8274,10 +8272,10 @@ OTHER DEALINGS IN THE SOFTWARE.
 
 ================================================================================
 
-[L-797a7a20231d] LICENSE
+[L-797a7a20231d] LICENSE_1.txt
 SHA256: 797a7a20231d4c433e9f1911db1731d06b5828b98f499819a034f7c0f56f5ce5
 Components: PyJWT
-Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260901T043316Z_audion-docs-ai_fc671953\collector_legal_files\pyjwt-2.13.0\LICENSE
+Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260904T022702Z_audion-docs-ai_03ebd123\collector_legal_files\pyjwt-2.13.0\LICENSE_1.txt
 --------------------------------------------------------------------------------
 The MIT License (MIT)
 
@@ -8303,10 +8301,10 @@ SOFTWARE.
 
 ================================================================================
 
-[L-7c605df6e286] LICENSE
+[L-7c605df6e286] LICENSE_1.txt
 SHA256: 7c605df6e28667a9603118e98274f64a49ce3eed0d26fccce9534a345e0ef955
 Components: mdurl
-Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260901T043316Z_audion-docs-ai_fc671953\collector_legal_files\mdurl-0.1.2\LICENSE
+Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260904T022702Z_audion-docs-ai_03ebd123\collector_legal_files\mdurl-0.1.2\LICENSE_1.txt
 --------------------------------------------------------------------------------
 Copyright (c) 2015 Vitaly Puzrin, Alex Kocharin.
 Copyright (c) 2021 Taneli Hukkinen
@@ -8357,10 +8355,10 @@ IN THE SOFTWARE.
 
 ================================================================================
 
-[L-7c7134b9f7b9] LICENSE
+[L-7c7134b9f7b9] LICENSE_1.txt
 SHA256: 7c7134b9f7b978c03fca875517cf398db91f19bbb8109b6685e742aa3f57468e
 Components: jiter
-Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260901T043316Z_audion-docs-ai_fc671953\collector_legal_files\jiter-0.16.0\LICENSE
+Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260904T022702Z_audion-docs-ai_03ebd123\collector_legal_files\jiter-0.16.0\LICENSE_1.txt
 --------------------------------------------------------------------------------
 The MIT License (MIT)
 
@@ -8386,10 +8384,10 @@ SOFTWARE.
 
 ================================================================================
 
-[L-7c77a44a8acd] LICENSE
+[L-7c77a44a8acd] LICENSE_1.txt
 SHA256: 7c77a44a8acd9b41fdc209864a8016b3d430b5d0e09309818d5b7444336df744
 Components: azure-ai-contentunderstanding, azure-ai-documentintelligence, azure-core, azure-identity, PowerShell
-Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260901T043316Z_audion-docs-ai_fc671953\collector_legal_files\azure-ai-contentunderstanding-1.2.0b3\LICENSE
+Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260904T022702Z_audion-docs-ai_03ebd123\collector_legal_files\azure-ai-contentunderstanding-1.2.0b3\LICENSE_1.txt
 --------------------------------------------------------------------------------
 Copyright (c) Microsoft Corporation.
 
@@ -8418,7 +8416,7 @@ SOFTWARE.
 [L-7df20dcdf919] LICENSE-Microsoft-MIT.txt
 SHA256: 7df20dcdf9197e9945c14858d41c60f11b52b93e5b69e2b63416b874d598d322
 Components: markitdown, onnxruntime
-Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260901T043316Z_audion-docs-ai_fc671953\collector_legal_files\markitdown-present-in-release\LICENSE-Microsoft-MIT.txt
+Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260904T022702Z_audion-docs-ai_03ebd123\collector_legal_files\markitdown-present-in-release\LICENSE-Microsoft-MIT.txt
 --------------------------------------------------------------------------------
 MIT License
 
@@ -8444,10 +8442,10 @@ SOFTWARE.
 
 ================================================================================
 
-[L-7e7d6dbaf7fe] LICENSE.md
+[L-7e7d6dbaf7fe] LICENSE_1md
 SHA256: 7e7d6dbaf7fe160d39fd6e84fd02c33cab96bcbea34d36998d545bceb4a19c30
 Components: httpx2
-Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260901T043316Z_audion-docs-ai_fc671953\collector_legal_files\httpx2-2.12.0\LICENSE.md
+Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260904T022702Z_audion-docs-ai_03ebd123\collector_legal_files\httpx2-2.12.0\LICENSE_1md
 --------------------------------------------------------------------------------
 Copyright © 2026 to present Pydantic Services Inc. and individual contributors.
 Copyright © 2019, [Encode OSS Ltd](https://www.encode.io/).
@@ -8465,10 +8463,10 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 
 ================================================================================
 
-[L-7f038029ea54] AUTHORS.txt
+[L-7f038029ea54] AUTHORS_1txt
 SHA256: 7f038029ea5463605dd2278d300099a381bce9e90dda83ccab2042346b6c8107
 Components: et_xmlfile
-Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260901T043316Z_audion-docs-ai_fc671953\collector_legal_files\et-xmlfile-2.0.0\AUTHORS.txt
+Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260904T022702Z_audion-docs-ai_03ebd123\collector_legal_files\et-xmlfile-2.0.0\AUTHORS_1txt
 --------------------------------------------------------------------------------
 The authors in alphabetical order
 
@@ -8478,10 +8476,10 @@ The authors in alphabetical order
 
 ================================================================================
 
-[L-804b59b25f2c] LICENSE
+[L-804b59b25f2c] LICENSE_1.txt
 SHA256: 804b59b25f2c31bd278f9202a19ae49a3945aa2664387e2d0a128c7cacc61ec3
 Components: typing-inspection
-Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260901T043316Z_audion-docs-ai_fc671953\collector_legal_files\typing-inspection-0.4.4\LICENSE
+Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260904T022702Z_audion-docs-ai_03ebd123\collector_legal_files\typing-inspection-0.4.4\LICENSE_1.txt
 --------------------------------------------------------------------------------
 MIT License
 
@@ -8507,10 +8505,10 @@ SOFTWARE.
 
 ================================================================================
 
-[L-80619b7049f0] LICENSE
+[L-80619b7049f0] LICENSE_1.txt
 SHA256: 80619b7049f08c81683ad0e01f08f257a840652dd71ee83146d36658c7d2c2b9
 Components: python-dotenv
-Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260901T043316Z_audion-docs-ai_fc671953\collector_legal_files\python-dotenv-1.2.3\LICENSE
+Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260904T022702Z_audion-docs-ai_03ebd123\collector_legal_files\python-dotenv-1.2.3\LICENSE_1.txt
 --------------------------------------------------------------------------------
 Copyright (c) 2014, Saurabh Kumar (python-dotenv), 2013, Ted Tieken (django-dotenv-rw), 2013, Jacob Kaplan-Moss (django-dotenv)
 
@@ -8542,10 +8540,10 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 ================================================================================
 
-[L-808e10c8a6ab] LICENSE_1txt
+[L-808e10c8a6ab] LICENSE_4txt
 SHA256: 808e10c8a6ab8deb149ff9b3fb19f447a808094606d712a9ca57fead3552599d
 Components: pip
-Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260901T043316Z_audion-docs-ai_fc671953\collector_legal_files\pip-26.2.1\LICENSE_1txt
+Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260904T022702Z_audion-docs-ai_03ebd123\collector_legal_files\pip-26.2.1\LICENSE_4txt
 --------------------------------------------------------------------------------
 A. HISTORY OF THE SOFTWARE
 ==========================
@@ -8834,10 +8832,10 @@ OF OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
 
 ================================================================================
 
-[L-81932e77fef4] LICENSE_7.txt
+[L-81932e77fef4] LICENSE_17.txt
 SHA256: 81932e77fef4cec306da54caf7d4d221dfd0f6fb6da214c712e36cb95ac47906
 Components: pip, requests
-Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260901T043316Z_audion-docs-ai_fc671953\collector_legal_files\pip-26.2.1\LICENSE_7.txt
+Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260904T022702Z_audion-docs-ai_03ebd123\collector_legal_files\pip-26.2.1\LICENSE_17.txt
 --------------------------------------------------------------------------------
 Apache License
                            Version 2.0, January 2004
@@ -9016,10 +9014,10 @@ Apache License
 
 ================================================================================
 
-[L-82606ac1b37d] LICENSE_5md
+[L-82606ac1b37d] LICENSE_15md
 SHA256: 82606ac1b37d264a2260639f8a1646f2a66b713941447e01362e1fef587b73a8
 Components: numpy
-Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260901T043316Z_audion-docs-ai_fc671953\collector_legal_files\numpy-2.5.2\LICENSE_5md
+Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260904T022702Z_audion-docs-ai_03ebd123\collector_legal_files\numpy-2.5.2\LICENSE_15md
 --------------------------------------------------------------------------------
 # SPLITMIX64
 
@@ -9033,10 +9031,10 @@ See <http://creativecommons.org/publicdomain/zero/1.0/>.
 
 ================================================================================
 
-[L-82b1038521b0] AUTHORS
+[L-82b1038521b0] AUTHORS_1.txt
 SHA256: 82b1038521b0696c63c90b31ed4a0a2c9c4c16871c648b157b07ca44b6f18f8d
 Components: sympy
-Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260901T043316Z_audion-docs-ai_fc671953\collector_legal_files\sympy-1.14.0\AUTHORS
+Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260904T022702Z_audion-docs-ai_03ebd123\collector_legal_files\sympy-1.14.0\AUTHORS_1.txt
 --------------------------------------------------------------------------------
 All people who contributed to SymPy by sending at least a patch or
 more (in the order of the date of their first contribution), except
@@ -10420,10 +10418,10 @@ KJaybhaye <krushnajaybhaye01@gmail.com>
 
 ================================================================================
 
-[L-86da0f01aeae] LICENSE_4.txt
+[L-86da0f01aeae] LICENSE_22.txt
 SHA256: 86da0f01aeae46348a3c3d465195dc1ceccde79f79e87769a64b8da04b2a4741
 Components: pip, setuptools
-Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260901T043316Z_audion-docs-ai_fc671953\collector_legal_files\pip-26.2.1\LICENSE_4.txt
+Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260904T022702Z_audion-docs-ai_03ebd123\collector_legal_files\pip-26.2.1\LICENSE_22.txt
 --------------------------------------------------------------------------------
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to
@@ -10445,10 +10443,10 @@ IN THE SOFTWARE.
 
 ================================================================================
 
-[L-86eeee87be2a] LICENSE.txt
+[L-86eeee87be2a] LICENSE_6txt
 SHA256: 86eeee87be2a43f3ff1f56496f451f69243926f025fedbb033666c304c4c161b
 Components: pip
-Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260901T043316Z_audion-docs-ai_fc671953\collector_legal_files\pip-26.2.1\LICENSE.txt
+Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260904T022702Z_audion-docs-ai_03ebd123\collector_legal_files\pip-26.2.1\LICENSE_6txt
 --------------------------------------------------------------------------------
 Copyright 2012-2021  Eric Larson
 
@@ -10466,10 +10464,10 @@ limitations under the License.
 
 ================================================================================
 
-[L-8700856576ae] LICENSE.txt
+[L-8700856576ae] LICENSE_1txt
 SHA256: 8700856576ae2bc80c63bc970250510d9213fb02fed006d5f22742c9ddde24d7
 Components: ifaddr
-Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260901T043316Z_audion-docs-ai_fc671953\collector_legal_files\ifaddr-0.2.0\LICENSE.txt
+Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260904T022702Z_audion-docs-ai_03ebd123\collector_legal_files\ifaddr-0.2.0\LICENSE_1txt
 --------------------------------------------------------------------------------
 The MIT License (MIT)
 
@@ -10495,10 +10493,10 @@ THE SOFTWARE.
 
 ================================================================================
 
-[L-882115c95dfc] LICENSE
+[L-882115c95dfc] LICENSE_1.txt
 SHA256: 882115c95dfc2af1eeb6714f8ec6d5cbcabf667caff8729f42420da63f714e9f
 Components: attrs
-Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260901T043316Z_audion-docs-ai_fc671953\collector_legal_files\attrs-26.1.0\LICENSE
+Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260904T022702Z_audion-docs-ai_03ebd123\collector_legal_files\attrs-26.1.0\LICENSE_1.txt
 --------------------------------------------------------------------------------
 The MIT License (MIT)
 
@@ -10524,10 +10522,10 @@ SOFTWARE.
 
 ================================================================================
 
-[L-8d3928f9dc44] LICENSE
+[L-8d3928f9dc44] LICENSE_1.txt
 SHA256: 8d3928f9dc4490fd635707cb88eb26bd764102a7282954307d3e5167a577e8a4
 Components: PyYAML
-Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260901T043316Z_audion-docs-ai_fc671953\collector_legal_files\pyyaml-6.0.3\LICENSE
+Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260904T022702Z_audion-docs-ai_03ebd123\collector_legal_files\pyyaml-6.0.3\LICENSE_1.txt
 --------------------------------------------------------------------------------
 Copyright (c) 2017-2021 Ingy döt Net
 Copyright (c) 2006-2016 Kirill Simonov
@@ -10552,10 +10550,10 @@ SOFTWARE.
 
 ================================================================================
 
-[L-8fc2b5681335] LICENSE.txt
+[L-8fc2b5681335] LICENSE_1txt
 SHA256: 8fc2b568133516e46845d2147917adeee1648e70ae9ab5ed6c5417afef4ce855
 Components: lxml
-Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260901T043316Z_audion-docs-ai_fc671953\collector_legal_files\lxml-6.1.2\LICENSE.txt
+Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260904T022702Z_audion-docs-ai_03ebd123\collector_legal_files\lxml-6.1.3\LICENSE_1txt
 --------------------------------------------------------------------------------
 BSD 3-Clause License
 
@@ -10591,10 +10589,10 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 ================================================================================
 
-[L-90f45e20cf0b] NOTICE.md
+[L-90f45e20cf0b] NOTICE_1md
 SHA256: 90f45e20cf0b5c730d956ad93d3cd68ab4466b9c7490ac2a1999c8dcbd521562
 Components: anthropic
-Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260901T043316Z_audion-docs-ai_fc671953\collector_legal_files\anthropic-1.2.0\NOTICE.md
+Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260904T022702Z_audion-docs-ai_03ebd123\collector_legal_files\anthropic-1.3.0\NOTICE_1md
 --------------------------------------------------------------------------------
 # httpx_aiohttp (vendored)
 
@@ -10627,10 +10625,10 @@ promoted by the authors of httpx-aiohttp.
 
 ================================================================================
 
-[L-925ce4346102] AUTHORS.rst
+[L-925ce4346102] AUTHORS_1rst
 SHA256: 925ce43461029eedbf558ec0b7cf7fc4b045def5120ebb97937c70814071cf07
 Components: PyJWT
-Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260901T043316Z_audion-docs-ai_fc671953\collector_legal_files\pyjwt-2.13.0\AUTHORS.rst
+Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260904T022702Z_audion-docs-ai_03ebd123\collector_legal_files\pyjwt-2.13.0\AUTHORS_1rst
 --------------------------------------------------------------------------------
 Authors
 =======
@@ -10642,10 +10640,10 @@ A full list of contributors can be found on GitHub’s `overview <https://github
 
 ================================================================================
 
-[L-926b19214015] LICENSE
+[L-926b19214015] LICENSE_1.txt
 SHA256: 926b19214015f0cad2a2c31c418401961379ae8d72b25a637981bb7a5158a96b
 Components: multidict
-Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260901T043316Z_audion-docs-ai_fc671953\collector_legal_files\multidict-6.7.1\LICENSE
+Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260904T022702Z_audion-docs-ai_03ebd123\collector_legal_files\multidict-6.7.1\LICENSE_1.txt
 --------------------------------------------------------------------------------
 Copyright 2016 Andrew Svetlov and aio-libs contributors
 
@@ -10663,10 +10661,10 @@ Copyright 2016 Andrew Svetlov and aio-libs contributors
 
 ================================================================================
 
-[L-92b72ba97e6c] libtiff.txt
+[L-92b72ba97e6c] libtiff_1txt
 SHA256: 92b72ba97e6c2749c2a94bc0ef646b47080217f1e772a482b33cf5a5f98a6506
 Components: pypdfium2
-Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260901T043316Z_audion-docs-ai_fc671953\collector_legal_files\pypdfium2-5.13.0\libtiff.txt
+Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260904T022702Z_audion-docs-ai_03ebd123\collector_legal_files\pypdfium2-5.13.0\libtiff_1txt
 --------------------------------------------------------------------------------
 Copyright (c) 1988-1997 Sam Leffler
 Copyright (c) 1991-1997 Silicon Graphics, Inc.
@@ -10692,10 +10690,10 @@ OF THIS SOFTWARE.
 
 ================================================================================
 
-[L-92cb9c55adfd] LICENSE.txt
+[L-92cb9c55adfd] LICENSE_3txt
 SHA256: 92cb9c55adfd53eb42170bfeb0ac77181184da7c024ecd6804ccfb713e5ff21f
 Components: SpeechRecognition
-Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260901T043316Z_audion-docs-ai_fc671953\collector_legal_files\speechrecognition-3.17.0\LICENSE.txt
+Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260904T022702Z_audion-docs-ai_03ebd123\collector_legal_files\speechrecognition-3.17.0\LICENSE_3txt
 --------------------------------------------------------------------------------
 Copyright (c) 2014-, Anthony Zhang <azhang9@gmail.com>
 All rights reserved.
@@ -10712,10 +10710,10 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 
 ================================================================================
 
-[L-930a704da82f] freetype.txt
+[L-930a704da82f] freetype_1txt
 SHA256: 930a704da82f21cdffad86aefc7034c18abdd0be140e3f519fa57dfa529fb44a
 Components: pypdfium2
-Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260901T043316Z_audion-docs-ai_fc671953\collector_legal_files\pypdfium2-5.13.0\freetype.txt
+Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260904T022702Z_audion-docs-ai_03ebd123\collector_legal_files\pypdfium2-5.13.0\freetype_1txt
 --------------------------------------------------------------------------------
 The FreeType Project LICENSE
                     ----------------------------
@@ -10889,10 +10887,10 @@ Legal Terms
 
 ================================================================================
 
-[L-9313256b27c4] LICENSE
+[L-9313256b27c4] LICENSE_1.txt
 SHA256: 9313256b27c4a1b7666c433acbf70a447383df0ea8c4b59bee0b6e412a281f92
 Components: python-dateutil
-Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260901T043316Z_audion-docs-ai_fc671953\collector_legal_files\python-dateutil-2.9.0.post0\LICENSE
+Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260904T022702Z_audion-docs-ai_03ebd123\collector_legal_files\python-dateutil-2.9.0.post0\LICENSE_1.txt
 --------------------------------------------------------------------------------
 Copyright 2017- Paul Ganssle <paul@ganssle.io>
 Copyright 2017- dateutil contributors (see AUTHORS file)
@@ -10951,10 +10949,10 @@ The above BSD License Applies to all code, even that also covered by Apache 2.0.
 
 ================================================================================
 
-[L-961eacd9633f] pdfium.txt
+[L-961eacd9633f] pdfium_1txt
 SHA256: 961eacd9633fff6d051db7208b755e9210e30efac7adec3e6a6d52798f0ccf0e
 Components: pypdfium2
-Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260901T043316Z_audion-docs-ai_fc671953\collector_legal_files\pypdfium2-5.13.0\pdfium.txt
+Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260904T022702Z_audion-docs-ai_03ebd123\collector_legal_files\pypdfium2-5.13.0\pdfium_1txt
 --------------------------------------------------------------------------------
 Copyright 2014 The PDFium Authors
 
@@ -11189,10 +11187,10 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 ================================================================================
 
-[L-96f5b328adbb] libjpeg_turbo.md
+[L-96f5b328adbb] libjpeg_turbo_1md
 SHA256: 96f5b328adbb78eeaaec6980d73fd558cb1e4d62560ed615646bc3cf5e532430
 Components: pypdfium2
-Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260901T043316Z_audion-docs-ai_fc671953\collector_legal_files\pypdfium2-5.13.0\libjpeg_turbo.md
+Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260904T022702Z_audion-docs-ai_03ebd123\collector_legal_files\pypdfium2-5.13.0\libjpeg_turbo_1md
 --------------------------------------------------------------------------------
 libjpeg-turbo Licenses
 ======================
@@ -11332,10 +11330,10 @@ that were granted to the IJG for code derived from their software.
 
 ================================================================================
 
-[L-9755a1851966] LICENSE_4.txt
+[L-9755a1851966] LICENSE_15.txt
 SHA256: 9755a18519666e5f0f4cae3daad3d7012bcae48a600b31237d75e9fe134e6683
 Components: setuptools
-Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260901T043316Z_audion-docs-ai_fc671953\collector_legal_files\setuptools-84.0.0\LICENSE_4.txt
+Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260904T022702Z_audion-docs-ai_03ebd123\collector_legal_files\setuptools-84.0.0\LICENSE_15.txt
 --------------------------------------------------------------------------------
 MIT License
 
@@ -11358,10 +11356,10 @@ USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 ================================================================================
 
-[L-9850f6b5bdef] LICENSE
+[L-9850f6b5bdef] LICENSE_1.txt
 SHA256: 9850f6b5bdef7346503065807b878deb8058b976c5c329f4c4d23bf4796ce9ae
 Components: pandas
-Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260901T043316Z_audion-docs-ai_fc671953\collector_legal_files\pandas-3.0.5\LICENSE
+Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260904T022702Z_audion-docs-ai_03ebd123\collector_legal_files\pandas-3.0.5\LICENSE_1.txt
 --------------------------------------------------------------------------------
 BSD 3-Clause License
 
@@ -11397,10 +11395,10 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 ================================================================================
 
-[L-9a8ad106a394] LICENSE.txt
+[L-9a8ad106a394] LICENSE_1txt
 SHA256: 9a8ad106a394e853bfe21f42f4e72d592819a22805d991b5f3275029292b658d
 Components: click
-Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260901T043316Z_audion-docs-ai_fc671953\collector_legal_files\click-8.5.0\LICENSE.txt
+Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260904T022702Z_audion-docs-ai_03ebd123\collector_legal_files\click-8.5.0\LICENSE_1txt
 --------------------------------------------------------------------------------
 Copyright 2014 Pallets
 
@@ -11433,10 +11431,10 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 ================================================================================
 
-[L-9d4098846018] LICENSE.md
+[L-9d4098846018] LICENSE_12md
 SHA256: 9d4098846018319cd68e228ee6220361787f73bccbf00237a85e4fc9621b998f
 Components: numpy
-Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260901T043316Z_audion-docs-ai_fc671953\collector_legal_files\numpy-2.5.2\LICENSE.md
+Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260904T022702Z_audion-docs-ai_03ebd123\collector_legal_files\numpy-2.5.2\LICENSE_12md
 --------------------------------------------------------------------------------
 # SFC64
 
@@ -11468,10 +11466,10 @@ DEALINGS IN THE SOFTWARE.
 
 ================================================================================
 
-[L-9e9824923444] COPYING
+[L-9e9824923444] COPYING_1.txt
 SHA256: 9e98249234446e96ab6cd2ac59cbb2f7bfcb15a8e21a00548e1e14da939b6927
 Components: pip
-Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260901T043316Z_audion-docs-ai_fc671953\collector_legal_files\pip-26.2.1\COPYING
+Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260904T022702Z_audion-docs-ai_03ebd123\collector_legal_files\pip-26.2.1\COPYING_1.txt
 --------------------------------------------------------------------------------
 Copyright (C) 2008-2011 INADA Naoki <songofacandy@gmail.com>
 
@@ -11489,10 +11487,10 @@ Copyright (C) 2008-2011 INADA Naoki <songofacandy@gmail.com>
 
 ================================================================================
 
-[L-a14cc25e10d4] LICENSE_1txt
+[L-a14cc25e10d4] LICENSE_5txt
 SHA256: a14cc25e10d40a3aa705b7de2fb764a6535d8ee9b2db4e1724900585457dfd55
 Components: numpy
-Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260901T043316Z_audion-docs-ai_fc671953\collector_legal_files\numpy-2.5.2\LICENSE_1txt
+Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260904T022702Z_audion-docs-ai_03ebd123\collector_legal_files\numpy-2.5.2\LICENSE_5txt
 --------------------------------------------------------------------------------
 Copyright (c) 1992-2013 The University of Tennessee and The University
                         of Tennessee Research Foundation.  All rights
@@ -11548,7 +11546,7 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 [L-a296f423c0d3] LICENSE-fzf.txt
 SHA256: a296f423c0d30ce3581435e78e7e36c5fe73984a882d8720c72e713b4593588b
 Components: fzf
-Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260901T043316Z_audion-docs-ai_fc671953\collector_legal_files\fzf-bundled\LICENSE-fzf.txt
+Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260904T022702Z_audion-docs-ai_03ebd123\collector_legal_files\fzf-bundled\LICENSE-fzf.txt
 --------------------------------------------------------------------------------
 The MIT License (MIT)
 
@@ -11574,10 +11572,10 @@ THE SOFTWARE.
 
 ================================================================================
 
-[L-a6d11f0694c0] BSD-3-Clause.txt
+[L-a6d11f0694c0] BSD-3-Clause_1txt
 SHA256: a6d11f0694c0137e9b02924b9d33a159f6c72f220fa4655bb2e1ea3654377d39
 Components: pypdfium2
-Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260901T043316Z_audion-docs-ai_fc671953\collector_legal_files\pypdfium2-5.13.0\BSD-3-Clause.txt
+Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260904T022702Z_audion-docs-ai_03ebd123\collector_legal_files\pypdfium2-5.13.0\BSD-3-Clause_1txt
 --------------------------------------------------------------------------------
 Copyright (c) <year> <owner>.
 
@@ -11608,10 +11606,10 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 ================================================================================
 
-[L-a7a1034ce101] LICENSE_2txt
+[L-a7a1034ce101] LICENSE_3txt
 SHA256: a7a1034ce1018ae36675f3e4c85f07854e4cc9ac87c1d0252e75002d52ec95e4
 Components: numpy
-Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260901T043316Z_audion-docs-ai_fc671953\collector_legal_files\numpy-2.5.2\LICENSE_2txt
+Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260904T022702Z_audion-docs-ai_03ebd123\collector_legal_files\numpy-2.5.2\LICENSE_3txt
 --------------------------------------------------------------------------------
 Copyright (c) 2005-2025, NumPy Developers.
 All rights reserved.
@@ -12529,10 +12527,10 @@ Public License instead of this License.  But first, please read
 
 ================================================================================
 
-[L-a85ca13fdf90] LICENSE_4md
+[L-a85ca13fdf90] LICENSE_10md
 SHA256: a85ca13fdf90160b64a0698215868c13b74d835ad0a4e2ba44713b8c5058a056
 Components: numpy
-Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260901T043316Z_audion-docs-ai_fc671953\collector_legal_files\numpy-2.5.2\LICENSE_4md
+Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260904T022702Z_audion-docs-ai_03ebd123\collector_legal_files\numpy-2.5.2\LICENSE_10md
 --------------------------------------------------------------------------------
 Copyright (C) 2010-2018 Max-Planck-Society
 All rights reserved.
@@ -12562,10 +12560,10 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 ================================================================================
 
-[L-a8ad31b1c3f4] LICENSE
+[L-a8ad31b1c3f4] LICENSE_1.txt
 SHA256: a8ad31b1c3f40dca5a84119351b8fa8ddc868edd77fad8a8ebf6d8f2d16fa4ae
 Components: aiofiles, distro, pip
-Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260901T043316Z_audion-docs-ai_fc671953\collector_legal_files\aiofiles-25.1.0\LICENSE
+Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260904T022702Z_audion-docs-ai_03ebd123\collector_legal_files\aiofiles-25.1.0\LICENSE_1.txt
 --------------------------------------------------------------------------------
 Apache License
                            Version 2.0, January 2004
@@ -12771,10 +12769,10 @@ Apache License
 
 ================================================================================
 
-[L-a9d66f1d526d] LICENSE_5.txt
+[L-a9d66f1d526d] LICENSE_16.txt
 SHA256: a9d66f1d526df02e29dce73436d34e56e8632f46c275bbdffc70569e882f9f17
 Components: pip, Pygments
-Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260901T043316Z_audion-docs-ai_fc671953\collector_legal_files\pip-26.2.1\LICENSE_5.txt
+Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260904T022702Z_audion-docs-ai_03ebd123\collector_legal_files\pip-26.2.1\LICENSE_16.txt
 --------------------------------------------------------------------------------
 Copyright (c) 2006-2022 by the respective authors (see AUTHORS file).
 All rights reserved.
@@ -12804,10 +12802,10 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 ================================================================================
 
-[L-a9e186f3ca16] LICENSE
+[L-a9e186f3ca16] LICENSE_1.txt
 SHA256: a9e186f3ca16b5eef84318e7a701721351a00cb7b8ae3a4394b67b49e3529ef3
 Components: pydantic
-Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260901T043316Z_audion-docs-ai_fc671953\collector_legal_files\pydantic-2.13.5\LICENSE
+Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260904T022702Z_audion-docs-ai_03ebd123\collector_legal_files\pydantic-2.13.5\LICENSE_1.txt
 --------------------------------------------------------------------------------
 The MIT License (MIT)
 
@@ -12833,10 +12831,10 @@ SOFTWARE.
 
 ================================================================================
 
-[L-aaf9a29ca590] LICENSE
+[L-aaf9a29ca590] LICENSE_1.txt
 SHA256: aaf9a29ca5907971ccf07de025375db34539a8d5eeebce20b46099805722106f
 Components: build
-Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260901T043316Z_audion-docs-ai_fc671953\collector_legal_files\build-1.6.0\LICENSE
+Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260904T022702Z_audion-docs-ai_03ebd123\collector_legal_files\build-1.6.0\LICENSE_1.txt
 --------------------------------------------------------------------------------
 Copyright © 2019 Filipe Laíns <filipe.lains@gmail.com>
 
@@ -12861,10 +12859,10 @@ DEALINGS IN THE SOFTWARE.
 
 ================================================================================
 
-[L-ab0d05ea62c2] LICENSE
+[L-ab0d05ea62c2] LICENSE_1.txt
 SHA256: ab0d05ea62c2817a068c92bf068db7a18a493da84cce4e43ad67acacc4d7b881
 Components: pillow
-Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260901T043316Z_audion-docs-ai_fc671953\collector_legal_files\pillow-12.3.0\LICENSE
+Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260904T022702Z_audion-docs-ai_03ebd123\collector_legal_files\pillow-12.3.0\LICENSE_1.txt
 --------------------------------------------------------------------------------
 The Python Imaging Library (PIL) is
 
@@ -14486,10 +14484,10 @@ freely, subject to the following restrictions:
 
 ================================================================================
 
-[L-af150257b1f7] LICENSE
+[L-af150257b1f7] LICENSE_1.txt
 SHA256: af150257b1f7cce92b6207854f2e8f90ea9ae52d7cac758d13a47bd12e2a2443
 Components: bottle
-Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260901T043316Z_audion-docs-ai_fc671953\collector_legal_files\bottle-0.13.4\LICENSE
+Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260904T022702Z_audion-docs-ai_03ebd123\collector_legal_files\bottle-0.13.4\LICENSE_1.txt
 --------------------------------------------------------------------------------
 Copyright (c) 2009-2024, Marcel Hellkamp.
 
@@ -14513,10 +14511,10 @@ THE SOFTWARE.
 
 ================================================================================
 
-[L-b345a9762fdc] LICENSE
+[L-b345a9762fdc] LICENSE_1.txt
 SHA256: b345a9762fdc5175d3d486d344cdcbb79078aee7c00e47fcc756ef2c4f5dcb61
 Components: pycparser
-Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260901T043316Z_audion-docs-ai_fc671953\collector_legal_files\pycparser-3.0\LICENSE
+Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260904T022702Z_audion-docs-ai_03ebd123\collector_legal_files\pycparser-3.0\LICENSE_1.txt
 --------------------------------------------------------------------------------
 pycparser -- A C parser in Python
 
@@ -14548,10 +14546,10 @@ OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 ================================================================================
 
-[L-b5a5dbce6026] LICENSE
+[L-b5a5dbce6026] LICENSE_1.txt
 SHA256: b5a5dbce60265e305a815a6cb83ed07f24519d8ba644f2a307994488bced8815
 Components: xlrd
-Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260901T043316Z_audion-docs-ai_fc671953\collector_legal_files\xlrd-2.0.2\LICENSE
+Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260904T022702Z_audion-docs-ai_03ebd123\collector_legal_files\xlrd-2.0.2\LICENSE_1.txt
 --------------------------------------------------------------------------------
 There are two licenses associated with xlrd. This one relates to the bulk of
 the work done on the library::
@@ -14632,10 +14630,10 @@ This one covers some earlier work::
 
 ================================================================================
 
-[L-b70e7e9b742f] LICENSE.BSD
+[L-b70e7e9b742f] LICENSE_1BSD
 SHA256: b70e7e9b742f1cc6f948b34c16aa39ffece94196364bc88ff0d2180f0028fac5
 Components: packaging, pip, setuptools
-Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260901T043316Z_audion-docs-ai_fc671953\collector_legal_files\packaging-26.3\LICENSE.BSD
+Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260904T022702Z_audion-docs-ai_03ebd123\collector_legal_files\packaging-26.3\LICENSE_1BSD
 --------------------------------------------------------------------------------
 Copyright (c) Donald Stufft and individual contributors.
 All rights reserved.
@@ -14663,10 +14661,10 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 ================================================================================
 
-[L-b80816b0d530] LICENSE_2.txt
+[L-b80816b0d530] LICENSE_13.txt
 SHA256: b80816b0d530b8accb4c2211783790984a6e3b61922c2b5ee92f3372ab2742fe
 Components: pip, setuptools
-Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260901T043316Z_audion-docs-ai_fc671953\collector_legal_files\pip-26.2.1\LICENSE_2.txt
+Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260904T022702Z_audion-docs-ai_03ebd123\collector_legal_files\pip-26.2.1\LICENSE_13.txt
 --------------------------------------------------------------------------------
 MIT License
 
@@ -14692,10 +14690,10 @@ SOFTWARE.
 
 ================================================================================
 
-[L-b8b132a8cafd] LICENSE.md
+[L-b8b132a8cafd] LICENSE_1md
 SHA256: b8b132a8cafda6dd54d348bf4568e14b76cbc896d4dd2841f9d32c1709ddba7d
 Components: pyreadline3
-Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260901T043316Z_audion-docs-ai_fc671953\collector_legal_files\pyreadline3-3.5.6\LICENSE.md
+Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260904T022702Z_audion-docs-ai_03ebd123\collector_legal_files\pyreadline3-3.5.6\LICENSE_1md
 --------------------------------------------------------------------------------
 # LICENSE
 
@@ -14753,10 +14751,10 @@ DAMAGE.
 
 ================================================================================
 
-[L-b8b1fae5894c] LICENSE
+[L-b8b1fae5894c] LICENSE_4.txt
 SHA256: b8b1fae5894cfbe213b47f1378bb2269cf82de18b34447e871c0225ace0d3ad7
 Components: numpy
-Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260901T043316Z_audion-docs-ai_fc671953\collector_legal_files\numpy-2.5.2\LICENSE
+Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260904T022702Z_audion-docs-ai_03ebd123\collector_legal_files\numpy-2.5.2\LICENSE_4.txt
 --------------------------------------------------------------------------------
 This project is primarily dual-licensed under your choice of either the Apache
 License 2.0 or the BSD 3-Clause License.
@@ -15132,10 +15130,10 @@ express Statement of Purpose.
 
 ================================================================================
 
-[L-b8f3b31a2f43] BSD-2-Clause.rst
+[L-b8f3b31a2f43] BSD-2-Clause_1rst
 SHA256: b8f3b31a2f4312401fe4122fe932a333ec0d7e47d849c02da0404e8048fe74d0
 Components: docutils
-Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260901T043316Z_audion-docs-ai_fc671953\collector_legal_files\docutils-0.23\BSD-2-Clause.rst
+Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260904T022702Z_audion-docs-ai_03ebd123\collector_legal_files\docutils-0.23\BSD-2-Clause_1rst
 --------------------------------------------------------------------------------
 2-Clause BSD license / FreeBSD license
 ======================================
@@ -15165,10 +15163,10 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 ================================================================================
 
-[L-b90ed8150a6d] LICENSE-FLAC.txt
+[L-b90ed8150a6d] LICENSE-FLAC_1txt
 SHA256: b90ed8150a6d371c84b7dbaa680cd0e9893ef7c2558765e1e00930513efcfe3b
 Components: SpeechRecognition
-Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260901T043316Z_audion-docs-ai_fc671953\collector_legal_files\speechrecognition-3.17.0\LICENSE-FLAC.txt
+Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260904T022702Z_audion-docs-ai_03ebd123\collector_legal_files\speechrecognition-3.17.0\LICENSE-FLAC_1txt
 --------------------------------------------------------------------------------
 GNU GENERAL PUBLIC LICENSE
                        Version 2, June 1991
@@ -15512,10 +15510,10 @@ Public License instead of this License.
 
 ================================================================================
 
-[L-b989238918e1] AUTHORS
+[L-b989238918e1] AUTHORS_1.txt
 SHA256: b989238918e1fdac1e46717cb405b63e92497a272413af0d989c1df6c8abcb6f
 Components: beautifulsoup4
-Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260901T043316Z_audion-docs-ai_fc671953\collector_legal_files\beautifulsoup4-4.15.0\AUTHORS
+Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260904T022702Z_audion-docs-ai_03ebd123\collector_legal_files\beautifulsoup4-4.15.0\AUTHORS_1.txt
 --------------------------------------------------------------------------------
 Behold, mortal, the origins of Beautiful Soup...
 ================================================
@@ -15569,10 +15567,10 @@ found ways to break Beautiful Soup:
 
 ================================================================================
 
-[L-ba26c1263131] pdfium-binaries.txt
+[L-ba26c1263131] pdfium-binaries_1txt
 SHA256: ba26c1263131696b86c10496b5066b918a20b7161822a80c274d0080105f6c93
 Components: pypdfium2
-Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260901T043316Z_audion-docs-ai_fc671953\collector_legal_files\pypdfium2-5.13.0\pdfium-binaries.txt
+Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260904T022702Z_audion-docs-ai_03ebd123\collector_legal_files\pypdfium2-5.13.0\pdfium-binaries_1txt
 --------------------------------------------------------------------------------
 Copyright 2014-2025 Benoit Blanchon
 
@@ -15586,10 +15584,10 @@ This package also includes third-party software. See the licenses/ directory for
 
 ================================================================================
 
-[L-bb28c48e3e07] LICENSE.APACHE
+[L-bb28c48e3e07] LICENSE_1APACHE
 SHA256: bb28c48e3e078166e91cfc2b6db7ffebb8a0973b9e23b3df060561292d8d69ec
 Components: packaging, pip, setuptools
-Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260901T043316Z_audion-docs-ai_fc671953\collector_legal_files\packaging-26.3\LICENSE.APACHE
+Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260904T022702Z_audion-docs-ai_03ebd123\collector_legal_files\packaging-26.3\LICENSE_1APACHE
 --------------------------------------------------------------------------------
 Apache License
                            Version 2.0, January 2004
@@ -15770,10 +15768,10 @@ Apache License
 
 ================================================================================
 
-[L-bc35cb420ea1] LICENSE
+[L-bc35cb420ea1] LICENSE_1.txt
 SHA256: bc35cb420ea1987a413e08ad979366dfc60d27cceded779b55ee19c3231285df
 Components: defusedxml
-Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260901T043316Z_audion-docs-ai_fc671953\collector_legal_files\defusedxml-0.7.1\LICENSE
+Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260904T022702Z_audion-docs-ai_03ebd123\collector_legal_files\defusedxml-0.7.1\LICENSE_1.txt
 --------------------------------------------------------------------------------
 PYTHON SOFTWARE FOUNDATION LICENSE VERSION 2
 --------------------------------------------
@@ -15826,10 +15824,10 @@ Agreement.
 
 ================================================================================
 
-[L-bdb0a645ea18] libpng.txt
+[L-bdb0a645ea18] libpng_1txt
 SHA256: bdb0a645ea18c60507d0368379b1ac5474b92255fcc2d115e07486a7672ba526
 Components: pypdfium2
-Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260901T043316Z_audion-docs-ai_fc671953\collector_legal_files\pypdfium2-5.13.0\libpng.txt
+Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260904T022702Z_audion-docs-ai_03ebd123\collector_legal_files\pypdfium2-5.13.0\libpng_1txt
 --------------------------------------------------------------------------------
 COPYRIGHT NOTICE, DISCLAIMER, and LICENSE
 =========================================
@@ -15968,10 +15966,10 @@ be appreciated.
 
 ================================================================================
 
-[L-c0e192fdb667] gpl-3-0.txt
+[L-c0e192fdb667] gpl-3-0_1txt
 SHA256: c0e192fdb6671d51cc645d81b74a1da5b7762bbf79d8dc75a85411b816b87c15
 Components: docutils
-Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260901T043316Z_audion-docs-ai_fc671953\collector_legal_files\docutils-0.23\gpl-3-0.txt
+Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260904T022702Z_audion-docs-ai_03ebd123\collector_legal_files\docutils-0.23\gpl-3-0_1txt
 --------------------------------------------------------------------------------
 GNU GENERAL PUBLIC LICENSE
                        Version 3, 29 June 2007
@@ -16650,10 +16648,10 @@ Public License instead of this License.  But first, please read
 
 ================================================================================
 
-[L-c110d3ea2ad7] agg23.txt
+[L-c110d3ea2ad7] agg23_1txt
 SHA256: c110d3ea2ad77467ce0dcff7d3337e6c8be8049a5103f4b9bd5fd911a77972e5
 Components: pypdfium2
-Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260901T043316Z_audion-docs-ai_fc671953\collector_legal_files\pypdfium2-5.13.0\agg23.txt
+Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260904T022702Z_audion-docs-ai_03ebd123\collector_legal_files\pypdfium2-5.13.0\agg23_1txt
 --------------------------------------------------------------------------------
 //----------------------------------------------------------------------------
 // Anti-Grain Geometry - Version 2.3
@@ -16672,10 +16670,10 @@ Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260901T043316Z_au
 
 ================================================================================
 
-[L-c17011467b4f] LICENSE_2.txt
+[L-c17011467b4f] LICENSE_5.txt
 SHA256: c17011467b4fe6e20fbfbeda4df09e58c2bca5480a063e55735a4000a379aad9
 Components: numpy
-Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260901T043316Z_audion-docs-ai_fc671953\collector_legal_files\numpy-2.5.2\LICENSE_2.txt
+Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260904T022702Z_audion-docs-ai_03ebd123\collector_legal_files\numpy-2.5.2\LICENSE_5.txt
 --------------------------------------------------------------------------------
 Copyright (c) 2005-2021, NumPy Developers.
 All rights reserved.
@@ -16710,10 +16708,39 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 ================================================================================
 
-[L-c26cae81da45] LICENSE
+[L-c26a5009d736] LICENSE-proxy_tools-MIT.txt
+SHA256: c26a5009d736e4c1740859873d798e5283c867dbec9fe0a14b9ba47730bcfcb5
+Components: proxy_tools
+Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260904T022702Z_audion-docs-ai_03ebd123\collector_legal_files\proxy-tools-present-in-release\LICENSE-proxy_tools-MIT.txt
+--------------------------------------------------------------------------------
+proxy_tools metadata declares the package license as MIT.
+
+Copyright (c) 2014 Jonathan Tushman
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+================================================================================
+
+[L-c26cae81da45] LICENSE_1.txt
 SHA256: c26cae81da4508e5e249985777a33821f183223ebb74d7f8cfbf90fe7eef2fb7
 Components: mpmath
-Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260901T043316Z_audion-docs-ai_fc671953\collector_legal_files\mpmath-1.3.0\LICENSE
+Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260904T022702Z_audion-docs-ai_03ebd123\collector_legal_files\mpmath-1.3.0\LICENSE_1.txt
 --------------------------------------------------------------------------------
 Copyright (c) 2005-2021 Fredrik Johansson and mpmath contributors
 
@@ -16745,10 +16772,10 @@ DAMAGE.
 
 ================================================================================
 
-[L-c4df125c807b] LICENSE.md
+[L-c4df125c807b] LICENSE_1md
 SHA256: c4df125c807b0613501e943a5c92496dd11d2c16604ce396097a8dde396304d9
 Components: httpcore2
-Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260901T043316Z_audion-docs-ai_fc671953\collector_legal_files\httpcore2-2.12.0\LICENSE.md
+Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260904T022702Z_audion-docs-ai_03ebd123\collector_legal_files\httpcore2-2.12.0\LICENSE_1md
 --------------------------------------------------------------------------------
 Copyright © 2026 to present Pydantic Services Inc. and individual contributors.
 Copyright © 2020, [Encode OSS Ltd](https://www.encode.io/).
@@ -16781,10 +16808,10 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 ================================================================================
 
-[L-c5ab0890a737] libopenjpeg.txt
+[L-c5ab0890a737] libopenjpeg_1txt
 SHA256: c5ab0890a737c2dfa7ba675036554f6d17741d98629b0c2a145354d00617e6b2
 Components: pypdfium2
-Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260901T043316Z_audion-docs-ai_fc671953\collector_legal_files\pypdfium2-5.13.0\libopenjpeg.txt
+Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260904T022702Z_audion-docs-ai_03ebd123\collector_legal_files\pypdfium2-5.13.0\libopenjpeg_1txt
 --------------------------------------------------------------------------------
 /*
  * The copyright in this software is being made available under the 2-clauses
@@ -16821,10 +16848,10 @@ Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260901T043316Z_au
 
 ================================================================================
 
-[L-c7dc80eb009a] LICENSE_1txt
+[L-c7dc80eb009a] LICENSE_2txt
 SHA256: c7dc80eb009aae1a51f5bed815859d03d0b0b5846b73327cce3b27300d88f5ae
 Components: SpeechRecognition
-Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260901T043316Z_audion-docs-ai_fc671953\collector_legal_files\speechrecognition-3.17.0\LICENSE_1txt
+Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260904T022702Z_audion-docs-ai_03ebd123\collector_legal_files\speechrecognition-3.17.0\LICENSE_2txt
 --------------------------------------------------------------------------------
 Copyright (c) 1999-2015 Carnegie Mellon University.  All rights
 reserved.
@@ -16859,10 +16886,10 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 ================================================================================
 
-[L-c9e97d3dbc1f] LICENSE
+[L-c9e97d3dbc1f] LICENSE_1.txt
 SHA256: c9e97d3dbc1fbbcdb4f7808b282cd646db887aff4f5313fe6bbe8d4c31405a9c
 Components: python-engineio, python-socketio
-Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260901T043316Z_audion-docs-ai_fc671953\collector_legal_files\python-engineio-4.14.0\LICENSE
+Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260904T022702Z_audion-docs-ai_03ebd123\collector_legal_files\python-engineio-4.14.0\LICENSE_1.txt
 --------------------------------------------------------------------------------
 The MIT License (MIT)
 
@@ -16887,10 +16914,10 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 ================================================================================
 
-[L-ca836a5f9ecc] LICENSE
+[L-ca836a5f9ecc] LICENSE_1.txt
 SHA256: ca836a5f9ecca3b2f350230faa20a48fb8b145653b5568d784862df864706b9b
 Components: pytest
-Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260901T043316Z_audion-docs-ai_fc671953\collector_legal_files\pytest-9.1.1\LICENSE
+Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260904T022702Z_audion-docs-ai_03ebd123\collector_legal_files\pytest-9.1.1\LICENSE_1.txt
 --------------------------------------------------------------------------------
 The MIT License (MIT)
 
@@ -16916,10 +16943,10 @@ SOFTWARE.
 
 ================================================================================
 
-[L-cac35c02686e] LICENSE.txt
+[L-cac35c02686e] LICENSE_1txt
 SHA256: cac35c02686e5d04a5a7140bfb3b36e73aed496656e891102e428886d7930318
 Components: colorama
-Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260901T043316Z_audion-docs-ai_fc671953\collector_legal_files\colorama-0.4.6\LICENSE.txt
+Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260904T022702Z_audion-docs-ai_03ebd123\collector_legal_files\colorama-0.4.6\LICENSE_1txt
 --------------------------------------------------------------------------------
 Copyright (c) 2010 Jonathan Hartley
 All rights reserved.
@@ -16951,10 +16978,10 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 ================================================================================
 
-[L-cad1ef5bd340] LICENSE
+[L-cad1ef5bd340] LICENSE_1.txt
 SHA256: cad1ef5bd340d73e074ba614d26f7deaca5c7940c3d8c34852e65c4909686c48
 Components: packaging, pip, setuptools
-Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260901T043316Z_audion-docs-ai_fc671953\collector_legal_files\packaging-26.3\LICENSE
+Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260904T022702Z_audion-docs-ai_03ebd123\collector_legal_files\packaging-26.3\LICENSE_1.txt
 --------------------------------------------------------------------------------
 This software is made available under the terms of *either* of the licenses
 found in LICENSE.APACHE or LICENSE.BSD. Contributions to this software is made
@@ -16962,10 +16989,10 @@ under the terms of *both* these licenses.
 
 ================================================================================
 
-[L-ce5fe4893fb6] LICENSE
+[L-ce5fe4893fb6] LICENSE_1.txt
 SHA256: ce5fe4893fb6ab843de77b367bfa9db974d7b00ab9033fcca8d7760a97fe1b43
 Components: isodate
-Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260901T043316Z_audion-docs-ai_fc671953\collector_legal_files\isodate-0.7.2\LICENSE
+Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260904T022702Z_audion-docs-ai_03ebd123\collector_legal_files\isodate-0.7.2\LICENSE_1.txt
 --------------------------------------------------------------------------------
 Copyright (c) 2021, Hugo van Kemenade and contributors
 Copyright (c) 2009-2018, Gerhard Weis and contributors
@@ -16996,10 +17023,10 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 ================================================================================
 
-[L-cf08b60a4ded] LICENSE.txt
+[L-cf08b60a4ded] LICENSE_1txt
 SHA256: cf08b60a4ded986b58a617cb8304373bda5c4eff42fb4e30d7597b616e116e87
 Components: xlsxwriter
-Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260901T043316Z_audion-docs-ai_fc671953\collector_legal_files\xlsxwriter-3.2.9\LICENSE.txt
+Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260904T022702Z_audion-docs-ai_03ebd123\collector_legal_files\xlsxwriter-3.2.9\LICENSE_1txt
 --------------------------------------------------------------------------------
 BSD 2-Clause License
 
@@ -17029,10 +17056,10 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 ================================================================================
 
-[L-cf1498d5b834] LICENSE.txt
+[L-cf1498d5b834] LICENSE_3txt
 SHA256: cf1498d5b834b3758a89d06d224a1502c54a28b3a852f46130b761deaa4890d1
 Components: olefile
-Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260901T043316Z_audion-docs-ai_fc671953\collector_legal_files\olefile-0.47\LICENSE.txt
+Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260904T022702Z_audion-docs-ai_03ebd123\collector_legal_files\olefile-0.47\LICENSE_3txt
 --------------------------------------------------------------------------------
 LICENSE for the olefile package:
 
@@ -17093,10 +17120,10 @@ PERFORMANCE OF THIS SOFTWARE.
 
 ================================================================================
 
-[L-cf7342f7ba48] ThirdPartyNotices.txt
+[L-cf7342f7ba48] ThirdPartyNotices_1txt
 SHA256: cf7342f7ba482ef715ae58f5f497a8d3564fa255164175aea324cd293c5701a0
 Components: onnxruntime
-Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260901T043316Z_audion-docs-ai_fc671953\collector_legal_files\onnxruntime-1.20.1\ThirdPartyNotices.txt
+Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260904T022702Z_audion-docs-ai_03ebd123\collector_legal_files\onnxruntime-1.20.1\ThirdPartyNotices_1txt
 --------------------------------------------------------------------------------
 THIRD PARTY SOFTWARE NOTICES AND INFORMATION
 
@@ -23609,10 +23636,10 @@ https://github.com/intel/neural-speed
 
 ================================================================================
 
-[L-d6b65e6c213a] LICENSE
+[L-d6b65e6c213a] LICENSE_1.txt
 SHA256: d6b65e6c213a5d0b577911d34d6e5949b9f59d76c238c5071a2f3fc16cfb2606
 Components: pluggy
-Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260901T043316Z_audion-docs-ai_fc671953\collector_legal_files\pluggy-1.6.0\LICENSE
+Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260904T022702Z_audion-docs-ai_03ebd123\collector_legal_files\pluggy-1.6.0\LICENSE_1.txt
 --------------------------------------------------------------------------------
 The MIT License (MIT)
 
@@ -23638,10 +23665,10 @@ SOFTWARE.
 
 ================================================================================
 
-[L-d7e9361b9533] LICENSE_7md
+[L-d7e9361b9533] LICENSE_11md
 SHA256: d7e9361b9533f48dd1e60ff7e4ab4dd1b53230ca2d4bf8d79bf3efa5f53336be
 Components: numpy
-Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260901T043316Z_audion-docs-ai_fc671953\collector_legal_files\numpy-2.5.2\LICENSE_7md
+Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260904T022702Z_audion-docs-ai_03ebd123\collector_legal_files\numpy-2.5.2\LICENSE_11md
 --------------------------------------------------------------------------------
 # PCG64
 
@@ -23668,10 +23695,10 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 ================================================================================
 
-[L-dcb95677a022] LICENSE.md
+[L-dcb95677a022] LICENSE_1md
 SHA256: dcb95677a02240243187e964f941847d19b17821cf99e5afae684fab328c19bf
 Components: starlette
-Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260901T043316Z_audion-docs-ai_fc671953\collector_legal_files\starlette-1.6.0\LICENSE.md
+Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260904T022702Z_audion-docs-ai_03ebd123\collector_legal_files\starlette-1.6.0\LICENSE_1md
 --------------------------------------------------------------------------------
 Copyright © 2018, [Encode OSS Ltd](https://www.encode.io/).
 All rights reserved.
@@ -23703,10 +23730,10 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 ================================================================================
 
-[L-dd6bdca10cdc] LICENSE
+[L-dd6bdca10cdc] LICENSE_1.txt
 SHA256: dd6bdca10cdc3b24c6b0b6cef5fd611b7feb6917f127833283ddcdb310d3b453
 Components: clr_loader
-Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260901T043316Z_audion-docs-ai_fc671953\collector_legal_files\clr-loader-0.3.1\LICENSE
+Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260904T022702Z_audion-docs-ai_03ebd123\collector_legal_files\clr-loader-0.3.1\LICENSE_1.txt
 --------------------------------------------------------------------------------
 MIT License
 
@@ -23732,10 +23759,10 @@ SOFTWARE.
 
 ================================================================================
 
-[L-deed7c17a431] LICENSE_1.txt
+[L-deed7c17a431] LICENSE_12.txt
 SHA256: deed7c17a4318158190a3ea239cc879a5a50271cebb98ae7025f48fbe58dca15
 Components: pip, rich
-Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260901T043316Z_audion-docs-ai_fc671953\collector_legal_files\pip-26.2.1\LICENSE_1.txt
+Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260904T022702Z_audion-docs-ai_03ebd123\collector_legal_files\pip-26.2.1\LICENSE_12.txt
 --------------------------------------------------------------------------------
 Copyright (c) 2020 Will McGugan
 
@@ -23759,10 +23786,10 @@ SOFTWARE.
 
 ================================================================================
 
-[L-df58f69ea886] LICENSE
+[L-df58f69ea886] LICENSE_1.txt
 SHA256: df58f69ea88683035d720b5375bcef0cf5aeaa98a1d098d572e0992c378deb46
 Components: tzdata
-Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260901T043316Z_audion-docs-ai_fc671953\collector_legal_files\tzdata-2026.3\LICENSE
+Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260904T022702Z_audion-docs-ai_03ebd123\collector_legal_files\tzdata-2026.3\LICENSE_1.txt
 --------------------------------------------------------------------------------
 Apache Software License 2.0
 
@@ -23783,10 +23810,10 @@ limitations under the License.
 
 ================================================================================
 
-[L-dfe514a337ae] LICENSE.md
+[L-dfe514a337ae] LICENSE_1md
 SHA256: dfe514a337ae8417abd31a8af707bbd6172b03e5430bb083e145899ea97a3eea
 Components: docstring_parser
-Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260901T043316Z_audion-docs-ai_fc671953\collector_legal_files\docstring-parser-0.18.0\LICENSE.md
+Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260904T022702Z_audion-docs-ai_03ebd123\collector_legal_files\docstring-parser-0.18.0\LICENSE_1md
 --------------------------------------------------------------------------------
 The MIT License (MIT)
 
@@ -23812,10 +23839,10 @@ SOFTWARE.
 
 ================================================================================
 
-[L-e06ef33485e7] LICENSE
+[L-e06ef33485e7] LICENSE_1.txt
 SHA256: e06ef33485e7498ad592887c41fa79cc8a7fecde576c7210e11bfdddef58040e
 Components: webencodings
-Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260901T043316Z_audion-docs-ai_fc671953\collector_legal_files\webencodings-0.6.1\LICENSE
+Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260904T022702Z_audion-docs-ai_03ebd123\collector_legal_files\webencodings-0.6.1\LICENSE_1.txt
 --------------------------------------------------------------------------------
 BSD 3-Clause License
 
@@ -23849,10 +23876,10 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 ================================================================================
 
-[L-e1dc3a6ff017] LICENSE
+[L-e1dc3a6ff017] LICENSE_1.txt
 SHA256: e1dc3a6ff017a6800dc27a7220500f512b95fbcd996d38ebbbff85c693245369
 Components: pythonnet
-Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260901T043316Z_audion-docs-ai_fc671953\collector_legal_files\pythonnet-3.1.0\LICENSE
+Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260904T022702Z_audion-docs-ai_03ebd123\collector_legal_files\pythonnet-3.1.0\LICENSE_1.txt
 --------------------------------------------------------------------------------
 MIT License
 
@@ -23878,10 +23905,10 @@ DEALINGS IN THE SOFTWARE.
 
 ================================================================================
 
-[L-e55522d81edc] icu.txt
+[L-e55522d81edc] icu_1txt
 SHA256: e55522d81edc687a341a4411e0776e54ca654e90147f354a90458aaced4116af
 Components: pypdfium2
-Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260901T043316Z_audion-docs-ai_fc671953\collector_legal_files\pypdfium2-5.13.0\icu.txt
+Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260904T022702Z_audion-docs-ai_03ebd123\collector_legal_files\pypdfium2-5.13.0\icu_1txt
 --------------------------------------------------------------------------------
 UNICODE LICENSE V3
 
@@ -24454,10 +24481,10 @@ SOFTWARE.
 
 ================================================================================
 
-[L-e562f3f974ce] fast_float.txt
+[L-e562f3f974ce] fast_float_1txt
 SHA256: e562f3f974ced7e69dd1db77b820b36bcf8f30377f1aa105723fba449c53c4e6
 Components: pypdfium2
-Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260901T043316Z_audion-docs-ai_fc671953\collector_legal_files\pypdfium2-5.13.0\fast_float.txt
+Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260904T022702Z_audion-docs-ai_03ebd123\collector_legal_files\pypdfium2-5.13.0\fast_float_1txt
 --------------------------------------------------------------------------------
 MIT License
 
@@ -24489,10 +24516,10 @@ DEALINGS IN THE SOFTWARE.
 
 ================================================================================
 
-[L-e7608cc316ea] LICENSE
+[L-e7608cc316ea] LICENSE_1.txt
 SHA256: e7608cc316ea65729d6ce63cd619fb185ae44d329740388d30099fe7e4b16a4d
 Components: youtube-transcript-api
-Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260901T043316Z_audion-docs-ai_fc671953\collector_legal_files\youtube-transcript-api-1.0.3\LICENSE
+Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260904T022702Z_audion-docs-ai_03ebd123\collector_legal_files\youtube-transcript-api-1.0.3\LICENSE_1.txt
 --------------------------------------------------------------------------------
 MIT License
 
@@ -24518,10 +24545,10 @@ SOFTWARE.
 
 ================================================================================
 
-[L-e76529051aac] License.html
+[L-e76529051aac] License_1html
 SHA256: e76529051aac9b02964fd7c5ab74de5c1841536c5c34357757edc50afb12b8ae
 Components: olefile
-Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260901T043316Z_audion-docs-ai_fc671953\collector_legal_files\olefile-0.47\License.html
+Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260904T022702Z_audion-docs-ai_03ebd123\collector_legal_files\olefile-0.47\License_1html
 --------------------------------------------------------------------------------
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -24566,10 +24593,10 @@ Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260901T043316Z_au
 
 ================================================================================
 
-[L-e93716da6b9c] LICENSE
+[L-e93716da6b9c] LICENSE_1.txt
 SHA256: e93716da6b9c0d5a4a1df60fe695b370f0695603d21f6f83f053e42cfc10caf7
 Components: certifi, pip
-Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260901T043316Z_audion-docs-ai_fc671953\collector_legal_files\certifi-2026.7.22\LICENSE
+Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260904T022702Z_audion-docs-ai_03ebd123\collector_legal_files\certifi-2026.7.22\LICENSE_1.txt
 --------------------------------------------------------------------------------
 This package contains a modified version of ca-bundle.crt:
 
@@ -24594,10 +24621,10 @@ one at http://mozilla.org/MPL/2.0/.
 
 ================================================================================
 
-[L-ea74b9158f45] AUTHORS
+[L-ea74b9158f45] AUTHORS_1.txt
 SHA256: ea74b9158f4587191549080d5713701859bf6f7b61ce491020338128131847f3
 Components: Pygments
-Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260901T043316Z_audion-docs-ai_fc671953\collector_legal_files\pygments-2.21.0\AUTHORS
+Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260904T022702Z_audion-docs-ai_03ebd123\collector_legal_files\pygments-2.21.0\AUTHORS_1.txt
 --------------------------------------------------------------------------------
 Pygments is written and maintained by Georg Brandl <georg@python.org>.
 
@@ -24898,10 +24925,10 @@ Many thanks for all contributions!
 
 ================================================================================
 
-[L-ea9b7901b93a] LICENSE
+[L-ea9b7901b93a] LICENSE_1.txt
 SHA256: ea9b7901b93a0e360da655d75454527c26cbc835b42ee739f7b1018f81afcb1a
 Components: sympy
-Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260901T043316Z_audion-docs-ai_fc671953\collector_legal_files\sympy-1.14.0\LICENSE
+Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260904T022702Z_audion-docs-ai_03ebd123\collector_legal_files\sympy-1.14.0\LICENSE_1.txt
 --------------------------------------------------------------------------------
 Copyright (c) 2006-2023 SymPy Development Team
 
@@ -25059,10 +25086,10 @@ SOFTWARE.
 
 ================================================================================
 
-[L-ebcd9bbf783a] llvm-libc.txt
+[L-ebcd9bbf783a] llvm-libc_1txt
 SHA256: ebcd9bbf783a73d05c53ba4d586b8d5813dcdf3bbec50265860ccc885e606f47
 Components: pypdfium2
-Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260901T043316Z_audion-docs-ai_fc671953\collector_legal_files\pypdfium2-5.13.0\llvm-libc.txt
+Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260904T022702Z_audion-docs-ai_03ebd123\collector_legal_files\pypdfium2-5.13.0\llvm-libc_1txt
 --------------------------------------------------------------------------------
 ==============================================================================
 The LLVM Project is under the Apache License v2.0 with LLVM Exceptions:
@@ -25345,10 +25372,10 @@ SOFTWARE.
 
 ================================================================================
 
-[L-ef21afaad4bb] LICENSE_6md
+[L-ef21afaad4bb] LICENSE_14md
 SHA256: ef21afaad4bb20d2020491dc27ed55ba0d042f1b9487911a57f28b46b407a2b7
 Components: numpy
-Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260901T043316Z_audion-docs-ai_fc671953\collector_legal_files\numpy-2.5.2\LICENSE_6md
+Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260904T022702Z_audion-docs-ai_03ebd123\collector_legal_files\numpy-2.5.2\LICENSE_14md
 --------------------------------------------------------------------------------
 # MT19937
 
@@ -25414,10 +25441,10 @@ SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 ================================================================================
 
-[L-efe1acf3e62f] LICENSE.md
+[L-efe1acf3e62f] LICENSE_1md
 SHA256: efe1acf3e62fb99c288b0ec73e5a773b7268ef4320fe757ea994214e4b63c371
 Components: uvicorn
-Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260901T043316Z_audion-docs-ai_fc671953\collector_legal_files\uvicorn-0.52.4\LICENSE.md
+Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260904T022702Z_audion-docs-ai_03ebd123\collector_legal_files\uvicorn-0.52.4\LICENSE_1md
 --------------------------------------------------------------------------------
 Copyright © 2017-present, [Encode OSS Ltd](https://www.encode.io/).
 All rights reserved.
@@ -25449,10 +25476,10 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 ================================================================================
 
-[L-f01e5d699a33] LICENSE
+[L-f01e5d699a33] LICENSE_1.txt
 SHA256: f01e5d699a33766b5caf4a5099f2856aba4f3f75ea1df05dc0572b34b4bea8f2
 Components: pdfminer.six
-Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260901T043316Z_audion-docs-ai_fc671953\collector_legal_files\pdfminer-six-20260107\LICENSE
+Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260904T022702Z_audion-docs-ai_03ebd123\collector_legal_files\pdfminer-six-20260107\LICENSE_1.txt
 --------------------------------------------------------------------------------
 Copyright (c) 2004-2016  Yusuke Shinyama <yusuke at shinyama dot jp>
 
@@ -25479,10 +25506,10 @@ SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 ================================================================================
 
-[L-f24a464601e5] LICENSE
+[L-f24a464601e5] LICENSE_1.txt
 SHA256: f24a464601e507e39bc91a8823d85c5b50a143fa3e9d9a14b4ee6e7bdb34f7fd
 Components: msal
-Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260901T043316Z_audion-docs-ai_fc671953\collector_legal_files\msal-1.38.0\LICENSE
+Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260904T022702Z_audion-docs-ai_03ebd123\collector_legal_files\msal-1.38.0\LICENSE_1.txt
 --------------------------------------------------------------------------------
 The MIT License (MIT)
 
@@ -25511,10 +25538,10 @@ THE SOFTWARE.
 
 ================================================================================
 
-[L-f388fd38cad1] LICENSE
+[L-f388fd38cad1] LICENSE_19.txt
 SHA256: f388fd38cad13112c1dc0f669bbe80e7f84541edbafb72f3030d2ca7642c3c9d
 Components: pip
-Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260901T043316Z_audion-docs-ai_fc671953\collector_legal_files\pip-26.2.1\LICENSE
+Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260904T022702Z_audion-docs-ai_03ebd123\collector_legal_files\pip-26.2.1\LICENSE_19.txt
 --------------------------------------------------------------------------------
 Copyright (c) 2018, Tzu-ping Chung <uranusjr@gmail.com>
 
@@ -25532,10 +25559,10 @@ OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
 
 ================================================================================
 
-[L-f419e9908876] LICENSE.txt
+[L-f419e9908876] LICENSE_4txt
 SHA256: f419e990887622d00595611ea5da8497b906ab63ba868ed1f3d7b0384287e113
 Components: numpy
-Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260901T043316Z_audion-docs-ai_fc671953\collector_legal_files\numpy-2.5.2\LICENSE.txt
+Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260904T022702Z_audion-docs-ai_03ebd123\collector_legal_files\numpy-2.5.2\LICENSE_4txt
 --------------------------------------------------------------------------------
 zlib License
   ------------
@@ -25561,10 +25588,10 @@ zlib License
 
 ================================================================================
 
-[L-f4573e7cb767] LICENSE_1.txt
+[L-f4573e7cb767] LICENSE_2.txt
 SHA256: f4573e7cb7676745fb5b8d36fa548aa93e391cfb6872ddacd65130c45ea6a92d
 Components: httptools
-Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260901T043316Z_audion-docs-ai_fc671953\collector_legal_files\httptools-0.8.0\LICENSE_1.txt
+Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260904T022702Z_audion-docs-ai_03ebd123\collector_legal_files\httptools-0.8.0\LICENSE_2.txt
 --------------------------------------------------------------------------------
 The MIT License
 
@@ -25590,10 +25617,10 @@ THE SOFTWARE.
 
 ================================================================================
 
-[L-f5110972deda] NOTICE
+[L-f5110972deda] NOTICE_1.txt
 SHA256: f5110972dedad2b4e9d314518daf3b7d72d6e02e499acd802181de6f74571dcc
 Components: requests
-Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260901T043316Z_audion-docs-ai_fc671953\collector_legal_files\requests-2.34.2\NOTICE
+Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260904T022702Z_audion-docs-ai_03ebd123\collector_legal_files\requests-2.34.2\NOTICE_1.txt
 --------------------------------------------------------------------------------
 Requests
 Copyright 2019 Kenneth Reitz
@@ -25603,7 +25630,7 @@ Copyright 2019 Kenneth Reitz
 [L-f6fa51e9cc3f] LICENSE-Python-Embedded.txt
 SHA256: f6fa51e9cc3f0a1ffad26fadc951585b6d0235677e5766ecc2de1aa4ef7ebac5
 Components: Python Embedded
-Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260901T043316Z_audion-docs-ai_fc671953\collector_legal_files\python-embedded-3.12.x\LICENSE-Python-Embedded.txt
+Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260904T022702Z_audion-docs-ai_03ebd123\collector_legal_files\python-embedded-3.12.x\LICENSE-Python-Embedded.txt
 --------------------------------------------------------------------------------
 A. HISTORY OF THE SOFTWARE
 ==========================
@@ -26309,10 +26336,10 @@ docs/license.html_lib.
 
 ================================================================================
 
-[L-f7b14309e5f5] dragon4_LICENSE.txt
+[L-f7b14309e5f5] dragon4_LICENSE_1txt
 SHA256: f7b14309e5f54e5022b26448eefd419988ada2aec01d3c1162d84a0ea8f21f2c
 Components: numpy
-Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260901T043316Z_audion-docs-ai_fc671953\collector_legal_files\numpy-2.5.2\dragon4_LICENSE.txt
+Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260904T022702Z_audion-docs-ai_03ebd123\collector_legal_files\numpy-2.5.2\dragon4_LICENSE_1txt
 --------------------------------------------------------------------------------
 Copyright (c) 2014 Ryan Juckett
 
@@ -26344,10 +26371,10 @@ permission to include it under the MIT license instead.
 
 ================================================================================
 
-[L-f8508be03f7b] LICENSE
+[L-f8508be03f7b] LICENSE_3.txt
 SHA256: f8508be03f7b370f84fb8411b78cc36b5addaa185628d91b6ca09888d0487798
 Components: anthropic
-Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260901T043316Z_audion-docs-ai_fc671953\collector_legal_files\anthropic-1.2.0\LICENSE
+Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260904T022702Z_audion-docs-ai_03ebd123\collector_legal_files\anthropic-1.3.0\LICENSE_3.txt
 --------------------------------------------------------------------------------
 Copyright 2023 Anthropic, PBC.
 
@@ -26359,10 +26386,10 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
 ================================================================================
 
-[L-fae8b42db142] LICENSE
+[L-fae8b42db142] LICENSE_1.txt
 SHA256: fae8b42db142dabf03b0c5c495831a5d11b9649ead0cf0bd4ab4f52294b263be
 Components: markdownify
-Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260901T043316Z_audion-docs-ai_fc671953\collector_legal_files\markdownify-1.2.3\LICENSE
+Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260904T022702Z_audion-docs-ai_03ebd123\collector_legal_files\markdownify-1.2.3\LICENSE_1.txt
 --------------------------------------------------------------------------------
 The MIT License (MIT)
 
@@ -26388,10 +26415,10 @@ SOFTWARE.
 
 ================================================================================
 
-[L-fb3496291624] LICENSE
+[L-fb3496291624] LICENSE_3.txt
 SHA256: fb34962916248c2e011077fb64b82d585814631bd291f2b78e37eccea9a9fe78
 Components: openai
-Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260901T043316Z_audion-docs-ai_fc671953\collector_legal_files\openai-3.6.0\LICENSE
+Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260904T022702Z_audion-docs-ai_03ebd123\collector_legal_files\openai-3.8.0\LICENSE_3.txt
 --------------------------------------------------------------------------------
 Apache License
                            Version 2.0, January 2004
@@ -26597,10 +26624,10 @@ Apache License
 
 ================================================================================
 
-[L-fc8dbc04e03a] simdutf.txt
+[L-fc8dbc04e03a] simdutf_1txt
 SHA256: fc8dbc04e03ad4efc08a647ffe7f995b811a95bc04c0e85a56d5277c6593fa5f
 Components: pypdfium2
-Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260901T043316Z_audion-docs-ai_fc671953\collector_legal_files\pypdfium2-5.13.0\simdutf.txt
+Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260904T022702Z_audion-docs-ai_03ebd123\collector_legal_files\pypdfium2-5.13.0\simdutf_1txt
 --------------------------------------------------------------------------------
 Copyright 2021 The simdutf authors
 
@@ -26623,10 +26650,10 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 ================================================================================
 
-[L-fcff87c3a47c] LICENCE
+[L-fcff87c3a47c] LICENCE_1.txt
 SHA256: fcff87c3a47ce8028a8512aa182d4fcf0ad1c90544ee75cf9b343684cac194de
 Components: tqdm
-Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260901T043316Z_audion-docs-ai_fc671953\collector_legal_files\tqdm-4.70.0\LICENCE
+Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260904T022702Z_audion-docs-ai_03ebd123\collector_legal_files\tqdm-4.70.0\LICENCE_1.txt
 --------------------------------------------------------------------------------
 `tqdm` is a product of collaborative work.
 Unless otherwise stated, all authors (see commit logs) retain copyright
@@ -26680,10 +26707,10 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 ================================================================================
 
-[L-fdbe26ef1b61] LICENSE
+[L-fdbe26ef1b61] LICENSE_1.txt
 SHA256: fdbe26ef1b61f1c72d38dbd71af8b42a334e3c58bca9775ef78c1d2ed15512d1
 Components: wsproto
-Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260901T043316Z_audion-docs-ai_fc671953\collector_legal_files\wsproto-1.3.2\LICENSE
+Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260904T022702Z_audion-docs-ai_03ebd123\collector_legal_files\wsproto-1.3.2\LICENSE_1.txt
 --------------------------------------------------------------------------------
 The MIT License (MIT)
 
@@ -26709,10 +26736,10 @@ THE SOFTWARE.
 
 ================================================================================
 
-[L-fdcb59154c74] LICENSE.md
+[L-fdcb59154c74] LICENSE_1md
 SHA256: fdcb59154c74cbaba16a11242f7740bea9f23d6feb5547917d8c5f94a80392a5
 Components: httpcore
-Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260901T043316Z_audion-docs-ai_fc671953\collector_legal_files\httpcore-1.0.9\LICENSE.md
+Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260904T022702Z_audion-docs-ai_03ebd123\collector_legal_files\httpcore-1.0.9\LICENSE_1md
 --------------------------------------------------------------------------------
 Copyright © 2020, [Encode OSS Ltd](https://www.encode.io/).
 All rights reserved.
@@ -26744,10 +26771,10 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 ================================================================================
 
-[L-fe1049884b1a] LICENSE
+[L-fe1049884b1a] LICENSE_1.txt
 SHA256: fe1049884b1a0d9342901e88e07f32925d24b3121d9972b6a6805fb9824b095d
 Components: annotated-types
-Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260901T043316Z_audion-docs-ai_fc671953\collector_legal_files\annotated-types-0.8.0\LICENSE
+Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260904T022702Z_audion-docs-ai_03ebd123\collector_legal_files\annotated-types-0.8.0\LICENSE_1.txt
 --------------------------------------------------------------------------------
 The MIT License (MIT)
 
@@ -26773,10 +26800,10 @@ SOFTWARE.
 
 ================================================================================
 
-[L-fff170779a6a] LICENSE
+[L-fff170779a6a] LICENSE_1.txt
 SHA256: fff170779a6acbf65abdb405c087f1cee1786691e4a96a4034517e4a504a0cdf
 Components: annotated-doc
-Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260901T043316Z_audion-docs-ai_fc671953\collector_legal_files\annotated-doc-0.0.5\LICENSE
+Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260904T022702Z_audion-docs-ai_03ebd123\collector_legal_files\annotated-doc-0.0.5\LICENSE_1.txt
 --------------------------------------------------------------------------------
 The MIT License (MIT)
 

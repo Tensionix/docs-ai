@@ -10,7 +10,7 @@
 
 **Version 1.9.4** · 2026-09-04 · 507.1 MB
 
-- [Direct download](https://dl.audion.dev/docs-ai/1.9.4/Audion_Docs_AI_v1.9.4_Full.zip) — unmetered, no rate limits
+- [Direct download](https://audion.dev/get/docs-ai/1.9.4/Audion_Docs_AI_v1.9.4_Full.zip) — unmetered, no rate limits
 - [Project page](https://audion.dev/downloads/docs-ai) — every version and how to install
 
 <p align="center"><img src="docs/screenshot.png" alt="The program window" width="560"></p>
@@ -23,7 +23,16 @@ An **Audion** tool, published by [Tensionix](https://github.com/Tensionix).
 <!-- /audion:release -->
 
 
-[Русский](README_RU.md) · [User Guide](USER_GUIDE_EN.md)
+[Русский](Docs/README_RU.md) · [User Guide](Docs/USER_GUIDE_EN.md)
+
+**Contents**
+
+- [Why It Exists](#why-it-exists)
+- [Principles](#principles)
+- [Providers](#providers)
+- [What Comes Out](#what-comes-out)
+- [Next](#next)
+- [Technical Reference](#technical-reference)
 
 Auditing documents with a language model and applying what it finds: Word and
 PowerPoint in, an error report and a corrected copy out.
@@ -94,7 +103,7 @@ The source document is never modified — edits go into a copy.
 
 ## Next
 
-* [User Guide](USER_GUIDE_EN.md) — step by step.
+* [User Guide](Docs/USER_GUIDE_EN.md) — step by step.
 * `tools\GUI_WORKFLOW_RU.md` — the window and the order of work.
 * `tools\DOCUMENT_NORMALIZATION_RU.md` — how correction works.
 * `tools\COMMA_LOWERCASE_RESTORE_RU.md` — restoring commas and lower case.

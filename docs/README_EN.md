@@ -2,6 +2,19 @@
 
 [Русский](README_RU.md) · [User Guide](USER_GUIDE_EN.md)
 
+**Contents**
+
+- [Why It Exists](#why-it-exists)
+- [Principles](#principles)
+- [Providers](#providers)
+- [What Comes Out](#what-comes-out)
+- [Next](#next)
+- [Technical Reference](#technical-reference)
+  - [Running](#running)
+  - [Settings](#settings)
+  - [Advanced Parameters](#advanced-parameters)
+  - [Workbench Naming](#workbench-naming)
+
 Auditing documents with a language model and applying what it finds: Word and
 PowerPoint in, an error report and a corrected copy out.
 
