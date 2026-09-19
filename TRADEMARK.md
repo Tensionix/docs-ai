@@ -12,8 +12,8 @@ name of its own.
 ## What is allowed
 
 - Stating, plainly and truthfully, that your work is based on this project:
-  "based on Audion Yandex Portable", "a fork of Audion Yandex Portable",
-  "compatible with Audion Yandex Portable".
+  "based on Audion Docs AI", "a fork of Audion Docs AI",
+  "compatible with Audion Docs AI".
 - Keeping the copyright and licence notices that the licence requires, including
   the ones that mention Audion.
 - Referring to the project by its name when writing about it, reviewing it or
